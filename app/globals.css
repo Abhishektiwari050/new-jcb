@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+/* ═══════════════════════════════════════════════════════
+   JBS CARGO MOVERS — Design System
+   ═══════════════════════════════════════════════════════ */
+
+@theme inline {
+  /* ── Brand Colours (from logo — pixel-accurate) ── */
+  --color-brand-orange: #E86A2F;
+  --color-brand-orange-dark: #D4571E;
+  --color-brand-orange-light: #F07840;
+  --color-brand-black: #0C0C0C;
+
+  /* ── Backgrounds ── */
+  --color-bg-hero: #0D0F0E;
+  --color-bg-footer: #080A09;
+  --color-bg-surface: #F5F6F4;
+  --color-bg-white: #FFFFFF;
+  --color-bg-warm: #FDF5F1;
+
+  /* ── Text ── */
+  --color-text-primary: #0C0C0C;
+  --color-text-body: #444444;
+  --color-text-muted: #777777;
+  --color-text-hint: #AAAAAA;
+
+  /* ── Accent ── */
+  --color-gold: #D4A017;
+  --color-live-green: #22C55E;
+
+  /* ── Borders ── */
+  --color-border-default: #DDDDDD;
+  --color-border-light: #E2E4E2;
+
+  /* ── Fonts ── */
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+/* ── Base ── */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text-body);
+  background: var(--color-bg-white);
+  overflow-x: hidden;
+}
+
+/* ── Clip-paths ── */
+.clip-btn {
+  clip-path: polygon(0 0, 100% 0, 100% 65%, 91% 100%, 0 100%);
+}
+
+.clip-btn-sm {
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 92% 100%, 0 100%);
+}
+
+.clip-logo {
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 75% 100%, 0 100%);
+}
+
+/* ── Animations ── */
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes pulse-dot {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  @keyframes travel {
+    0% { left: 0; }
+    50% { left: calc(100% - 8px); }
+    100% { left: 0; }
+  }
+
+  @keyframes dotpulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(232, 106, 47, 0.5); }
+    50% { box-shadow: 0 0 0 8px rgba(232, 106, 47, 0); }
+  }
+
+  @keyframes ticker {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  @keyframes livepulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0D0F0E;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E86A2F;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D4571E;
+}
+
+/* ── Selection ── */
+::selection {
+  background: rgba(232, 106, 47, 0.30);
+  color: #FFFFFF;
+}
