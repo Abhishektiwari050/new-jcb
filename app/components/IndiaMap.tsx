@@ -11,12 +11,12 @@ const ReactIndiaMap = dynamic(() => import("@vishalvoid/react-india-map").then(m
 
 export const IndiaMap = ({ className }: { className?: string }) => {
   const mapStyle = {
-    backgroundColor: "#FDFBF7",
-    hoverColor: "#E86A2F",
+    backgroundColor: "#ffffff",
+    hoverColor: "#FDFBF7",
     strokeColor: "#0F3460",
     strokeWidth: 0.5,
     tooltipConfig: {
-      backgroundColor: "#0F3460",
+      backgroundColor: "rgba(15, 52, 96, 0.95)",
       textColor: "#ffffff",
     },
   };
@@ -26,47 +26,46 @@ export const IndiaMap = ({ className }: { className?: string }) => {
     {
       id: "IN-DL", // Delhi
       customData: {
-        hub: "Central National Hub",
-        capacity: "1000+ tons/day",
-        status: "Active",
+        hub: "Central Hub / Head Office",
+        connectivity: "Direct Flights to 80+ Cities",
+        status: "Active - 24/7",
       },
     },
     {
       id: "IN-MH", // Maharashtra (Mumbai)
       customData: {
-        hub: "West Zone Hub",
-        capacity: "800+ tons/day",
+        hub: "West Zone Regional Hub",
+        connectivity: "Major Port & Air Connectivity",
         status: "Active",
       },
     },
     {
       id: "IN-KA", // Karnataka (Bangalore)
       customData: {
-        hub: "South Zone Hub",
-        capacity: "600+ tons/day",
+        hub: "South Zone Regional Hub",
+        connectivity: "High-Tech Logistics Network",
         status: "Active",
       },
     },
     {
       id: "IN-WB", // West Bengal (Kolkata)
       customData: {
-        hub: "East Zone Hub",
-        capacity: "500+ tons/day",
+        hub: "East Zone Regional Hub",
+        connectivity: "Gateway to North-East",
         status: "Active",
       },
     },
     {
       id: "IN-TN", // Tamil Nadu (Chennai)
       customData: {
-        hub: "Port Connectivity Hub",
-        capacity: "450+ tons/day",
+        hub: "South-East Hub",
+        connectivity: "Coastal & Rail Network",
         status: "Active",
       },
     },
     {
       id: "IN-UP", // Uttar Pradesh (Lucknow)
       customData: {
-        hub: "North-Central Hub",
         capacity: "400+ tons/day",
         status: "Active",
       },

@@ -39,8 +39,8 @@ export default function CoverageSection() {
         </div>
 
         {/* Map — in normal flow */}
-        <div className="flex justify-center mb-16">
-          <IndiaMap className="w-full max-w-4xl h-auto" />
+        <div className="flex justify-center mb-16" suppressHydrationWarning>
+          <IndiaMap className="w-full max-w-3xl h-auto" />
         </div>
 
         {/* Stats — in normal flow below map */}
