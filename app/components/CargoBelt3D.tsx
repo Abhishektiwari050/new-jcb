@@ -447,8 +447,8 @@ const CargoBelt3D: FC<CargoBelt3DProps> = ({
   return (
     <div
       ref={mountRef}
-      className={className}
-      style={{ width: '100%', height: '100%', overflow: 'hidden', ...style }}
+      className={`w-full h-full overflow-hidden ${className}`}
+      style={style}
     />
   );
 };

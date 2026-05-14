@@ -25,7 +25,7 @@ export const CardStack = ({
     >
       {/* This sticky wrapper acts as a fixed viewport */}
       <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
-        <div className="relative w-full max-w-5xl mx-auto" style={{ height: "480px" }}>
+        <div className="relative w-full max-w-5xl mx-auto h-[480px]">
           {items.map((item, i) => (
             <StackCard
               key={i}
