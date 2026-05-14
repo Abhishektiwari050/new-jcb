@@ -1,26 +1,22 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { MessageCircle } from "lucide-react";
+import { SmoothScroll } from "./components/SmoothScroll";
+import CustomCursor from "./components/CustomCursor";
+import LoadingScreen from "./components/LoadingScreen";
 
 export const metadata: Metadata = {
-  title: "JBS Cargo Movers — Specialist Cargo & Logistics",
+  title: "JBS Cargo Movers | Air, Surface & Train Cargo — Pan India Logistics",
   description:
-    "India's specialist cargo movers. Air & Surface, Pharma, Cold Chain, Food & FMCG, Textiles, Airport Cargo, Automotive logistics. 28+ states, 70+ vehicles, 24/7 operations.",
+    "JBS Cargo Movers offers Air Cargo, Surface Cargo, Train Cargo, Consolidation and Manpower services across 100+ destinations in India. Fast, reliable, door-to-door. Get a quote today.",
   keywords: [
     "cargo movers",
     "air freight India",
-    "cold chain logistics",
-    "pharma freight",
     "JBS Cargo",
     "surface cargo",
-    "FMCG logistics",
+    "train freight India",
+    "logistics company New Delhi",
   ],
-  openGraph: {
-    title: "JBS Cargo Movers — Specialist Cargo & Logistics",
-    description:
-      "India's specialist cargo movers covering Air & Surface, Pharma, Cold Chain, and more across 28+ states.",
-    type: "website",
-  },
 };
 
 export default function RootLayout({
@@ -29,22 +25,27 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark" suppressHydrationWarning>
       <head>
         <link
-          href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Plus+Jakarta+Sans:wght@500;600;700&family=Share+Tech+Mono&family=Bebas+Neue&display=swap"
           rel="stylesheet"
         />
+        <link rel="icon" href="/images/cursor.png" />
       </head>
       <body 
-        className="antialiased relative bg-fixed bg-cover bg-center bg-no-repeat min-h-screen"
-        style={{ backgroundImage: "url('/images/hero_bg.png')" }}
+        className="antialiased bg-brand-black selection:bg-brand-orange selection:text-white"
+        suppressHydrationWarning
       >
-        {children}
+        <CustomCursor />
+        <LoadingScreen />
+        <SmoothScroll>
+          {children}
+        </SmoothScroll>
         
         {/* Floating WhatsApp Button */}
         <a
-          href="https://wa.me/911234567890"
+          href="https://wa.me/919582566995"
           target="_blank"
           rel="noopener noreferrer"
           className="fixed bottom-6 left-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:scale-110 hover:shadow-xl transition-all duration-300 flex items-center justify-center"

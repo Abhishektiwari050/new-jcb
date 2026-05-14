@@ -1,31 +1,30 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const partners = [
-  "Emirates SkyCargo",
-  "Qatar Airways Cargo",
-  "Lufthansa Cargo",
-  "Singapore Airlines",
-  "Cathay Pacific",
-  "Air India Cargo",
-  "Maersk",
-  "MSC",
-  "DHL Aviation",
-  "FedEx",
+  { name: "Blue Dart Express", logo: "https://upload.wikimedia.org/wikipedia/commons/6/6c/Blue_Dart_Express_logo.svg" },
+  { name: "Delhivery Ltd.", logo: "https://upload.wikimedia.org/wikipedia/commons/2/23/Delhivery_Logo_%282019%29.png" },
+  { name: "Mahindra Logistics", logo: "https://upload.wikimedia.org/wikipedia/commons/7/70/MAHINDRA_LOGISTICS_LOGO.jpg" },
+  { name: "IndiGo Cargo", logo: "https://upload.wikimedia.org/wikipedia/commons/6/69/IndiGo_Airlines_logo.svg" },
+  { name: "Air India Cargo", logo: "https://upload.wikimedia.org/wikipedia/commons/b/bf/Air_India_2023.svg" },
+  { name: "Akasa Air Cargo", logo: "https://upload.wikimedia.org/wikipedia/commons/6/69/Akasa_Air_logo.svg" },
+  { name: "SpiceJet Cargo", logo: "https://upload.wikimedia.org/wikipedia/en/9/9c/SpiceJet_logo.svg" },
+  { name: "Indian Railways", logo: "https://upload.wikimedia.org/wikipedia/fr/e/ed/Indian_Railway.png" },
 ];
 
 export default function PartnersSection() {
   return (
-    <section className="bg-white py-16 overflow-hidden border-t border-border-light/50">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section className="bg-white py-16 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-10">
         {/* Header */}
-        <div className="text-center mb-10">
+        <div className="text-center">
           <motion.h2
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="font-[var(--font-display)] font-extrabold text-2xl text-text-primary tracking-tight uppercase"
+            className="font-[var(--font-display)] font-extrabold text-2xl text-brand-black tracking-tight uppercase"
           >
             Our Partners
           </motion.h2>
@@ -37,25 +36,30 @@ export default function PartnersSection() {
             className="w-12 h-1 bg-brand-orange mx-auto my-3"
           />
         </div>
+      </div>
 
-        {/* Logo Marquee */}
-        <div className="relative">
-          {/* Fade edges */}
-          <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white to-transparent z-10" />
-          <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white to-transparent z-10" />
-
-          <div className="flex animate-[ticker_40s_linear_infinite] whitespace-nowrap gap-12">
-            {[...partners, ...partners].map((partner, i) => (
-              <div
-                key={i}
-                className="flex items-center justify-center min-w-[160px] h-20 px-6 bg-surface-light border border-border-light/40 hover:border-brand-orange/50 transition-colors"
-              >
-                <span className="font-[var(--font-display)] font-bold text-sm text-text-primary/40 tracking-wider hover:text-brand-orange transition-colors">
-                  {partner}
-                </span>
+      {/* Logo Marquee — Full Width */}
+      <div className="relative w-full">
+        {/* No fade edges as per user request */}
+        
+        <div className="flex animate-[ticker_40s_linear_infinite] whitespace-nowrap gap-8 transform-gpu will-change-transform py-4">
+          {[...partners, ...partners, ...partners].map((partner, i) => (
+            <motion.div
+              key={i}
+              whileHover={{ y: -5, scale: 1.02 }}
+              className="flex items-center justify-center min-w-[220px] h-28 px-10 bg-white rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-brand-black/5 hover:border-brand-orange/30 transition-all group"
+            >
+              <div className="relative w-full h-14">
+                <Image
+                  src={partner.logo}
+                  alt={partner.name}
+                  fill
+                  sizes="220px"
+                  className="object-contain transition-all duration-300"
+                />
               </div>
-            ))}
-          </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

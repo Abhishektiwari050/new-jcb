@@ -1,19 +1,19 @@
 import { Metadata } from "next";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import ContactPageContent from "./ContactPageContent";
+import TrackingPageContent from "./TrackingPageContent";
 
 export const metadata: Metadata = {
-  title: "Contact Us | JBS Cargo Movers",
+  title: "Track Shipment | JBS Cargo Movers",
   description:
-    "Get in touch with JBS Cargo Movers. Our logistics experts are available 24/7 for quotes, tracking, and operational support.",
+    "Real-time tracking for your JBS Cargo shipments. Enter your consignment number to get live status updates.",
 };
 
-export default function ContactPage() {
+export default function TrackingPage() {
   return (
     <main className="min-h-screen bg-white">
       <Navbar theme="dark" />
-      <ContactPageContent />
+      <TrackingPageContent />
       <Footer />
     </main>
   );

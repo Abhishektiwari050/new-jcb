@@ -10,10 +10,12 @@ import {
 
 const footerLinks = {
   services: [
-    { label: "Domestic Air Freight", href: "/services" },
-    { label: "International Air Freight", href: "/services" },
-    { label: "International Ocean Freight", href: "/services" },
-    { label: "Global Logistics", href: "/services" },
+    { label: "Air Cargo", href: "/services" },
+    { label: "Surface Freight", href: "/services" },
+    { label: "Train Logistics", href: "/services" },
+    { label: "Warehousing", href: "/services" },
+    { label: "Consolidation", href: "/services" },
+    { label: "Door-to-Door", href: "/services" },
   ],
   information: [
     { label: "About Us", href: "/about" },
@@ -23,7 +25,6 @@ const footerLinks = {
   ],
   usefulLinks: [
     { label: "Tracking", href: "/tracking" },
-    { label: "Client Login", href: "/login" },
     { label: "Privacy Policy", href: "/privacy" },
     { label: "Terms of Service", href: "/terms" },
   ],
@@ -31,39 +32,43 @@ const footerLinks = {
 
 export default function Footer() {
   return (
-    <footer className="bg-brand-black/60 text-white pt-20 pb-10 backdrop-blur-md">
+    <footer className="bg-[#FDFBF7] text-brand-black pt-20 pb-8 border-t border-brand-black/5">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
-          {/* Column 1 — About/Logo */}
+          {/* Column 1 — Logo & Tagline */}
           <div className="space-y-6 lg:col-span-1">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-8 h-8 bg-brand-orange clip-logo flex items-center justify-center">
-                <span className="font-[var(--font-display)] font-extrabold text-white text-xs">
-                  JBS
-                </span>
-              </div>
-              <span className="font-[var(--font-display)] font-extrabold text-lg">
-                JBS Cargo
+            <div className="flex items-center mb-4">
+              <img
+                src="/images/logo.png"
+                alt="JBS Logo"
+                className="h-14 w-auto object-contain object-left mix-blend-multiply"
+              />
+            </div>
+            <p className="text-brand-black/50 text-sm leading-relaxed font-medium">
+              Saman Ho Koi Bhi, JBS Karega Delivery.
+            </p>
+            <div className="flex items-center gap-2 mt-4">
+              <span className="w-2 h-2 rounded-full bg-live-green animate-pulse" />
+              <span className="text-[10px] text-live-green font-bold uppercase tracking-widest">
+                Operations Active
               </span>
             </div>
-            <p className="text-white/50 text-sm leading-relaxed">
-              JBS Cargo, a domestic IATA approved cargo agency offers and handles all types of Air cargo movement across the country.
-            </p>
           </div>
 
           {/* Column 2 — Services */}
-          <div className="space-y-6">
-            <h3 className="font-[var(--font-display)] font-bold text-lg tracking-wide border-b border-brand-orange/30 inline-block pb-2">
+          <div className="space-y-5">
+            <h3 className="font-[var(--font-display)] font-bold text-sm tracking-wider uppercase text-brand-black/80">
               Our Services
             </h3>
+            <div className="w-8 h-0.5 bg-brand-orange" />
             <ul className="space-y-3">
               {footerLinks.services.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="group flex items-center gap-2 text-sm text-white/60 hover:text-brand-orange transition-colors"
+                    className="group flex items-center gap-2 text-sm text-brand-black/50 hover:text-brand-orange transition-colors font-medium"
                   >
-                    <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity -ml-4 group-hover:ml-0" />
+                    <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-all -ml-4 group-hover:ml-0" />
                     {link.label}
                   </Link>
                 </li>
@@ -72,18 +77,19 @@ export default function Footer() {
           </div>
 
           {/* Column 3 — Information */}
-          <div className="space-y-6">
-            <h3 className="font-[var(--font-display)] font-bold text-lg tracking-wide border-b border-brand-orange/30 inline-block pb-2">
+          <div className="space-y-5">
+            <h3 className="font-[var(--font-display)] font-bold text-sm tracking-wider uppercase text-brand-black/80">
               Information
             </h3>
+            <div className="w-8 h-0.5 bg-brand-orange" />
             <ul className="space-y-3">
               {footerLinks.information.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="group flex items-center gap-2 text-sm text-white/60 hover:text-brand-orange transition-colors"
+                    className="group flex items-center gap-2 text-sm text-brand-black/50 hover:text-brand-orange transition-colors font-medium"
                   >
-                    <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity -ml-4 group-hover:ml-0" />
+                    <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-all -ml-4 group-hover:ml-0" />
                     {link.label}
                   </Link>
                 </li>
@@ -92,18 +98,19 @@ export default function Footer() {
           </div>
 
           {/* Column 4 — Useful Links */}
-          <div className="space-y-6">
-            <h3 className="font-[var(--font-display)] font-bold text-lg tracking-wide border-b border-brand-orange/30 inline-block pb-2">
+          <div className="space-y-5">
+            <h3 className="font-[var(--font-display)] font-bold text-sm tracking-wider uppercase text-brand-black/80">
               Useful Links
             </h3>
+            <div className="w-8 h-0.5 bg-brand-orange" />
             <ul className="space-y-3">
               {footerLinks.usefulLinks.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="group flex items-center gap-2 text-sm text-white/60 hover:text-brand-orange transition-colors"
+                    className="group flex items-center gap-2 text-sm text-brand-black/50 hover:text-brand-orange transition-colors font-medium"
                   >
-                    <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity -ml-4 group-hover:ml-0" />
+                    <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-all -ml-4 group-hover:ml-0" />
                     {link.label}
                   </Link>
                 </li>
@@ -112,45 +119,54 @@ export default function Footer() {
           </div>
 
           {/* Column 5 — Contact */}
-          <div className="space-y-6">
-            <h3 className="font-[var(--font-display)] font-bold text-lg tracking-wide border-b border-brand-orange/30 inline-block pb-2">
-              Our Contacts
+          <div className="space-y-5">
+            <h3 className="font-[var(--font-display)] font-bold text-sm tracking-wider uppercase text-brand-black/80">
+              Contact Us
             </h3>
+            <div className="w-8 h-0.5 bg-brand-orange" />
             <div className="space-y-4">
-              <div className="flex items-start gap-3 text-sm text-white/60">
-                <MapPin className="w-4 h-4 mt-1 flex-shrink-0 text-brand-orange" />
+              <div className="flex items-start gap-3 text-sm text-brand-black/50 font-medium">
+                <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-brand-orange" />
                 <span>
-                  Mumbai, Maharashtra<br />
-                  India — 400001
+                  Plot No. 6, Street No. 5, V.P.O. Shahabad
+                  <br />
+                  Mohammadpur, New Delhi – 110061
                 </span>
               </div>
               <a
-                href="tel:+911234567890"
-                className="flex items-center gap-3 text-sm text-white/60 hover:text-brand-orange transition-colors"
+                href="tel:+919582566995"
+                className="flex items-center gap-3 text-sm text-brand-black/50 hover:text-brand-orange transition-colors font-medium"
               >
                 <Phone className="w-4 h-4 flex-shrink-0 text-brand-orange" />
-                <span>+91 123 456 7890</span>
+                <span>+91 9582566995 / +91 9582166995</span>
               </a>
               <a
-                href="mailto:info@jbscargo.com"
-                className="flex items-center gap-3 text-sm text-white/60 hover:text-brand-orange transition-colors"
+                href="mailto:jbscargomovers@gmail.com"
+                className="flex items-center gap-3 text-sm text-brand-black/50 hover:text-brand-orange transition-colors font-medium"
               >
                 <Mail className="w-4 h-4 flex-shrink-0 text-brand-orange" />
-                <span>info@jbscargo.com</span>
+                <span>jbscargomovers@gmail.com</span>
               </a>
             </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-white/40 text-sm">
-            © {new Date().getFullYear()} JBS Cargo Movers. All rights reserved.
+        <div className="border-t border-brand-black/5 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 relative z-10">
+          <p className="text-brand-black/30 text-xs font-bold uppercase tracking-widest">
+            © {new Date().getFullYear()} JBS Cargo Movers. All Rights Reserved.
           </p>
-          <div className="flex items-center gap-2 text-white/40 text-sm">
-            Designed to spec.
-          </div>
+          <p className="text-brand-black/20 text-xs font-bold uppercase tracking-widest">
+            Designed & Built with precision.
+          </p>
         </div>
+      </div>
+
+      {/* Large Background Brand Name */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full overflow-hidden pointer-events-none select-none -mb-12">
+        <h2 className="text-[22vw] font-black text-brand-black/[0.04] leading-none whitespace-nowrap tracking-tighter uppercase text-center">
+          JBS CARGO MOVERS
+        </h2>
       </div>
     </footer>
   );

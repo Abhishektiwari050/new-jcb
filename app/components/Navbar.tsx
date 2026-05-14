@@ -11,12 +11,17 @@ const navLinks = [
   { label: "Our Services", href: "/services" },
   { label: "Tracking", href: "/tracking" },
   { label: "Contact Us", href: "/contact" },
-  { label: "Login", href: "/login" },
 ];
 
-export default function Navbar() {
+interface NavbarProps {
+  theme?: "light" | "dark";
+}
+
+export default function Navbar({ theme = "light" }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  const isDark = theme === "dark";
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -38,58 +43,64 @@ export default function Navbar() {
             : "bg-transparent"
         }`}
       >
-        {/* Top Contact Bar (Hides on scroll for a cleaner sticky nav) */}
-        <div className={`hidden lg:block w-full border-b border-white/10 transition-all duration-300 ${scrolled ? "h-0 overflow-hidden opacity-0" : "h-10 opacity-100"}`}>
-          <div className="max-w-7xl mx-auto px-6 lg:px-8 h-full flex items-center justify-end gap-6 text-xs text-white/80 font-medium">
-            <a href="mailto:info@jbscargo.in" className="flex items-center gap-2 hover:text-brand-orange transition-colors">
+        {/* Top Contact Bar */}
+        <div className={`hidden lg:block w-full border-b transition-all duration-300 ${scrolled ? "h-0 overflow-hidden opacity-0" : `h-10 opacity-100 ${isDark ? "border-white/10" : "border-brand-black/10"}`}`}>
+          <div className={`max-w-7xl mx-auto px-6 lg:px-8 h-full flex items-center justify-end gap-6 text-xs font-bold ${scrolled || isDark ? "text-white/80" : "text-brand-black/60"}`}>
+            <a href="mailto:jbscargomovers@gmail.com" className="flex items-center gap-2 hover:text-brand-orange transition-colors">
               <Mail className="w-3.5 h-3.5" />
-              info@jbscargo.in
+              jbscargomovers@gmail.com
             </a>
-            <div className="w-px h-4 bg-white/20" />
-            <a href="tel:+911234567890" className="flex items-center gap-2 hover:text-brand-orange transition-colors">
+            <div className={`w-px h-4 ${scrolled || isDark ? "bg-white/20" : "bg-brand-black/20"}`} />
+            <div className="flex items-center gap-2">
               <Phone className="w-3.5 h-3.5" />
-              +91 123 456 7890
-            </a>
+              <a href="tel:+919582566995" className="hover:text-brand-orange transition-colors">+91 9582566995</a>
+              <span>/</span>
+              <a href="tel:+919582166995" className="hover:text-brand-orange transition-colors">+91 9582166995</a>
+            </div>
           </div>
         </div>
 
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
+          <div className={`flex items-center justify-between transition-all duration-500 ${scrolled ? "h-20" : "h-32"}`}>
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-3 group">
-              <div className="relative w-10 h-10">
-                <div className="absolute inset-0 bg-brand-orange clip-logo" />
-                <span className="absolute inset-0 flex items-center justify-center font-[var(--font-display)] font-extrabold text-white text-sm tracking-wider">
-                  JBS
-                </span>
-              </div>
-              <div className="flex flex-col">
-                <span className="font-[var(--font-display)] font-extrabold text-white text-lg tracking-wide group-hover:text-brand-orange transition-colors">
-                  JBS
-                </span>
-                <span className="text-[10px] text-text-hint tracking-[0.25em] uppercase -mt-1">
-                  Cargo Movers
-                </span>
+            <Link href="/" className="flex items-center group">
+              <div className={`relative transition-all duration-500 flex items-center justify-start overflow-visible ${scrolled ? "h-12 w-28 mt-0" : "h-16 w-36 mt-2"}`}>
+                <img 
+                   src="/images/logo.png" 
+                   alt="JBS Cargo Movers" 
+                   className={`h-full w-full object-contain object-left transition-all duration-500 ${
+                     scrolled || isDark ? "invert-[1] hue-rotate-180 brightness-125" : "mix-blend-multiply"
+                   }`}
+                />
               </div>
             </Link>
 
             {/* Desktop Nav */}
             <div className="hidden lg:flex items-center gap-8">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.label}
-                  href={link.href}
-                  className="text-sm text-white/70 hover:text-brand-orange transition-colors duration-200 tracking-wide uppercase font-medium"
-                >
-                  {link.label}
-                </Link>
-              ))}
+              <div className="flex items-center gap-8 mr-8">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.label}
+                    href={link.href}
+                    className={`text-sm transition-colors duration-200 tracking-wide uppercase font-bold ${scrolled || isDark ? "text-white/70 hover:text-brand-orange" : "text-brand-black/60 hover:text-brand-orange"}`}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+              
+              <Link
+                href="/contact"
+                className="clip-btn bg-brand-orange text-white font-[var(--font-display)] font-bold text-xs px-6 py-3 tracking-wider uppercase hover:bg-brand-orange-dark transition-colors shadow-lg shadow-brand-orange/20"
+              >
+                Get a Quote
+              </Link>
             </div>
 
             {/* Mobile Toggle */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden text-white p-2"
+              className={`lg:hidden p-2 ${scrolled || isDark ? "text-white" : "text-brand-black"}`}
               aria-label="Toggle navigation"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -119,14 +130,19 @@ export default function Navbar() {
                 <div className="flex items-center justify-between px-6 py-6 border-b border-white/10">
                   <Link
                     href="/"
-                    className="font-[var(--font-display)] font-extrabold text-white text-xl"
+                    className="flex items-center"
                     onClick={() => setIsOpen(false)}
                   >
-                    JBS<span className="text-brand-orange">.</span>
+                    <img 
+                      src="/images/logo.png" 
+                      alt="JBS Logo" 
+                      className="h-12 w-40 object-contain object-left origin-left invert-[1] hue-rotate-180 brightness-125" 
+                    />
                   </Link>
                   <button
                     onClick={() => setIsOpen(false)}
                     className="text-white/60 hover:text-white"
+                    aria-label="Close menu"
                   >
                     <X className="w-6 h-6" />
                   </button>

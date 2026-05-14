@@ -33,8 +33,8 @@
   --color-border-light: #E2E4E2;
 
   /* ── Fonts ── */
-  --font-display: 'Syne', sans-serif;
-  --font-body: 'DM Sans', sans-serif;
+  --font-display: 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'Inter', sans-serif;
 }
 
 /* ── Base ── */
@@ -49,6 +49,12 @@ body {
   color: var(--color-text-body);
   background: var(--color-bg-white);
   overflow-x: hidden;
+  cursor: none !important;
+}
+
+/* Hide cursor for all interactive elements to ensure the custom cursor is the only one visible */
+a, button, [role="button"], input, textarea, select {
+  cursor: none !important;
 }
 
 /* ── Clip-paths ── */
@@ -87,6 +93,11 @@ body {
     to { transform: translateX(-50%); }
   }
 
+  @keyframes tickerReverse {
+    from { transform: translateX(-50%); }
+    to { transform: translateX(0); }
+  }
+
   @keyframes livepulse {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.4; }
@@ -101,6 +112,19 @@ body {
     0% { background-position: -200% 0; }
     100% { background-position: 200% 0; }
   }
+
+  @keyframes aurora {
+    from {
+      background-position: 50% 50%, 50% 50%;
+    }
+    to {
+      background-position: 350% 50%, 350% 50%;
+    }
+  }
+}
+
+.animate-aurora {
+  animation: aurora 60s linear infinite;
 }
 
 /* ── Scrollbar ── */
