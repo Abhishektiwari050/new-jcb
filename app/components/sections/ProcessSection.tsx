@@ -11,8 +11,12 @@ const content = [
     description:
       "Schedule a pickup through our portal or WhatsApp. Our professional team arrives at your location, performs basic QC, and secures your Saman for transit.",
     content: (
-      <div className="h-full w-full bg-brand-orange/10 flex items-center justify-center text-brand-orange">
-        <Package className="w-28 h-28 opacity-40" strokeWidth={1} />
+      <div className="h-full w-full bg-brand-orange/10 flex items-center justify-center overflow-hidden">
+        <img 
+          src="/images/pickup.png" 
+          alt="Doorstep Pickup" 
+          className="w-full h-full object-cover opacity-80"
+        />
       </div>
     ),
   },
@@ -21,8 +25,12 @@ const content = [
     description:
       "Your cargo is brought to our central New Delhi hub. Here, we consolidate shipments based on destination and urgency to ensure cost-efficiency and maximum safety.",
     content: (
-      <div className="h-full w-full flex items-center justify-center bg-brand-black/5">
-        <Search className="w-28 h-28 text-brand-orange opacity-40" strokeWidth={1} />
+      <div className="h-full w-full flex items-center justify-center bg-brand-black/5 overflow-hidden">
+        <img 
+          src="/images/consolidation.png" 
+          alt="Smart Consolidation" 
+          className="w-full h-full object-cover opacity-80"
+        />
       </div>
     ),
   },
@@ -31,13 +39,12 @@ const content = [
     description:
       "Depending on your choice (Air, Surface, or Rail), your cargo is dispatched via our priority channels. Real-time GPS tracking keeps you informed every mile of the way.",
     content: (
-      <div className="h-full w-full bg-brand-orange/10 flex items-center justify-center text-brand-orange">
-        <motion.div
-          animate={{ x: [-20, 20, -20] }}
-          transition={{ duration: 4, repeat: Infinity }}
-        >
-          <Truck className="w-28 h-28 opacity-40" strokeWidth={1} />
-        </motion.div>
+      <div className="h-full w-full bg-brand-orange/10 flex items-center justify-center overflow-hidden">
+        <img 
+          src="/images/transit.png" 
+          alt="Rapid Transit" 
+          className="w-full h-full object-cover opacity-80"
+        />
       </div>
     ),
   },
@@ -46,8 +53,12 @@ const content = [
     description:
       "Our last-mile delivery fleet ensures your cargo reaches the recipient's doorstep safely. Digital proof of delivery is updated instantly on our system.",
     content: (
-      <div className="h-full w-full bg-white flex items-center justify-center">
-        <CheckCircle className="w-28 h-28 text-brand-orange opacity-40" strokeWidth={1} />
+      <div className="h-full w-full bg-white flex items-center justify-center overflow-hidden">
+        <img 
+          src="/images/delivery.png" 
+          alt="Safe Delivery" 
+          className="w-full h-full object-cover opacity-80"
+        />
       </div>
     ),
   },

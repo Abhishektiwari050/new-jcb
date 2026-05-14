@@ -68,9 +68,7 @@ export default function Navbar({ theme = "light" }: NavbarProps) {
                 <img 
                    src="/images/logo.png" 
                    alt="JBS Cargo Movers" 
-                   className={`h-full w-full object-contain object-left transition-all duration-500 ${
-                     scrolled || isDark ? "invert-[1] hue-rotate-180 brightness-125" : "mix-blend-multiply"
-                   }`}
+                   className="h-full w-full object-contain object-left transition-all duration-500"
                 />
               </div>
             </Link>
@@ -136,7 +134,7 @@ export default function Navbar({ theme = "light" }: NavbarProps) {
                     <img 
                       src="/images/logo.png" 
                       alt="JBS Logo" 
-                      className="h-12 w-40 object-contain object-left origin-left invert-[1] hue-rotate-180 brightness-125" 
+                      className="h-12 w-40 object-contain object-left origin-left" 
                     />
                   </Link>
                   <button

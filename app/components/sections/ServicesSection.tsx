@@ -92,10 +92,12 @@ const items = [
     title: "Consolidation",
     description: "Smart groupage services that bundle smaller shipments into full loads, significantly reducing your overall logistics costs.",
     icon: Package,
+    bgImage: "/images/consolidation.png",
   },
   {
     title: "Door-to-Door",
     description: "End-to-end logistics where we handle everything from pickup at your origin to final delivery at your customer's doorstep.",
     icon: DoorOpen,
+    bgImage: "/images/delivery.png",
   },
 ];

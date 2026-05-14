@@ -32,17 +32,21 @@ const footerLinks = {
 
 export default function Footer() {
   return (
-    <footer className="bg-[#FDFBF7] text-brand-black pt-20 pb-8 border-t border-brand-black/5">
+    <footer className="bg-white text-brand-black pt-20 pb-8 border-t border-brand-black/5 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16 relative z-10">
           {/* Column 1 — Logo & Tagline */}
           <div className="space-y-6 lg:col-span-1">
-            <div className="flex items-center mb-4">
+            <div className="flex items-center mb-4 gap-3">
               <img
                 src="/images/logo.png"
                 alt="JBS Logo"
-                className="h-14 w-auto object-contain object-left mix-blend-multiply"
+                className="h-14 w-auto object-contain object-left"
               />
+              <div className="flex flex-col">
+                <span className="text-xl font-black tracking-tighter leading-none">JBS CARGO</span>
+                <span className="text-[10px] font-bold text-brand-orange tracking-widest uppercase mt-1">Movers</span>
+              </div>
             </div>
             <p className="text-brand-black/50 text-sm leading-relaxed font-medium">
               Saman Ho Koi Bhi, JBS Karega Delivery.
@@ -54,7 +58,7 @@ export default function Footer() {
               </span>
             </div>
           </div>
-
+          
           {/* Column 2 — Services */}
           <div className="space-y-5">
             <h3 className="font-[var(--font-display)] font-bold text-sm tracking-wider uppercase text-brand-black/80">
@@ -163,8 +167,8 @@ export default function Footer() {
       </div>
 
       {/* Large Background Brand Name */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full overflow-hidden pointer-events-none select-none -mb-12">
-        <h2 className="text-[22vw] font-black text-brand-black/[0.04] leading-none whitespace-nowrap tracking-tighter uppercase text-center">
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full overflow-hidden pointer-events-none select-none">
+        <h2 className="text-[20vw] font-black text-brand-black/[0.12] leading-none whitespace-nowrap tracking-tighter uppercase text-center">
           JBS CARGO MOVERS
         </h2>
       </div>
