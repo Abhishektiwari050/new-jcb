@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { IndiaMapSVG } from "../IndiaMapSVG";
 
 export default function CoverageSection() {
   return (
@@ -40,16 +41,8 @@ export default function CoverageSection() {
         {/* Map — in normal flow */}
         <div className="flex justify-center mb-16 relative group">
           <div className="absolute inset-0 bg-brand-orange/5 blur-3xl rounded-full -z-10 group-hover:bg-brand-orange/10 transition-colors duration-700" />
-          <img 
-            src="/images/india-map.png" 
-            alt="JBS Coverage Map" 
-            className="w-full max-w-4xl h-auto rounded-[48px] shadow-2xl border border-brand-black/5 transform group-hover:scale-[1.01] transition-transform duration-700"
-          />
-          
-          {/* Delhi Pulse Overlay */}
-          <div className="absolute top-[35%] left-[48%] pointer-events-none">
-             <div className="absolute -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-brand-orange/20 rounded-full animate-ping" />
-             <div className="absolute -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-brand-orange rounded-full border-4 border-white shadow-lg" />
+          <div className="w-full max-w-2xl">
+            <IndiaMapSVG className="w-full h-auto" />
           </div>
         </div>
 

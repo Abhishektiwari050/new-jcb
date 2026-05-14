@@ -5,6 +5,7 @@ import { ArrowRight, Shield } from "lucide-react";
 import Link from "next/link";
 import { useRef } from "react";
 import dynamic from "next/dynamic";
+import { IndiaMapSVG } from "../IndiaMapSVG";
 
 // Import CargoBelt3D dynamically for performance
 const CargoBelt3D = dynamic(() => import("../CargoBelt3D"), { 
@@ -154,35 +155,28 @@ export default function HeroSection() {
                 </div>
                 
                 <div className="relative px-2 pb-2">
-                   <img 
-                    src="/images/india-map.png" 
-                    alt="Connectivity Map" 
-                    className="w-full h-auto rounded-[32px] transform group-hover:scale-[1.02] transition-transform duration-700"
-                   />
+                   <div className="w-full h-full min-h-[400px] flex items-center justify-center">
+                      <IndiaMapSVG className="w-full h-full max-h-[500px]" />
+                   </div>
                    
-                   {/* Connectivity Dots moving out of Delhi (Visual effect) */}
-                   <div className="absolute top-[35%] left-[48%] pointer-events-none">
-                      {/* Pulse at Delhi */}
-                      <div className="absolute -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-brand-orange/30 rounded-full animate-ping" />
-                      <div className="absolute -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-brand-orange rounded-full" />
-                      
-                      {/* Animated "cargo" dots moving out */}
+                   {/* Animated "cargo" dots moving out from Delhi (approx coordinates 276, 150 in SVG) */}
+                   <div className="absolute top-[32%] left-[46%] pointer-events-none w-full h-full">
                       {[0, 45, 90, 135, 180, 225, 270, 315].map((angle, i) => (
                         <motion.div
                           key={i}
                           initial={{ x: 0, y: 0, opacity: 0 }}
                           animate={{ 
-                            x: Math.cos(angle * Math.PI / 180) * 150,
-                            y: Math.sin(angle * Math.PI / 180) * 150,
+                            x: Math.cos(angle * Math.PI / 180) * 120,
+                            y: Math.sin(angle * Math.PI / 180) * 120,
                             opacity: [0, 1, 0]
                           }}
                           transition={{ 
-                            duration: 2.5, 
+                            duration: 3, 
                             repeat: Infinity, 
-                            delay: i * 0.4,
+                            delay: i * 0.5,
                             ease: "easeOut"
                           }}
-                          className="absolute w-1 h-1 bg-brand-orange rounded-full"
+                          className="absolute w-1.5 h-1.5 bg-brand-orange rounded-full shadow-[0_0_8px_rgba(232,106,47,0.8)]"
                         />
                       ))}
                    </div>
