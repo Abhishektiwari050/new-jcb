@@ -166,6 +166,7 @@ export default function TestimonialsSection() {
             onClick={prev}
             className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:border-brand-orange hover:bg-brand-orange/10 transition-all duration-300"
             aria-label="Previous testimonial"
+            suppressHydrationWarning
           >
             <ChevronLeft className="w-5 h-5 text-white/60" />
           </button>
@@ -185,6 +186,7 @@ export default function TestimonialsSection() {
                     : "w-2 bg-white/20 hover:bg-white/40"
                 }`}
                 aria-label={`Go to testimonial ${i + 1}`}
+                suppressHydrationWarning
               />
             ))}
           </div>
@@ -193,6 +195,7 @@ export default function TestimonialsSection() {
             onClick={next}
             className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:border-brand-orange hover:bg-brand-orange/10 transition-all duration-300"
             aria-label="Next testimonial"
+            suppressHydrationWarning
           >
             <ChevronRight className="w-5 h-5 text-white/60" />
           </button>

@@ -69,6 +69,7 @@ export default function Navbar({ theme = "light" }: NavbarProps) {
                    src="/images/logo.png" 
                    alt="JBS Cargo Movers" 
                    className="h-full w-full object-contain object-left transition-all duration-500"
+                   suppressHydrationWarning
                 />
               </div>
             </Link>
@@ -100,6 +101,7 @@ export default function Navbar({ theme = "light" }: NavbarProps) {
               onClick={() => setIsOpen(!isOpen)}
               className={`lg:hidden p-2 ${scrolled || isDark ? "text-white" : "text-brand-black"}`}
               aria-label="Toggle navigation"
+              suppressHydrationWarning
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -135,6 +137,7 @@ export default function Navbar({ theme = "light" }: NavbarProps) {
                       src="/images/logo.png" 
                       alt="JBS Logo" 
                       className="h-12 w-40 object-contain object-left origin-left" 
+                      suppressHydrationWarning
                     />
                   </Link>
                   <button

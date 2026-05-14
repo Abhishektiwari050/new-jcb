@@ -74,7 +74,10 @@ export const IndiaMap = ({ className }: { className?: string }) => {
   ];
 
   return (
-    <div className={`relative ${className} group`}>
+    <div 
+      className={`relative ${className} group`}
+      suppressHydrationWarning
+    >
       <div className="absolute inset-0 bg-brand-orange/5 rounded-[40px] blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
       <div className="relative z-10 p-8 bg-white/50 backdrop-blur-sm rounded-[40px] border border-brand-black/5 shadow-2xl">
         <ReactIndiaMap

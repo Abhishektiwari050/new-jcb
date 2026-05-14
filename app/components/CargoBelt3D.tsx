@@ -317,8 +317,10 @@ const CargoBelt3D: FC<CargoBelt3DProps> = ({
 }) => {
   const mountRef = useRef<HTMLDivElement>(null);
   const rafRef   = useRef<number>(0);
+  const isMounted = useRef(false);
 
   useEffect(() => {
+    isMounted.current = true;
     const el = mountRef.current;
     if (!el) return;
 
@@ -437,6 +439,7 @@ const CargoBelt3D: FC<CargoBelt3DProps> = ({
     window.addEventListener('resize', onResize);
 
     return () => {
+      isMounted.current = false;
       cancelAnimationFrame(rafRef.current);
       window.removeEventListener('resize', onResize);
       renderer.dispose();
