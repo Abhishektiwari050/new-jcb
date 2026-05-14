@@ -18,7 +18,7 @@ export const CardStack = ({
   });
 
   return (
-    <div
+    <motion.div
       ref={containerRef}
       className="relative"
       style={{ height: `${items.length * 100}vh` }}
