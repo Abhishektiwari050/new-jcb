@@ -65,7 +65,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="font-[var(--font-display)] font-black text-5xl sm:text-6xl lg:text-7xl xl:text-8xl text-brand-black leading-[0.95] tracking-tighter"
+              className="font-[var(--font-display)] font-black text-4xl xs:text-5xl sm:text-6xl lg:text-7xl xl:text-8xl text-brand-black leading-[0.95] tracking-tighter"
             >
               Saman Ho Koi Bhi,
               <br />
@@ -77,7 +77,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="text-brand-black/60 text-lg max-w-md leading-relaxed font-medium"
+              className="text-brand-black/60 text-base md:text-lg max-w-md leading-relaxed font-medium"
             >
               Air, surface, train and consolidation cargo — from New Delhi to 100+ destinations across India. Fast, secure, and door-to-door.
             </motion.p>
@@ -87,11 +87,11 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="flex flex-wrap gap-4"
+              className="flex flex-col sm:flex-row gap-4"
             >
               <Link
                 href="/contact"
-                className="bg-brand-orange text-white font-[var(--font-display)] font-bold text-sm px-10 py-5 tracking-wider uppercase hover:bg-brand-orange-dark transition-all duration-300 flex items-center gap-2 shadow-xl shadow-brand-orange/20 hover:scale-105 active:scale-95"
+                className="bg-brand-orange text-white font-[var(--font-display)] font-bold text-sm px-10 py-5 tracking-wider uppercase hover:bg-brand-orange-dark transition-all duration-300 flex items-center justify-center gap-2 shadow-xl shadow-brand-orange/20 hover:scale-105 active:scale-95 w-full sm:w-auto text-center"
               >
                 Get a Quote
                 <ArrowRight className="w-4 h-4" />
@@ -100,7 +100,7 @@ export default function HeroSection() {
                 href="https://wa.me/919582566995"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white text-brand-black border-2 border-brand-black font-bold text-sm px-10 py-5 tracking-wider uppercase hover:bg-brand-black hover:text-white transition-all duration-300 hover:scale-105 active:scale-95"
+                className="bg-white text-brand-black border-2 border-brand-black font-bold text-sm px-10 py-5 tracking-wider uppercase hover:bg-brand-black hover:text-white transition-all duration-300 hover:scale-105 active:scale-95 w-full sm:w-auto text-center"
               >
                 WhatsApp Us
               </Link>
@@ -111,7 +111,7 @@ export default function HeroSection() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8 }}
-              className="flex items-center gap-12 pt-8 border-t border-brand-black/5"
+              className="flex items-center justify-between sm:justify-start gap-4 sm:gap-12 pt-8 border-t border-brand-black/5"
             >
               {[
                 { val: "100+", label: "Destinations" },

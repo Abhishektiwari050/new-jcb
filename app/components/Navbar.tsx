@@ -37,8 +37,8 @@ export default function Navbar({ theme = "light" }: NavbarProps) {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled
+        className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${
+          scrolled || isOpen
             ? "bg-brand-black/95 backdrop-blur-md shadow-lg shadow-black/20"
             : "bg-transparent"
         }`}
@@ -68,7 +68,7 @@ export default function Navbar({ theme = "light" }: NavbarProps) {
                 <img 
                    src="/images/logo.png" 
                    alt="JBS Cargo Movers" 
-                   className="h-full w-full object-contain object-left transition-all duration-500"
+                   className={`h-full w-full object-contain object-left transition-all duration-500 ${scrolled || isDark || isOpen ? "brightness-0 invert" : ""}`}
                    suppressHydrationWarning
                 />
               </div>
@@ -99,7 +99,7 @@ export default function Navbar({ theme = "light" }: NavbarProps) {
             {/* Mobile Toggle */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className={`lg:hidden p-2 ${scrolled || isDark ? "text-white" : "text-brand-black"}`}
+              className={`lg:hidden p-2 z-[130] transition-colors duration-300 ${isOpen || scrolled || isDark ? "text-white" : "text-brand-black"}`}
               aria-label="Toggle navigation"
               suppressHydrationWarning
             >
@@ -107,72 +107,76 @@ export default function Navbar({ theme = "light" }: NavbarProps) {
             </button>
           </div>
         </div>
-
-        {/* Mobile Drawer */}
-        <AnimatePresence>
-          {isOpen && (
-            <>
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 lg:hidden"
-                onClick={() => setIsOpen(false)}
-              />
-              <motion.div
-                initial={{ x: "-100%" }}
-                animate={{ x: 0 }}
-                exit={{ x: "-100%" }}
-                transition={{ type: "spring", damping: 25, stiffness: 200 }}
-                className="fixed top-0 left-0 bottom-0 w-[80%] max-w-sm bg-brand-black z-50 lg:hidden flex flex-col"
-              >
-                {/* Mobile Header */}
-                <div className="flex items-center justify-between px-6 py-6 border-b border-white/10">
-                  <Link
-                    href="/"
-                    className="flex items-center"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    <img 
-                      src="/images/logo.png" 
-                      alt="JBS Logo" 
-                      className="h-12 w-40 object-contain object-left origin-left" 
-                      suppressHydrationWarning
-                    />
-                  </Link>
-                  <button
-                    onClick={() => setIsOpen(false)}
-                    className="text-white/60 hover:text-white"
-                    aria-label="Close menu"
-                  >
-                    <X className="w-6 h-6" />
-                  </button>
-                </div>
-
-                {/* Mobile Links */}
-                <div className="flex-1 px-6 py-8 space-y-2">
-                  {navLinks.map((link, i) => (
-                    <motion.div
-                      key={link.label}
-                      initial={{ x: -20, opacity: 0 }}
-                      animate={{ x: 0, opacity: 1 }}
-                      transition={{ delay: i * 0.05 + 0.1 }}
-                    >
-                      <Link
-                        href={link.href}
-                        onClick={() => setIsOpen(false)}
-                        className="block py-4 text-lg text-white/80 hover:text-brand-orange transition-colors border-b border-white/5 font-medium tracking-wide"
-                      >
-                        {link.label}
-                      </Link>
-                    </motion.div>
-                  ))}
-                </div>
-              </motion.div>
-            </>
-          )}
-        </AnimatePresence>
       </nav>
+
+      {/* Mobile Drawer - Moved outside nav tag to ensure proper stacking and background visibility */}
+      <AnimatePresence mode="wait">
+        {isOpen && (
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 bg-black/85 backdrop-blur-md z-[110] lg:hidden"
+              onClick={() => setIsOpen(false)}
+            />
+            <motion.div
+              initial={{ x: "-100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "-100%" }}
+              transition={{ type: "spring", damping: 30, stiffness: 300 }}
+              className="fixed top-0 left-0 bottom-0 w-[85%] max-w-sm bg-[#0C0C0C] z-[120] lg:hidden flex flex-col shadow-2xl border-r border-white/5"
+            >
+              {/* Mobile Header */}
+              <div className="flex items-center justify-between px-6 py-8 border-b border-white/5">
+                <Link
+                  href="/"
+                  className="flex items-center"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <img 
+                    src="/images/logo.png" 
+                    alt="JBS Logo" 
+                    className="h-12 w-40 object-contain object-left origin-left brightness-0 invert" 
+                    suppressHydrationWarning
+                  />
+                </Link>
+              </div>
+
+              {/* Mobile Links */}
+              <div className="flex-1 px-6 py-10 space-y-4 overflow-y-auto">
+                {navLinks.map((link, i) => (
+                  <motion.div
+                    key={link.label}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: i * 0.08 }}
+                  >
+                    <Link
+                      href={link.href}
+                      onClick={() => setIsOpen(false)}
+                      className="block py-4 text-2xl font-bold text-white/90 hover:text-brand-orange transition-colors border-b border-white/5 last:border-0"
+                    >
+                      {link.label}
+                    </Link>
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* Mobile Footer */}
+              <div className="p-6 mt-auto border-t border-white/5 bg-black/20">
+                <Link
+                  href="/contact"
+                  onClick={() => setIsOpen(false)}
+                  className="block w-full py-5 bg-brand-orange text-white text-center font-bold uppercase tracking-widest clip-btn hover:bg-brand-orange-dark transition-all"
+                >
+                  Get a Quote
+                </Link>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </>
   );
 }
