@@ -1,92 +1,99 @@
 "use client";
+
 import React from "react";
-import { motion } from "framer-motion";
+import { IndiaMap as ReactIndiaMap } from "@vishalvoid/react-india-map";
+import type { StateData } from "@vishalvoid/react-india-map";
 
 export const IndiaMap = ({ className }: { className?: string }) => {
+  const mapStyle = {
+    backgroundColor: "#FDFBF7",
+    hoverColor: "#E86A2F",
+    strokeColor: "#0F3460",
+    strokeWidth: 0.5,
+    tooltipConfig: {
+      backgroundColor: "#0F3460",
+      textColor: "#ffffff",
+    },
+  };
+
+  // We highlight states where JBS has major hub activity
+  const stateData: StateData[] = [
+    {
+      id: "IN-DL", // Delhi
+      customData: {
+        hub: "Central National Hub",
+        capacity: "1000+ tons/day",
+        status: "Active",
+      },
+    },
+    {
+      id: "IN-MH", // Maharashtra (Mumbai)
+      customData: {
+        hub: "West Zone Hub",
+        capacity: "800+ tons/day",
+        status: "Active",
+      },
+    },
+    {
+      id: "IN-KA", // Karnataka (Bangalore)
+      customData: {
+        hub: "South Zone Hub",
+        capacity: "600+ tons/day",
+        status: "Active",
+      },
+    },
+    {
+      id: "IN-WB", // West Bengal (Kolkata)
+      customData: {
+        hub: "East Zone Hub",
+        capacity: "500+ tons/day",
+        status: "Active",
+      },
+    },
+    {
+      id: "IN-TN", // Tamil Nadu (Chennai)
+      customData: {
+        hub: "Port Connectivity Hub",
+        capacity: "450+ tons/day",
+        status: "Active",
+      },
+    },
+    {
+      id: "IN-UP", // Uttar Pradesh (Lucknow)
+      customData: {
+        hub: "North-Central Hub",
+        capacity: "400+ tons/day",
+        status: "Active",
+      },
+    },
+  ];
+
   return (
-    <div className={className}>
-      <svg
-        viewBox="0 0 500 550"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        className="w-full h-full"
-      >
-        <motion.path
-          initial={{ pathLength: 0, opacity: 0 }}
-          whileInView={{ pathLength: 1, opacity: 1 }}
-          transition={{ duration: 2, ease: "easeInOut" }}
-          viewport={{ once: true }}
-          d="M174.5,4.3c-2.3,1.3-4.1,3.4-6.1,5.2c-2.8,2.5-5.9,4.7-9.4,6.2c-2.4,1-4.7,2.2-7.1,3.2c-4,1.8-7.9,3.8-12.1,5.3c-2.6,0.9-5.1,1.8-7.7,2.8c-2,0.8-4,1.4-6.1,2.1c-1.3,0.4-2.6,0.9-3.9,1.3c-3,1-6.1,1.8-9.1,2.8c-2.2,0.7-4.4,1.4-6.6,2.1c-4,1.3-7.9,2.5-12,3.6c-2.6,0.7-5.2,1.3-7.8,2c-2.7,0.7-5.5,1.5-8.2,2.2c-4.1,1.1-8.2,2.2-12.4,3.3c-2.7,0.7-5.5,1.4-8.2,2.2c-2.7,0.7-5.5,1.4-8.2,2.1c-4.1,1-8.2,2.1-12.3,3.1c-2.7,0.7-5.4,1.3-8.1,2c-2.7,0.6-5.5,1.3-8.2,1.9c-2.7,0.6-5.5,1.2-8.2,1.9c-2.7,0.6-5.5,1.2-8.2,1.8c-2.7,0.6-5.5,1.2-8.2,1.8c-2.7,0.6-5.5,1.2-8.2,1.8c-2.7,0.6-5.4,1.2-8.1,1.8L0,72.2l12.4,4.2c2.7,0.9,5.5,1.8,8.2,2.8c2.7,0.9,5.5,1.8,8.2,2.7c2.7,0.9,5.5,1.8,8.2,2.7c4.1,1.4,8.2,2.8,12.3,4.2c2.7,0.9,5.5,1.8,8.2,2.7c2.7,0.9,5.5,1.8,8.2,2.7c2.7,0.9,5.5,1.8,8.2,2.7c2.7,0.9,5.5,1.8,8.2,2.7c2.7,0.9,5.5,1.8,8.2,2.7c2.7,0.9,5.5,1.8,8.2,2.7l12.4,4.1l2.8-1.5c2.1-1.1,4.2-2.3,6.3-3.4c4.2-2.3,8.4-4.5,12.6-6.8c2.1-1.1,4.2-2.3,6.3-3.4c2.1-1.1,4.2-2.3,6.3-3.4c4.2-2.3,8.4-4.5,12.6-6.8c2.1-1.1,4.2-2.3,6.3-3.4c2.1-1.1,4.2-2.3,6.3-3.4c4.2-2.3,8.4-4.5,12.6-6.8c2.1-1.1,4.2-2.3,6.3-3.4c2.1-1.1,4.2-2.3,6.3-3.4c4.2-2.3,8.4-4.5,12.6-6.8c2.1-1.1,4.2-2.3,6.3-3.4l6.3-3.4l3.5,4.7c2.3,3.1,4.7,6.2,7,9.3c4.7,6.2,9.3,12.5,14,18.7c2.3,3.1,4.7,6.2,7,9.3c2.3,3.1,4.7,6.2,7,9.3c4.7,6.2,9.3,12.5,14,18.7c2.3,3.1,4.7,6.2,7,9.3c2.3,3.1,4.7,6.2,7,9.3c4.7,6.2,9.3,12.5,14,18.7c2.3,3.1,4.7,6.2,7,9.3c2.3,3.1,4.7,6.2,7,9.3l7,9.3l13.1-0.2c2.9,0,5.8-0.1,8.7-0.1c5.8-0.1,11.6-0.2,17.4-0.3c2.9,0,5.8-0.1,8.7-0.1c2.9,0,5.8-0.1,8.7-0.1c5.8-0.1,11.6-0.2,17.4-0.3c2.9,0,5.8-0.1,8.7-0.1c2.9,0,5.8-0.1,8.7-0.1c5.8-0.1,11.6-0.2,17.4-0.3c2.9,0,5.8-0.1,8.7-0.1c2.9,0,5.8-0.1,8.7-0.1l8.7-0.1l-1.9-12.7c-0.4-2.8-0.8-5.6-1.3-8.4c-0.9-5.6-1.7-11.2-2.6-16.8c-0.4-2.8-0.8-5.6-1.3-8.4c-0.4-2.8-0.8-5.6-1.3-8.4c-0.9-5.6-1.7-11.2-2.6-16.8c-0.4-2.8-0.8-5.6-1.3-8.4c-0.4-2.8-0.8-5.6-1.3-8.4c-0.9-5.6-1.7-11.2-2.6-16.8c-0.4-2.8-0.8-5.6-1.3-8.4c-0.4-2.8-0.8-5.6-1.3-8.4l-1.3-8.4l-12.8-2.6c-2.8-0.6-5.7-1.1-8.5-1.7c-5.7-1.1-11.4-2.3-17-3.4c-2.8-0.6-5.7-1.1-8.5-1.7c-2.8-0.6-5.7-1.1-8.5-1.7c-5.7-1.1-11.4-2.3-17-3.4c-2.8-0.6-5.7-1.1-8.5-1.7c-2.8-0.6-5.7-1.1-8.5-1.7c-5.7-1.1-11.4-2.3-17-3.4c-2.8-0.6-5.7-1.1-8.5-1.7c-2.8-0.6-5.7-1.1-8.5-1.7l-8.5-1.7l1.7-12.7c0.4-2.8,0.7-5.7,1.1-8.5c0.7-5.7,1.5-11.4,2.2-17c0.4-2.8,0.7-5.7,1.1-8.5c0.4-2.8,0.7-5.7,1.1-8.5c0.7-5.7,1.5-11.4,2.2-17c0.4-2.8,0.7-5.7,1.1-8.5c0.4-2.8,0.7-5.7,1.1-8.5c0.7-5.7,1.5-11.4,2.2-17c0.4-2.8,0.7-5.7,1.1-8.5c0.4-2.8,0.7-5.7,1.1-8.5l1.1-8.5L174.5,4.3z"
-          fill="#E86A2F"
-          fillOpacity="0.05"
-          stroke="#E86A2F"
-          strokeWidth="0.5"
+    <div className={`relative ${className} group`}>
+      <div className="absolute inset-0 bg-brand-orange/5 rounded-[40px] blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+      <div className="relative z-10 p-8 bg-white/50 backdrop-blur-sm rounded-[40px] border border-brand-black/5 shadow-2xl">
+        <ReactIndiaMap
+          mapStyle={mapStyle}
+          stateData={stateData}
         />
-        {/* Hub and Spoke Lines */}
-        {[
-          { x: 100, y: 320 }, // Mumbai
-          { x: 160, y: 450 }, // Bangalore
-          { x: 220, y: 440 }, // Chennai
-          { x: 340, y: 280 }, // Kolkata
-          { x: 240, y: 180 }, // Lucknow
-        ].map((city, i) => (
-          <motion.path
-            key={`line_${i}`}
-            initial={{ pathLength: 0, opacity: 0 }}
-            whileInView={{ pathLength: 1, opacity: 1 }}
-            transition={{ delay: 1.5 + i * 0.1, duration: 1.5 }}
-            viewport={{ once: true }}
-            d={`M140,150 Q${(140 + city.x) / 2},${(150 + city.y) / 2 - 50} ${city.x},${city.y}`}
-            stroke="#E86A2F"
-            strokeWidth="0.5"
-            strokeDasharray="4,4"
-            fill="none"
-          />
-        ))}
-        {/* Cities */}
-        {[
-          { x: 140, y: 150, name: "Delhi" },
-          { x: 100, y: 320, name: "Mumbai" },
-          { x: 160, y: 450, name: "Bangalore" },
-          { x: 220, y: 440, name: "Chennai" },
-          { x: 340, y: 280, name: "Kolkata" },
-          { x: 240, y: 180, name: "Lucknow" },
-        ].map((city, i) => (
-          <g key={city.name}>
-            <motion.circle
-              initial={{ scale: 0 }}
-              whileInView={{ scale: 1 }}
-              transition={{ delay: 1 + i * 0.1 }}
-              viewport={{ once: true }}
-              cx={city.x}
-              cy={city.y}
-              r="4"
-              className="fill-brand-orange"
-            />
-             <motion.circle
-              initial={{ scale: 0, opacity: 0 }}
-              whileInView={{ scale: [1, 2.5], opacity: [0.5, 0] }}
-              transition={{ delay: 1 + i * 0.1, duration: 2, repeat: Infinity }}
-              viewport={{ once: true }}
-              cx={city.x}
-              cy={city.y}
-              r="6"
-              className="fill-brand-orange/50"
-            />
-            <motion.text
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ delay: 1.5 + i * 0.1 }}
-              viewport={{ once: true }}
-              x={city.x + 8}
-              y={city.y + 4}
-              className="text-[10px] font-bold fill-brand-black/40 uppercase tracking-widest"
-            >
-              {city.name}
-            </motion.text>
-          </g>
-        ))}
-      </svg>
+      </div>
+      
+      {/* Legend / Info */}
+      <div className="absolute bottom-12 right-12 z-20 pointer-events-none hidden md:block">
+        <div className="bg-brand-black text-white p-6 rounded-3xl shadow-2xl border border-white/10">
+          <p className="text-[10px] font-bold uppercase tracking-widest text-brand-orange mb-3">Live Network</p>
+          <div className="space-y-2">
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 rounded-full bg-brand-orange animate-pulse" />
+              <p className="text-xs font-black">Active Hubs Operational</p>
+            </div>
+            <div className="flex items-center gap-2 opacity-50">
+              <div className="w-2 h-2 rounded-full bg-white/20" />
+              <p className="text-xs font-bold">Expansion Zone</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
