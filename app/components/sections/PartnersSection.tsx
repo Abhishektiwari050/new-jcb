@@ -5,6 +5,7 @@ import Image from "next/image";
 
 const partners = [
   { name: "Blue Dart Express", logo: "https://upload.wikimedia.org/wikipedia/commons/6/6c/Blue_Dart_Express_logo.svg" },
+  { name: "DHL Express", logo: "/images/logos/partners/dhl.svg" },
   { name: "Delhivery Ltd.", logo: "https://upload.wikimedia.org/wikipedia/commons/2/23/Delhivery_Logo_%282019%29.png" },
   { name: "Mahindra Logistics", logo: "https://upload.wikimedia.org/wikipedia/commons/7/70/MAHINDRA_LOGISTICS_LOGO.jpg" },
   { name: "IndiGo Cargo", logo: "https://upload.wikimedia.org/wikipedia/commons/6/69/IndiGo_Airlines_logo.svg" },
