@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useRef, FC, CSSProperties } from 'react';
 import * as THREE from 'three';
 import { MotionValue } from 'framer-motion';

@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Globe, MessageSquare, Clock } from "lucide-react";
 import ContactSection from "../components/sections/ContactSection";
