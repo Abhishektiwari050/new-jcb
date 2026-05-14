@@ -175,7 +175,7 @@ function makeShippingLabelTex(cfg: BoxConfig, isWhite: boolean): THREE.CanvasTex
   ctx.fillText('FROM', tx, ty + 30);
   ctx.fillStyle = '#1C1C1C';
   ctx.font = 'bold 20px Arial, sans-serif';
-  ctx.fillText('FRAGILE', tx + 64, ty + 30);
+  ctx.fillText('JBS CARGO MOVERS', tx + 64, ty + 30);
 
   ctx.fillStyle = '#AAAAAA';
   ctx.font = '500 15px Arial, sans-serif';
@@ -333,7 +333,7 @@ const CargoBelt3D: FC<CargoBelt3DProps> = ({
     renderer.setSize(W, H);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     renderer.shadowMap.enabled  = true;
-    renderer.shadowMap.type     = THREE.PCFSoftShadowMap;
+    renderer.shadowMap.type     = THREE.PCFShadowMap;
     
     el.appendChild(renderer.domElement);
 

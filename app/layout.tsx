@@ -31,7 +31,7 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Plus+Jakarta+Sans:wght@500;600;700&family=Share+Tech+Mono&family=Bebas+Neue&display=swap"
           rel="stylesheet"
         />
-        <link rel="icon" href="/images/cursor.png" />
+        <link rel="icon" href="/images/logo.png" />
       </head>
       <body 
         className="antialiased bg-brand-black selection:bg-brand-orange selection:text-white"

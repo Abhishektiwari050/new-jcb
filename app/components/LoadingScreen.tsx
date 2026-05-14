@@ -49,6 +49,7 @@ export default function LoadingScreen() {
                 src="/images/logo.png"
                 alt="JBS Logo"
                 fill
+                sizes="(max-width: 768px) 128px, 128px"
                 className="object-contain"
                 priority
               />
