@@ -88,6 +88,7 @@ export default function CustomCursor() {
           src="/images/cursor.png"
           alt="JBS Cursor"
           className="w-full h-full object-contain filter drop-shadow-lg"
+          suppressHydrationWarning
         />
       </motion.div>
     </motion.div>

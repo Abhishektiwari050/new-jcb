@@ -12,6 +12,11 @@ const CargoBelt3D = dynamic(() => import("../CargoBelt3D"), {
   loading: () => <div className="absolute inset-0 bg-[#F2EFEA]" />
 });
 
+const IndiaMap = dynamic(() => import("../IndiaMap").then(mod => mod.IndiaMap), {
+  ssr: false,
+  loading: () => <div className="w-full h-96 bg-brand-black/5 animate-pulse rounded-3xl" />
+});
+
 export default function HeroSection() {
   const sectionRef = useRef<HTMLElement>(null);
   const { scrollY } = useScroll();
@@ -130,55 +135,50 @@ export default function HeroSection() {
             </motion.div>
           </div>
 
-          {/* Right Visual - Floating Trust Card */}
-          <div className="hidden lg:flex flex-col items-end justify-center relative">
-            <motion.div 
-              initial={{ x: 50, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ delay: 1.0 }}
-              className="bg-white/80 backdrop-blur-xl p-8 rounded-3xl border border-white shadow-2xl shadow-brand-black/5 w-80 relative overflow-hidden"
-            >
-              <div className="absolute top-0 right-0 w-32 h-32 bg-brand-orange/10 rounded-full blur-3xl -mr-16 -mt-16" />
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 bg-brand-orange rounded-2xl flex items-center justify-center shadow-lg shadow-brand-orange/30">
-                  <Shield className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <p className="text-brand-black font-black text-xl leading-tight">Secured</p>
-                  <p className="text-brand-black/40 text-xs font-bold uppercase tracking-wider">100% Insured</p>
-                </div>
-              </div>
-              <div className="space-y-4">
-                <div className="h-2 bg-brand-black/5 rounded-full overflow-hidden">
-                  <motion.div 
-                    initial={{ width: 0 }}
-                    animate={{ width: "99.8%" }}
-                    transition={{ duration: 2, delay: 1.5 }}
-                    className="h-full bg-brand-orange" 
-                  />
-                </div>
-                <div className="flex justify-between items-end">
-                  <div>
-                    <p className="text-brand-black font-black text-3xl">99.8%</p>
-                    <p className="text-brand-black/30 text-[10px] font-bold uppercase">SLA Met</p>
-                  </div>
-                  <div className="text-right">
-                    <p className="text-brand-orange font-black text-xl italic tracking-tighter">PREMIUM</p>
-                    <p className="text-brand-black/30 text-[10px] font-bold uppercase whitespace-nowrap">Service Level</p>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Live Indicator */}
+          {/* Right Visual - Interactive Map */}
+          <div className="hidden lg:flex flex-col items-center justify-center relative">
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 1.2 }}
-              className="mt-6 mr-8 bg-live-green/10 border border-live-green/20 px-4 py-2 rounded-full flex items-center gap-2"
+              initial={{ opacity: 0, scale: 0.95, x: 20 }}
+              animate={{ opacity: 1, scale: 1, x: 0 }}
+              transition={{ delay: 0.6, duration: 0.8 }}
+              className="w-full relative group"
             >
-              <span className="w-2 h-2 rounded-full bg-live-green animate-pulse" />
-              <span className="text-[10px] text-live-green font-bold uppercase tracking-widest">System Online</span>
+              {/* Background Glow */}
+              <div className="absolute inset-0 bg-brand-orange/10 blur-[120px] rounded-full -z-10 animate-pulse" />
+              
+              <div className="bg-white/60 backdrop-blur-xl p-6 rounded-[60px] border border-white shadow-[0_32px_64px_-16px_rgba(0,0,0,0.1)] relative overflow-hidden">
+                {/* Hub Connectivity visualization overlay */}
+                <div className="absolute inset-0 pointer-events-none z-20">
+                   <div className="absolute top-[34%] left-[47%] w-3 h-3 bg-brand-orange/40 rounded-full animate-ping" />
+                   <div className="absolute top-[35%] left-[48%] w-1.5 h-1.5 bg-brand-orange rounded-full" />
+                </div>
+
+                <div className="mb-6 flex items-center justify-between px-4 pt-4">
+                  <div>
+                    <h3 className="font-[var(--font-display)] font-black text-2xl text-brand-black tracking-tighter">NETWORK REACH</h3>
+                    <p className="text-[10px] text-brand-orange font-bold uppercase tracking-[0.2em]">Pan-India Connectivity</p>
+                  </div>
+                  <div className="px-4 py-2 bg-brand-black text-white rounded-2xl flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-live-green animate-pulse" />
+                    <span className="text-[10px] font-bold uppercase tracking-wider">Delhi HQ</span>
+                  </div>
+                </div>
+                
+                <div className="px-2 pb-2">
+                   <IndiaMap className="w-full h-auto" />
+                </div>
+              </div>
+              
+              {/* Floating Trust Tag */}
+              <motion.div
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 1.2 }}
+                className="absolute -bottom-8 -left-8 bg-white p-6 rounded-3xl shadow-2xl border border-brand-black/5 flex flex-col gap-1 max-w-[180px]"
+              >
+                <p className="text-brand-black font-black text-3xl tracking-tighter">100+</p>
+                <p className="text-[10px] text-brand-black/40 font-bold uppercase tracking-widest leading-tight">Cities Connected Nationwide</p>
+              </motion.div>
             </motion.div>
           </div>
         </div>

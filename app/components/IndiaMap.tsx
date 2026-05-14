@@ -6,7 +6,6 @@ import type { StateData } from "@vishalvoid/react-india-map";
 
 const ReactIndiaMap = dynamic(() => import("@vishalvoid/react-india-map").then(mod => mod.IndiaMap), {
   ssr: false,
-  loading: () => <div className="w-full aspect-[4/5] bg-brand-orange/5 animate-pulse rounded-3xl" />
 });
 
 export const IndiaMap = ({ className }: { className?: string }) => {
@@ -72,32 +71,37 @@ export const IndiaMap = ({ className }: { className?: string }) => {
     },
   ];
 
+  const [isMounted, setIsMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return (
+      <div className={className}>
+        <div className="w-full aspect-[4/5] bg-brand-orange/5 animate-pulse rounded-[40px]" />
+      </div>
+    );
+  }
+
   return (
     <div 
       className={`relative ${className} group`}
       suppressHydrationWarning
     >
-      <div className="absolute inset-0 bg-brand-orange/5 rounded-[40px] blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-      <div className="relative z-10 p-8 bg-white/50 backdrop-blur-sm rounded-[40px] border border-brand-black/5 shadow-2xl">
-        <ReactIndiaMap
-          mapStyle={mapStyle}
-          stateData={stateData}
-        />
-      </div>
+      <ReactIndiaMap
+        mapStyle={mapStyle}
+        stateData={stateData}
+      />
       
       {/* Legend / Info */}
-      <div className="absolute bottom-12 right-12 z-20 pointer-events-none hidden md:block">
-        <div className="bg-brand-black text-white p-6 rounded-3xl shadow-2xl border border-white/10">
-          <p className="text-[10px] font-bold uppercase tracking-widest text-brand-orange mb-3">Live Network</p>
-          <div className="space-y-2">
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 rounded-full bg-brand-orange animate-pulse" />
-              <p className="text-xs font-black">Active Hubs Operational</p>
-            </div>
-            <div className="flex items-center gap-2 opacity-50">
-              <div className="w-2 h-2 rounded-full bg-white/20" />
-              <p className="text-xs font-bold">Expansion Zone</p>
-            </div>
+      <div className="absolute bottom-4 right-4 z-20 pointer-events-none hidden md:block">
+        <div className="bg-brand-black text-white p-4 rounded-2xl shadow-2xl border border-white/10 scale-90 origin-bottom-right">
+          <p className="text-[10px] font-bold uppercase tracking-widest text-brand-orange mb-2">Network Hubs</p>
+          <div className="flex items-center gap-2">
+            <div className="w-2 h-2 rounded-full bg-brand-orange animate-pulse" />
+            <p className="text-[10px] font-black">Delhi HQ Operational</p>
           </div>
         </div>
       </div>
