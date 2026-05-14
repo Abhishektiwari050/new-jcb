@@ -416,8 +416,8 @@ const CargoBelt3D: FC<CargoBelt3DProps> = ({
         ? scrollProgress 
         : (scrollProgress?.get() ?? 0);
 
-      // Base speed + scroll boost (accelerates significantly during scroll)
-      const currentSpeed = speed + (scrollVal * 1.5);
+      // Base speed + scroll boost (reduced for more subtle feel)
+      const currentSpeed = speed + (scrollVal * 0.4);
       
       beltTex.offset.x -= currentSpeed * 0.28;
       liveBoxes.forEach(b => {

@@ -8,6 +8,7 @@ const nextConfig: any = {
   turbopack: {
     root: path.join(__dirname),
   },
+  transpilePackages: ["@vishalvoid/react-india-map"],
   images: {
     remotePatterns: [
       {

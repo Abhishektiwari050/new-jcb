@@ -40,7 +40,7 @@ export default function CoverageSection() {
 
         {/* Map — in normal flow */}
         <div className="flex justify-center mb-16">
-          <IndiaMap className="w-full max-w-3xl h-auto" />
+          <IndiaMap className="w-full max-w-4xl h-auto" />
         </div>
 
         {/* Stats — in normal flow below map */}

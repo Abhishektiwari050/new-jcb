@@ -1,8 +1,13 @@
 "use client";
 
 import React from "react";
-import { IndiaMap as ReactIndiaMap } from "@vishalvoid/react-india-map";
+import dynamic from "next/dynamic";
 import type { StateData } from "@vishalvoid/react-india-map";
+
+const ReactIndiaMap = dynamic(() => import("@vishalvoid/react-india-map").then(mod => mod.IndiaMap), {
+  ssr: false,
+  loading: () => <div className="w-full aspect-[4/5] bg-brand-orange/5 animate-pulse rounded-3xl" />
+});
 
 export const IndiaMap = ({ className }: { className?: string }) => {
   const mapStyle = {
