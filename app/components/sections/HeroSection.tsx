@@ -12,11 +12,6 @@ const CargoBelt3D = dynamic(() => import("../CargoBelt3D"), {
   loading: () => <div className="absolute inset-0 bg-[#F2EFEA]" />
 });
 
-const IndiaMap = dynamic(() => import("../IndiaMap").then(mod => mod.IndiaMap), {
-  ssr: false,
-  loading: () => <div className="w-full h-96 bg-brand-black/5 animate-pulse rounded-3xl" />
-});
-
 export default function HeroSection() {
   const sectionRef = useRef<HTMLElement>(null);
   const { scrollY } = useScroll();
@@ -135,7 +130,7 @@ export default function HeroSection() {
             </motion.div>
           </div>
 
-          {/* Right Visual - Interactive Map */}
+          {/* Right Visual - Connectivity Map Image */}
           <div className="hidden lg:flex flex-col items-center justify-center relative">
             <motion.div
               initial={{ opacity: 0, scale: 0.95, x: 20 }}
@@ -147,15 +142,9 @@ export default function HeroSection() {
               <div className="absolute inset-0 bg-brand-orange/10 blur-[120px] rounded-full -z-10 animate-pulse" />
               
               <div className="bg-white/60 backdrop-blur-xl p-6 rounded-[60px] border border-white shadow-[0_32px_64px_-16px_rgba(0,0,0,0.1)] relative overflow-hidden">
-                {/* Hub Connectivity visualization overlay */}
-                <div className="absolute inset-0 pointer-events-none z-20">
-                   <div className="absolute top-[34%] left-[47%] w-3 h-3 bg-brand-orange/40 rounded-full animate-ping" />
-                   <div className="absolute top-[35%] left-[48%] w-1.5 h-1.5 bg-brand-orange rounded-full" />
-                </div>
-
                 <div className="mb-6 flex items-center justify-between px-4 pt-4">
                   <div>
-                    <h3 className="font-[var(--font-display)] font-black text-2xl text-brand-black tracking-tighter">NETWORK REACH</h3>
+                    <h3 className="font-[var(--font-display)] font-black text-2xl text-brand-black tracking-tighter uppercase">Network Reach</h3>
                     <p className="text-[10px] text-brand-orange font-bold uppercase tracking-[0.2em]">Pan-India Connectivity</p>
                   </div>
                   <div className="px-4 py-2 bg-brand-black text-white rounded-2xl flex items-center gap-2">
@@ -164,8 +153,39 @@ export default function HeroSection() {
                   </div>
                 </div>
                 
-                <div className="px-2 pb-2">
-                   <IndiaMap className="w-full h-auto" />
+                <div className="relative px-2 pb-2">
+                   <img 
+                    src="/images/india-map.png" 
+                    alt="Connectivity Map" 
+                    className="w-full h-auto rounded-[32px] transform group-hover:scale-[1.02] transition-transform duration-700"
+                   />
+                   
+                   {/* Connectivity Dots moving out of Delhi (Visual effect) */}
+                   <div className="absolute top-[35%] left-[48%] pointer-events-none">
+                      {/* Pulse at Delhi */}
+                      <div className="absolute -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-brand-orange/30 rounded-full animate-ping" />
+                      <div className="absolute -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-brand-orange rounded-full" />
+                      
+                      {/* Animated "cargo" dots moving out */}
+                      {[0, 45, 90, 135, 180, 225, 270, 315].map((angle, i) => (
+                        <motion.div
+                          key={i}
+                          initial={{ x: 0, y: 0, opacity: 0 }}
+                          animate={{ 
+                            x: Math.cos(angle * Math.PI / 180) * 150,
+                            y: Math.sin(angle * Math.PI / 180) * 150,
+                            opacity: [0, 1, 0]
+                          }}
+                          transition={{ 
+                            duration: 2.5, 
+                            repeat: Infinity, 
+                            delay: i * 0.4,
+                            ease: "easeOut"
+                          }}
+                          className="absolute w-1 h-1 bg-brand-orange rounded-full"
+                        />
+                      ))}
+                   </div>
                 </div>
               </div>
               
