@@ -39,7 +39,7 @@ export const CardStack = ({
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
