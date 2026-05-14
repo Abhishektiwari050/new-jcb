@@ -17,6 +17,28 @@ export const metadata: Metadata = {
     "train freight India",
     "logistics company New Delhi",
   ],
+  openGraph: {
+    title: "JBS Cargo Movers | Pan India Logistics",
+    description: "Fast, reliable, door-to-door logistics services across 100+ destinations in India.",
+    url: "https://jbscargomovers.com", // Adjust to your actual domain
+    siteName: "JBS Cargo Movers",
+    images: [
+      {
+        url: "/images/logo.png",
+        width: 800,
+        height: 600,
+        alt: "JBS Cargo Movers Logo",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "JBS Cargo Movers | Pan India Logistics",
+    description: "Fast, reliable, door-to-door logistics services across 100+ destinations in India.",
+    images: ["/images/logo.png"],
+  },
 };
 
 import { ThemeProvider } from "./components/theme-provider";
