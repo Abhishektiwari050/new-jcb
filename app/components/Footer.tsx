@@ -19,7 +19,6 @@ const footerLinks = {
   ],
   information: [
     { label: "About Us", href: "/about" },
-    { label: "Coverage", href: "/#coverage" },
     { label: "Careers", href: "/contact" },
     { label: "Contact Us", href: "/contact" },
   ],

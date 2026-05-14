@@ -5,10 +5,9 @@ import { ArrowRight, Shield } from "lucide-react";
 import Link from "next/link";
 import { useRef } from "react";
 import dynamic from "next/dynamic";
-import { IndiaMapSVG } from "../IndiaMapSVG";
 
 // Import CargoBelt3D dynamically for performance
-const CargoBelt3D = dynamic(() => import("../CargoBelt3D"), { 
+const CargoBelt3D = dynamic(() => import("../CargoBelt3D"), {
   ssr: false,
   loading: () => <div className="absolute inset-0 bg-[#F2EFEA]" />
 });
@@ -16,10 +15,10 @@ const CargoBelt3D = dynamic(() => import("../CargoBelt3D"), {
 export default function HeroSection() {
   const sectionRef = useRef<HTMLElement>(null);
   const { scrollY } = useScroll();
-  
+
   // Get scroll velocity
   const scrollVelocity = useVelocity(scrollY);
-  
+
   // Smooth the velocity so it doesn't jump
   const smoothVelocity = useSpring(scrollVelocity, {
     damping: 50,
@@ -35,10 +34,10 @@ export default function HeroSection() {
       {/* 3D Background Layer */}
       <div className="absolute inset-0 z-0">
         <div className="w-full h-full">
-           <CargoBelt3D 
-              isBackground={true} 
-              scrollProgress={velocityFactor} 
-           />
+          <CargoBelt3D
+            isBackground={true}
+            scrollProgress={velocityFactor}
+          />
         </div>
         {/* Overlay gradient to ensure text readability */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#F2EFEA] via-[#F2EFEA]/80 to-transparent pointer-events-none" />
@@ -131,68 +130,55 @@ export default function HeroSection() {
             </motion.div>
           </div>
 
-          {/* Right Visual - Connectivity Map Image */}
-          <div className="hidden lg:flex flex-col items-center justify-center relative">
+          {/* Right Visual - Floating Trust Card */}
+          <div className="hidden lg:flex flex-col items-end justify-center relative">
             <motion.div
-              initial={{ opacity: 0, scale: 0.95, x: 20 }}
-              animate={{ opacity: 1, scale: 1, x: 0 }}
-              transition={{ delay: 0.6, duration: 0.8 }}
-              className="w-full relative group"
+              initial={{ x: 50, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ delay: 1.0 }}
+              className="bg-white/80 backdrop-blur-xl p-8 rounded-3xl border border-white shadow-2xl shadow-brand-black/5 w-80 relative overflow-hidden"
             >
-              {/* Background Glow */}
-              <div className="absolute inset-0 bg-brand-orange/10 blur-[120px] rounded-full -z-10 animate-pulse" />
-              
-              <div className="bg-white/60 backdrop-blur-xl p-6 rounded-[60px] border border-white shadow-[0_32px_64px_-16px_rgba(0,0,0,0.1)] relative overflow-hidden">
-                <div className="mb-6 flex items-center justify-between px-4 pt-4">
-                  <div>
-                    <h3 className="font-[var(--font-display)] font-black text-2xl text-brand-black tracking-tighter uppercase">Network Reach</h3>
-                    <p className="text-[10px] text-brand-orange font-bold uppercase tracking-[0.2em]">Pan-India Connectivity</p>
-                  </div>
-                  <div className="px-4 py-2 bg-brand-black text-white rounded-2xl flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-live-green animate-pulse" />
-                    <span className="text-[10px] font-bold uppercase tracking-wider">Delhi HQ</span>
-                  </div>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-brand-orange/10 rounded-full blur-3xl -mr-16 -mt-16" />
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 bg-brand-orange rounded-2xl flex items-center justify-center shadow-lg shadow-brand-orange/30">
+                  <Shield className="w-6 h-6 text-white" />
                 </div>
-                
-                <div className="relative px-2 pb-2">
-                   <div className="w-full h-full min-h-[400px] flex items-center justify-center">
-                      <IndiaMapSVG className="w-full h-full max-h-[500px]" />
-                   </div>
-                   
-                   {/* Animated "cargo" dots moving out from Delhi (approx coordinates 276, 150 in SVG) */}
-                   <div className="absolute top-[32%] left-[46%] pointer-events-none w-full h-full">
-                      {[0, 45, 90, 135, 180, 225, 270, 315].map((angle, i) => (
-                        <motion.div
-                          key={i}
-                          initial={{ x: 0, y: 0, opacity: 0 }}
-                          animate={{ 
-                            x: Math.cos(angle * Math.PI / 180) * 120,
-                            y: Math.sin(angle * Math.PI / 180) * 120,
-                            opacity: [0, 1, 0]
-                          }}
-                          transition={{ 
-                            duration: 3, 
-                            repeat: Infinity, 
-                            delay: i * 0.5,
-                            ease: "easeOut"
-                          }}
-                          className="absolute w-1.5 h-1.5 bg-brand-orange rounded-full shadow-[0_0_8px_rgba(232,106,47,0.8)]"
-                        />
-                      ))}
-                   </div>
+                <div>
+                  <p className="text-brand-black font-black text-xl leading-tight">Secured</p>
+                  <p className="text-brand-black/40 text-xs font-bold uppercase tracking-wider">100% Insured</p>
                 </div>
               </div>
-              
-              {/* Floating Trust Tag */}
-              <motion.div
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 1.2 }}
-                className="absolute -bottom-8 -left-8 bg-white p-6 rounded-3xl shadow-2xl border border-brand-black/5 flex flex-col gap-1 max-w-[180px]"
-              >
-                <p className="text-brand-black font-black text-3xl tracking-tighter">100+</p>
-                <p className="text-[10px] text-brand-black/40 font-bold uppercase tracking-widest leading-tight">Cities Connected Nationwide</p>
-              </motion.div>
+              <div className="space-y-4">
+                <div className="h-2 bg-brand-black/5 rounded-full overflow-hidden">
+                  <motion.div
+                    initial={{ width: 0 }}
+                    animate={{ width: "99.8%" }}
+                    transition={{ duration: 2, delay: 1.5 }}
+                    className="h-full bg-brand-orange"
+                  />
+                </div>
+                <div className="flex justify-between items-end">
+                  <div>
+                    <p className="text-brand-black font-black text-3xl">99.8%</p>
+                    <p className="text-brand-black/30 text-[10px] font-bold uppercase">SLA Met</p>
+                  </div>
+                  <div className="text-right">
+                    <p className="text-brand-orange font-black text-xl italic tracking-tighter">PREMIUM</p>
+                    <p className="text-brand-black/30 text-[10px] font-bold uppercase whitespace-nowrap">Service Level</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Live Indicator */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 1.2 }}
+              className="mt-6 mr-8 bg-live-green/10 border border-live-green/20 px-4 py-2 rounded-full flex items-center gap-2"
+            >
+              <span className="w-2 h-2 rounded-full bg-live-green animate-pulse" />
+              <span className="text-[10px] text-live-green font-bold uppercase tracking-widest">System Online</span>
             </motion.div>
           </div>
         </div>

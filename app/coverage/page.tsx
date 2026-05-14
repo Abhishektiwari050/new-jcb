@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import CoverageSection from "../components/sections/CoverageSection";
 import CTASection from "../components/sections/CTASection";
 
 export const metadata: Metadata = {
@@ -35,8 +34,22 @@ export default function CoveragePage() {
         </div>
       </section>
 
-      <div className="bg-white">
-        <CoverageSection />
+      <div className="bg-white py-24">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
+            {[
+              { label: "100+", sub: "Destinations" },
+              { label: "24/7", sub: "Support" },
+              { label: "Real-time", sub: "Tracking" },
+              { label: "Express", sub: "Delivery" },
+            ].map((stat, i) => (
+              <div key={i} className="text-center">
+                <p className="text-4xl md:text-5xl font-black text-brand-orange">{stat.label}</p>
+                <p className="text-[10px] font-bold text-brand-black/40 uppercase tracking-widest mt-2">{stat.sub}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
 
       <div className="py-20">

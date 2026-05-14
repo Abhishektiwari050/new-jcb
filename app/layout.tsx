@@ -19,13 +19,15 @@ export const metadata: Metadata = {
   ],
 };
 
+import { ThemeProvider } from "./components/theme-provider";
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark" suppressHydrationWarning data-scroll-behavior="smooth">
+    <html lang="en" suppressHydrationWarning data-scroll-behavior="smooth">
       <head>
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Plus+Jakarta+Sans:wght@500;600;700&family=Share+Tech+Mono&family=Bebas+Neue&display=swap"
@@ -37,11 +39,18 @@ export default function RootLayout({
         className="antialiased bg-brand-black selection:bg-brand-orange selection:text-white"
         suppressHydrationWarning
       >
-        <CustomCursor />
-        <LoadingScreen />
-        <SmoothScroll>
-          {children}
-        </SmoothScroll>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <CustomCursor />
+          <LoadingScreen />
+          <SmoothScroll>
+            {children}
+          </SmoothScroll>
+        </ThemeProvider>
         
         {/* Floating WhatsApp Button */}
         <a

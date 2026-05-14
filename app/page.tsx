@@ -8,7 +8,6 @@ import WhyChooseUsSection from "./components/sections/WhyChooseUsSection";
 import TestimonialsSection from "./components/sections/TestimonialsSection";
 import ContactSection from "./components/sections/ContactSection";
 import Footer from "./components/Footer";
-import CoverageSection from "./components/sections/CoverageSection";
 import ProcessSection from "./components/sections/ProcessSection";
 import CTASection from "./components/sections/CTASection";
 
@@ -32,8 +31,7 @@ export default function Home() {
       {/* Sticky Scroll Process */}
       <ProcessSection />
 
-      {/* India Coverage Map */}
-      <CoverageSection />
+
 
       {/* Why Choose Us — Ticker */}
       <WhyChooseUsSection />
