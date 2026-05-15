@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Shield, Target, Users, Zap, Award, Globe, CheckCircle2, Mountain, Cpu, Waves, Castle } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 import Navbar from "@/app/components/Navbar";
 
 const IndiaGateIcon = ({ className }: { className?: string }) => (
@@ -69,6 +69,41 @@ const ChennaiIcon = ({ className }: { className?: string }) => (
     <path d="M42 10 H58" />
     <path d="M48 60 L48 20" />
     <path d="M52 60 L52 20" />
+  </svg>
+);
+
+const PuneIcon = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 100 100" className={className} fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M10 90 L90 90" />
+    <path d="M15 90 V45 H40 V90" />
+    <path d="M60 90 V45 H85 V90" />
+    <path d="M40 90 V50 Q50 35 60 50 V90" />
+    <path d="M40 45 H60 V30 H40 V45" />
+    <path d="M35 30 H65 V20 H35 V30" />
+    <path d="M20 55 V70" />
+    <path d="M25 55 V70" />
+    <path d="M30 55 V70" />
+    <path d="M70 55 V70" />
+    <path d="M75 55 V70" />
+    <path d="M80 55 V70" />
+  </svg>
+);
+
+const HyderabadIcon = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 100 100" className={className} fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M10 90 L90 90" />
+    <path d="M15 90 V40" />
+    <path d="M25 90 V40" />
+    <path d="M75 90 V40" />
+    <path d="M85 90 V40" />
+    <path d="M15 40 H25 V30 H15 V40" />
+    <path d="M75 40 H85 V30 H75 V40" />
+    <path d="M15 30 Q20 15 25 30" />
+    <path d="M75 30 Q80 15 85 30" />
+    <path d="M25 90 V50 H75 V90" />
+    <path d="M40 90 V70 Q50 60 60 70 V90" />
+    <path d="M30 60 Q35 50 40 60" />
+    <path d="M60 60 Q65 50 70 60" />
   </svg>
 );
 
@@ -211,10 +246,10 @@ export default function AboutPageContent() {
               {[
                 { name: "Delhi NCR", icon: IndiaGateIcon },
                 { name: "Mumbai", icon: GatewayOfIndiaIcon },
-                { name: "Pune", icon: Mountain },
+                { name: "Pune", icon: PuneIcon },
                 { name: "Bangalore", icon: BangaloreIcon },
                 { name: "Chennai", icon: ChennaiIcon },
-                { name: "Hyderabad", icon: Castle },
+                { name: "Hyderabad", icon: HyderabadIcon },
               ].map((city, i) => (
                 <div key={i} className="p-6 bg-white border border-brand-black/5 rounded-2xl text-center group hover:border-brand-orange/30 transition-colors">
                   <city.icon className="w-6 h-6 text-brand-orange mx-auto mb-3 group-hover:scale-110 transition-transform" />
