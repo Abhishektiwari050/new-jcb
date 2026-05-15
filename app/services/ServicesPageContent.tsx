@@ -119,14 +119,9 @@ export default function ServicesPageContent() {
                 </div>
                 
                 <h3 className="text-2xl font-black text-brand-black mb-4">{service.title}</h3>
-                <p className="text-brand-black/50 leading-relaxed text-sm mb-8">
+                <p className="text-brand-black/50 leading-relaxed text-sm">
                   {service.description}
                 </p>
-                
-                <div className="flex items-center gap-2 text-brand-orange font-bold text-xs uppercase tracking-widest">
-                  <span>Learn More</span>
-                  <CheckCircle2 className="w-4 h-4" />
-                </div>
               </motion.div>
             ))}
           </div>
