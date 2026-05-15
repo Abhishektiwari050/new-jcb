@@ -123,46 +123,7 @@ export default function ServicesPageContent() {
         </div>
       </section>
 
-      {/* Why Choose Us Highlight */}
-      <section className="py-24 bg-brand-black text-white">
-         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-               <div>
-                  <h2 className="text-4xl font-[var(--font-display)] font-black mb-8">
-                    Why Choose <span className="text-brand-orange">JBS.</span>
-                  </h2>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                     {[
-                       "Fast & Reliable Delivery",
-                       "PAN India Cargo Connectivity",
-                       "Safe & Secure Cargo Handling",
-                       "Dedicated Customer Support",
-                       "Economical & Competitive Pricing",
-                       "Customised Logistics Solutions",
-                       "Professional Logistics Management",
-                       "Timely & Committed Deliveries",
-                       "Strong Transportation Network — Blue Dart, Delhivery, Mahindra Logistics and major airline cargo partners"
-                     ].map((benefit, i) => (
-                       <div key={i} className="flex items-start gap-3">
-                          <CheckCircle2 className="w-5 h-5 text-brand-orange mt-0.5" />
-                          <span className="text-white/70 text-sm font-medium">{benefit}</span>
-                       </div>
-                     ))}
-                  </div>
-               </div>
-               <div className="bg-white/5 border border-white/10 p-12 rounded-[40px]">
-                  <p className="text-brand-orange font-bold uppercase tracking-widest text-xs mb-4">Our Commitment</p>
-                  <p className="text-xl text-white/80 leading-relaxed font-medium">
-                    "Saman Ho Koi Bhi, JBS Karega Delivery"
-                  </p>
-                  <p className="text-white/40 mt-6 leading-relaxed">
-                    At JBS Cargo Movers, we offer customized logistics solutions designed to meet 
-                    the growing demands of corporate and commercial clients.
-                  </p>
-               </div>
-            </div>
-         </div>
-      </section>
+
     </div>
   );
 }
