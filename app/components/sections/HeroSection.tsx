@@ -103,7 +103,7 @@ export default function HeroSection() {
                 WhatsApp Us
               </Link>
             </motion.div>
-
+          </div>
         </div>
 
         {/* Stats row — Moved out of grid to span full width */}
