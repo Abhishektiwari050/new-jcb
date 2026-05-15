@@ -20,24 +20,25 @@ export default function PartnersSection() {
     <section className="bg-white py-8 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-6">
         {/* Header */}
-        <div className="text-center">
+        <div className="text-center mb-8">
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-orange/5 border border-brand-orange/10 mb-4"
+          >
+            <span className="text-[10px] text-brand-orange font-bold uppercase tracking-widest">Industry Leaders</span>
+          </motion.div>
           <motion.h2
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="font-[var(--font-display)] font-extrabold text-2xl text-brand-black tracking-tight uppercase"
+            className="font-[var(--font-display)] font-black text-2xl md:text-3xl text-brand-black tracking-tight uppercase"
           >
             Our Business Partners
           </motion.h2>
-          <motion.div
-            initial={{ opacity: 0, scaleX: 0 }}
-            whileInView={{ opacity: 1, scaleX: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="w-12 h-1 bg-brand-orange mx-auto my-3"
-          />
-          <p className="text-brand-black/40 text-xs font-bold uppercase tracking-widest mt-4">
-            Strengthening our logistics network with industry leaders
+          <p className="text-brand-black/40 text-[10px] font-bold uppercase tracking-widest mt-3 max-w-lg mx-auto leading-relaxed">
+            Strengthening our logistics network with India's premier cargo carriers and infrastructure
           </p>
         </div>
       </div>
