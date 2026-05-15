@@ -33,7 +33,7 @@ export default function HeroSection() {
     <section id="hero" ref={sectionRef} className="relative min-h-screen overflow-hidden bg-[#F2EFEA]">
       {/* 3D Background Layer */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="w-full h-full">
+        <div className="w-full h-full -translate-y-24 md:translate-y-0 scale-[1.15] md:scale-100">
           <CargoBelt3D
             isBackground={true}
             scrollProgress={velocityFactor}
@@ -41,7 +41,7 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-28 md:pt-32 pb-4 md:pb-6 w-full min-h-screen flex flex-col justify-between items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-16 md:pt-32 pb-20 md:pb-6 w-full min-h-screen flex flex-col justify-between items-center">
         {/* Top Content: Text */}
         <div className="w-full flex flex-col items-center">
           <div className="space-y-6 md:space-y-8 max-w-4xl text-center flex flex-col items-center">
@@ -74,7 +74,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center w-full sm:w-auto"
+          className="flex flex-col sm:flex-row gap-4 justify-center w-full sm:w-auto mb-4 md:mb-0"
         >
           <Link
             href="/contact"
