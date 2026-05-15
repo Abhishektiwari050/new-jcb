@@ -41,22 +41,11 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-40 md:pt-48 pb-32 w-full min-h-screen flex flex-col justify-start items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-32 md:pt-40 pb-20 w-full min-h-screen flex flex-col justify-start items-center">
         <div className="w-full flex flex-col items-center">
           {/* Centered Content */}
           <div className="space-y-8 md:space-y-10 max-w-4xl text-center flex flex-col items-center">
-            {/* Badge */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 bg-brand-orange/10 border border-brand-orange/20 rounded-full px-4 py-2 mx-auto mt-4"
-            >
-              <span className="w-2 h-2 rounded-full bg-brand-orange animate-pulse" />
-              <span className="text-[10px] md:text-xs text-brand-orange font-bold tracking-wide uppercase">
-                Shipping Nationwide — 24/7
-              </span>
-            </motion.div>
+
 
             {/* Headline */}
             <motion.h1
