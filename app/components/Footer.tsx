@@ -10,13 +10,12 @@ import {
 
 const footerLinks = {
   services: [
-    { label: "Air Cargo", href: "/services" },
-    { label: "Surface Freight", href: "/services" },
-    { label: "Train Logistics", href: "/services" },
-    { label: "Warehousing", href: "/services" },
-    { label: "Consolidation", href: "/services" },
-    { label: "Door-to-Door", href: "/services" },
-    { label: "Manpower", href: "/services" },
+    { label: "Air Cargo Services", href: "/services" },
+    { label: "Surface Cargo Services", href: "/services" },
+    { label: "Train Cargo Services", href: "/services" },
+    { label: "Consolidation Services", href: "/services" },
+    { label: "Door-to-Door Delivery", href: "/services" },
+    { label: "Manpower Services", href: "/services" },
   ],
   information: [
     { label: "About Us", href: "/about" },
@@ -142,7 +141,7 @@ export default function Footer() {
                 className="flex items-center gap-3 text-sm text-brand-black/50 hover:text-brand-orange transition-colors font-medium"
               >
                 <Phone className="w-4 h-4 flex-shrink-0 text-brand-orange" />
-                <span>+91 9582566995 / +91 9582166995</span>
+                <span>+91 9582566995 / 9582166995</span>
               </a>
               <a
                 href="mailto:jbscargomovers@gmail.com"

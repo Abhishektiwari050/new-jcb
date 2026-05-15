@@ -1,31 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Shield, Target, Users, Zap, Award, Globe } from "lucide-react";
+import { Shield, Target, Users, Zap, Award, Globe, CheckCircle2 } from "lucide-react";
 import Navbar from "@/app/components/Navbar";
-
-const values = [
-  {
-    icon: Shield,
-    title: "Safety First",
-    description: "Every shipment is handled with the highest standards of safety and security protocols."
-  },
-  {
-    icon: Target,
-    title: "Precision",
-    description: "Our hub-and-spoke model ensures pinpoint accuracy in routing and deliveries."
-  },
-  {
-    icon: Zap,
-    title: "Velocity",
-    description: "Time-critical shipments delivered with the fastest transit times in the industry."
-  },
-  {
-    icon: Users,
-    title: "Customer Centric",
-    description: "Dedicated support team available 24/7 to solve your logistics challenges."
-  }
-];
 
 export default function AboutPageContent() {
   return (
@@ -42,7 +19,7 @@ export default function AboutPageContent() {
           >
             <span className="w-2 h-2 rounded-full bg-brand-orange animate-pulse" />
             <span className="text-[10px] text-brand-orange font-bold uppercase tracking-widest">
-              Established 2009
+              Established 2023
             </span>
           </motion.div>
           <motion.h1
@@ -51,8 +28,8 @@ export default function AboutPageContent() {
             transition={{ delay: 0.1 }}
             className="font-[var(--font-display)] font-black text-5xl md:text-7xl lg:text-8xl text-white leading-[0.95] tracking-tighter mb-8"
           >
-            Logistics With <br />
-            <span className="text-brand-orange">Integrity.</span>
+            Saman Ho Koi Bhi, <br />
+            <span className="text-brand-orange text-outline">JBS Karega Delivery.</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -60,16 +37,17 @@ export default function AboutPageContent() {
             transition={{ delay: 0.2 }}
             className="text-white/60 text-xl max-w-3xl mx-auto leading-relaxed"
           >
-            JBS Cargo Movers has evolved from a local New Delhi courier to a nationwide 
-            logistics powerhouse. We don't just move Saman; we move your business forward.
+            JBS Cargo Movers is a professionally managed logistics and cargo service company 
+            established in 2023 with the vision of providing reliable, secure, fast, and cost-effective 
+            logistics solutions across India.
           </motion.p>
         </div>
       </section>
 
-      {/* Story Section */}
+      {/* Profile Section */}
       <section className="py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -77,41 +55,35 @@ export default function AboutPageContent() {
               className="space-y-8"
             >
               <h2 className="text-4xl md:text-5xl font-[var(--font-display)] font-black text-brand-black leading-tight">
-                Our <span className="text-brand-orange">Journey</span> <br />
-                Across India.
+                About <span className="text-brand-orange">JBS Cargo</span> <br />
+                Movers.
               </h2>
               <div className="space-y-6 text-brand-black/60 text-lg leading-relaxed">
                 <p>
-                  Founded in 2009 by logistics veterans, JBS Cargo Movers was born out of a 
-                  desire to solve the complex fragmented shipping landscape in India. We saw 
-                  businesses struggling with unreliable transit times and lack of transparency.
+                  Based in New Delhi, we specialize in Air Cargo, Surface Cargo, Train Cargo, Consolidation Services, and Manpower Solutions. We provide complete Door-to-Door cargo movement services through Air, Surface, and Rail transportation modes, ensuring efficient and timely deliveries across approximately 100 destinations nationwide.
                 </p>
                 <p>
-                  We started with two small vans in New Delhi. Today, we manage a massive multi-modal 
-                  network involving 70+ specialized vehicles, 200+ logistics professionals, and 
-                  dedicated cargo space with every major Indian airline.
+                  With a dedicated team of experienced logistics professionals and strong operational coordination, we offer customized logistics solutions designed to meet the growing demands of corporate and commercial clients.
                 </p>
                 <p>
-                  Our commitment remains the same: whether it's a 1kg medical kit or a 10-ton 
-                  industrial turbine, it gets there on time, every time.
+                  Our commitment is to provide safe, smooth, and hassle-free cargo transportation services while maintaining the highest standards of professionalism and customer satisfaction.
                 </p>
               </div>
               
-              <div className="flex flex-wrap gap-8 pt-8">
-                <div>
-                  <p className="text-4xl font-black text-brand-orange leading-none">15+</p>
-                  <p className="text-[10px] font-bold text-brand-black/40 uppercase tracking-widest mt-2">Years of Service</p>
-                </div>
-                <div className="w-px h-12 bg-brand-black/5 hidden sm:block" />
-                <div>
-                  <p className="text-4xl font-black text-brand-orange leading-none">100+</p>
-                  <p className="text-[10px] font-bold text-brand-black/40 uppercase tracking-widest mt-2">Active Hubs</p>
-                </div>
-                <div className="w-px h-12 bg-brand-black/5 hidden sm:block" />
-                <div>
-                  <p className="text-4xl font-black text-brand-orange leading-none">1M+</p>
-                  <p className="text-[10px] font-bold text-brand-black/40 uppercase tracking-widest mt-2">Tons Moved</p>
-                </div>
+              <div className="pt-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                 {[
+                   "Fast & Reliable Delivery",
+                   "PAN India Connectivity",
+                   "Safe & Secure Handling",
+                   "24/7 Customer Support",
+                   "Economical Pricing",
+                   "Customized Solutions"
+                 ].map((item, i) => (
+                   <div key={i} className="flex items-center gap-3">
+                     <CheckCircle2 className="w-5 h-5 text-brand-orange" />
+                     <span className="font-bold text-brand-black text-sm">{item}</span>
+                   </div>
+                 ))}
               </div>
             </motion.div>
 
@@ -119,58 +91,64 @@ export default function AboutPageContent() {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="relative group"
+              className="space-y-8"
             >
-              <div className="aspect-square bg-brand-orange/5 rounded-[60px] border border-brand-orange/10 overflow-hidden relative shadow-2xl">
-                <img 
-                  src="/images/warehouse.png" 
-                  alt="Modern Warehouse" 
-                  className="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700" 
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-brand-black/60 to-transparent opacity-60" />
+              <div className="p-10 bg-brand-black rounded-[40px] text-white space-y-8 relative overflow-hidden group">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-brand-orange/20 blur-[60px] group-hover:bg-brand-orange/40 transition-colors" />
+                
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-4">Our Vision</h3>
+                  <p className="text-white/50 leading-relaxed">
+                    To become one of India’s most trusted and preferred logistics service providers by delivering innovative, customer-focused, and reliable transportation solutions.
+                  </p>
+                </div>
+
+                <div className="w-full h-px bg-white/10" />
+
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-4">Our Mission</h3>
+                  <p className="text-white/50 leading-relaxed">
+                    To provide efficient, secure, and value-driven logistics services while maintaining the highest standards of professionalism, operational excellence, and customer satisfaction.
+                  </p>
+                </div>
+
+                <div className="w-full h-px bg-white/10" />
+
+                <div className="pt-4">
+                   <p className="text-brand-orange text-xs font-bold uppercase tracking-widest mb-2">Operational Edge</p>
+                   <p className="text-white/70 text-sm leading-relaxed">
+                     Our operational capabilities are further strengthened through our associated organization, <span className="text-white font-bold underline decoration-brand-orange underline-offset-4">Move Zen Express Logistics Pvt. Ltd.</span>, which provides additional expertise in transport and logistics management.
+                   </p>
+                </div>
               </div>
-              
-              {/* Floating Badge */}
-              <div className="absolute -bottom-10 -left-10 bg-white p-8 rounded-3xl shadow-2xl border border-brand-black/5 max-w-[240px] z-10">
-                <Award className="w-10 h-10 text-brand-orange mb-4" />
-                <p className="font-[var(--font-display)] font-black text-brand-black text-lg leading-tight">ISO 9001:2015</p>
-                <p className="text-brand-black/40 text-xs font-bold uppercase mt-1">Certified Operations</p>
+
+              <div className="p-10 bg-brand-orange/5 border border-brand-orange/10 rounded-[40px]">
+                <h3 className="text-xl font-bold text-brand-black mb-4">Client Commitment</h3>
+                <p className="text-brand-black/60 leading-relaxed">
+                  At JBS Cargo Movers, we believe in building long-term business relationships based on trust, transparency, service quality, and operational efficiency. Our mission is to provide complete peace of mind to our clients through dependable and hassle-free logistics services.
+                </p>
               </div>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Values Section */}
-      <section className="py-32 bg-[#FDFBF7]">
+      {/* Network Highlights */}
+      <section className="py-24 bg-[#FDFBF7]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-[var(--font-display)] font-black text-brand-black">
-              The JBS <span className="text-brand-orange">Standard.</span>
-            </h2>
-            <p className="text-brand-black/40 mt-6 max-w-2xl mx-auto text-lg">
-              Our core values guide every pickup, every transit, and every delivery.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white p-8 rounded-[32px] border border-brand-black/5 hover:border-brand-orange/30 hover:shadow-xl transition-all duration-500 group"
-              >
-                <div className="w-14 h-14 rounded-2xl bg-brand-orange/10 flex items-center justify-center group-hover:bg-brand-orange transition-colors duration-500 mb-8">
-                  <value.icon className="w-7 h-7 text-brand-orange group-hover:text-white transition-colors duration-500" />
+           <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-[var(--font-display)] font-black text-brand-black">Our Network & Operations</h2>
+              <p className="text-brand-black/40 mt-4">Covering major cities and business hubs across India</p>
+           </div>
+           
+           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+              {["Delhi NCR", "Mumbai", "Pune", "Bangalore", "Chennai", "Hyderabad"].map((city, i) => (
+                <div key={i} className="p-6 bg-white border border-brand-black/5 rounded-2xl text-center group hover:border-brand-orange/30 transition-colors">
+                  <MapPin className="w-6 h-6 text-brand-orange mx-auto mb-3 group-hover:scale-110 transition-transform" />
+                  <span className="font-bold text-brand-black text-sm">{city}</span>
                 </div>
-                <h3 className="text-xl font-black text-brand-black mb-4">{value.title}</h3>
-                <p className="text-brand-black/50 text-sm leading-relaxed">{value.description}</p>
-              </motion.div>
-            ))}
-          </div>
+              ))}
+           </div>
         </div>
       </section>
     </div>

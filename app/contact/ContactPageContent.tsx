@@ -1,44 +1,17 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Phone, Mail, MapPin, Globe, MessageSquare, Clock } from "lucide-react";
-import ContactSection from "../components/sections/ContactSection";
+import { Phone, Mail, MapPin, Clock, CheckCircle2, MessageCircle } from "lucide-react";
 import Navbar from "@/app/components/Navbar";
-
-const contactMethods = [
-  {
-    icon: Phone,
-    title: "Call Our Ops",
-    details: ["+91 9582566995", "+91 9582166995"],
-    sub: "Available 24/7 for urgent cargo."
-  },
-  {
-    icon: Mail,
-    title: "Email Support",
-    details: ["jbscargomovers@gmail.com"],
-    sub: "Quotes within 4 business hours."
-  },
-  {
-    icon: MapPin,
-    title: "Headquarters",
-    details: ["V.P.O. Shahabad Mohammadpur", "New Delhi – 110061"],
-    sub: "Central hub for all operations."
-  }
-];
+import ContactSection from "../components/sections/ContactSection";
 
 export default function ContactPageContent() {
   return (
-    <div>
-      {/* Hero Header */}
+    <main className="bg-white min-h-screen">
+      <Navbar theme="dark" />
+      
+      {/* Hero Section */}
       <section className="relative py-48 bg-brand-black overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img 
-            src="/images/train-cargo.png" 
-            alt="Contact Background" 
-            className="w-full h-full object-cover opacity-20"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-brand-black/60 via-brand-black/80 to-brand-black" />
-        </div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,_rgba(232,106,47,0.15)_0%,_transparent_70%)]" />
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 text-center">
           <motion.div
@@ -48,89 +21,120 @@ export default function ContactPageContent() {
           >
             <span className="w-2 h-2 rounded-full bg-brand-orange animate-pulse" />
             <span className="text-[10px] text-brand-orange font-bold uppercase tracking-widest">
-              24/7 Response
+              Contact JBS
             </span>
           </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="font-[var(--font-display)] font-black text-5xl md:text-7xl lg:text-8xl text-white leading-tight tracking-tighter mb-8"
+            className="font-[var(--font-display)] font-black text-5xl md:text-7xl lg:text-8xl text-white leading-[0.95] tracking-tighter mb-8"
           >
-            Let's Start <br />
-            <span className="text-brand-orange">Shipping.</span>
+            Let's Get Your <br />
+            <span className="text-brand-orange text-outline">Cargo Moving.</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-white/50 text-xl max-w-3xl mx-auto leading-relaxed"
+            className="text-white/60 text-xl max-w-3xl mx-auto leading-relaxed"
           >
-            Our logistics experts are ready to handle your specialized cargo needs. 
-            Get in touch for custom quotes or real-time operational support.
+            Our logistics experts are available across India to provide safe, smooth, 
+            and hassle-free transportation services.
           </motion.p>
         </div>
       </section>
 
       {/* Contact Cards */}
-      <section className="py-24 bg-[#FDFBF7]">
+      <section className="py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
-            {contactMethods.map((method, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white p-10 rounded-[40px] border border-brand-black/5 hover:border-brand-orange/30 hover:shadow-xl transition-all duration-500 group"
-              >
-                <div className="w-14 h-14 rounded-2xl bg-brand-orange/10 flex items-center justify-center group-hover:bg-brand-orange transition-colors duration-500 mb-8">
-                  <method.icon className="w-7 h-7 text-brand-orange group-hover:text-white transition-colors duration-500" />
-                </div>
-                <h3 className="text-xl font-black text-brand-black mb-4">{method.title}</h3>
-                <div className="space-y-1 mb-4">
-                  {method.details.map((detail, j) => (
-                    <p key={j} className="text-brand-black font-bold">{detail}</p>
-                  ))}
-                </div>
-                <p className="text-brand-black/40 text-xs font-bold uppercase tracking-widest">{method.sub}</p>
-              </motion.div>
-            ))}
-          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Registered Office */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="p-10 rounded-[40px] border border-brand-black/5 bg-white hover:shadow-2xl transition-all duration-500"
+            >
+              <div className="w-14 h-14 rounded-2xl bg-brand-orange/10 flex items-center justify-center mb-8">
+                <MapPin className="w-7 h-7 text-brand-orange" />
+              </div>
+              <h3 className="text-xl font-black text-brand-black mb-4">Registered Office</h3>
+              <p className="text-brand-black/60 leading-relaxed font-medium">
+                Plot No. 6, Street No. 5, V.P.O. Shahabad Mohammadpur, <br />
+                New Delhi – 110061
+              </p>
+            </motion.div>
 
-          {/* Integration of main contact form section */}
-          <div className="bg-white rounded-[60px] border border-brand-black/5 overflow-hidden shadow-sm">
-             <ContactSection />
+            {/* Direct Contact */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              viewport={{ once: true }}
+              className="p-10 rounded-[40px] border border-brand-black/5 bg-white hover:shadow-2xl transition-all duration-500"
+            >
+              <div className="w-14 h-14 rounded-2xl bg-brand-orange/10 flex items-center justify-center mb-8">
+                <Phone className="w-7 h-7 text-brand-orange" />
+              </div>
+              <h3 className="text-xl font-black text-brand-black mb-4">Call Us</h3>
+              <div className="space-y-2">
+                <a href="tel:+919582566995" className="block text-brand-black font-bold text-lg hover:text-brand-orange transition-colors">+91 9582566995</a>
+                <a href="tel:+919582166995" className="block text-brand-black font-bold text-lg hover:text-brand-orange transition-colors">+91 9582166995</a>
+              </div>
+            </motion.div>
+
+            {/* Email & Web */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              viewport={{ once: true }}
+              className="p-10 rounded-[40px] border border-brand-black/5 bg-white hover:shadow-2xl transition-all duration-500"
+            >
+              <div className="w-14 h-14 rounded-2xl bg-brand-orange/10 flex items-center justify-center mb-8">
+                <Mail className="w-7 h-7 text-brand-orange" />
+              </div>
+              <h3 className="text-xl font-black text-brand-black mb-4">Online</h3>
+              <div className="space-y-2">
+                <a href="mailto:jbscargomovers@gmail.com" className="block text-brand-black font-bold hover:text-brand-orange transition-colors">jbscargomovers@gmail.com</a>
+                <a href="https://www.jbscargomovers.com" className="block text-brand-black font-bold hover:text-brand-orange transition-colors text-sm">www.jbscargomovers.com</a>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Quick Help Strip */}
-      <section className="py-16 bg-brand-orange text-white overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-            <div className="flex items-center gap-6">
-              <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center">
-                <Clock className="w-8 h-8 text-white" />
-              </div>
-              <div>
-                <p className="text-2xl font-black">4-Hour SLA</p>
-                <p className="text-white/70 font-medium tracking-wide">On all custom quote requests received during business hours.</p>
-              </div>
+      {/* Main Contact Form Section */}
+      <section className="pb-32">
+         <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <div className="bg-brand-black rounded-[60px] overflow-hidden">
+               <ContactSection />
             </div>
-            <div className="flex items-center gap-6">
-              <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center">
-                <MessageSquare className="w-8 h-8 text-white" />
+         </div>
+      </section>
+
+      {/* Quick Stats/Commitment */}
+      <section className="py-24 bg-[#FDFBF7] border-t border-brand-black/5">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+           <p className="text-brand-orange font-bold uppercase tracking-widest text-xs mb-6">Our Commitment</p>
+           <h2 className="text-4xl font-[var(--font-display)] font-black text-brand-black mb-12">"Saman Ho Koi Bhi, JBS Karega Delivery"</h2>
+           <div className="flex flex-wrap justify-center gap-12">
+              <div className="flex items-center gap-3">
+                 <CheckCircle2 className="w-6 h-6 text-brand-orange" />
+                 <span className="font-bold text-brand-black">PAN India Connectivity</span>
               </div>
-              <div>
-                <p className="text-2xl font-black">Direct WhatsApp</p>
-                <p className="text-white/70 font-medium tracking-wide">Chat with our fleet managers instantly for live updates.</p>
+              <div className="flex items-center gap-3">
+                 <CheckCircle2 className="w-6 h-6 text-brand-orange" />
+                 <span className="font-bold text-brand-black">Dedicated Support</span>
               </div>
-            </div>
-          </div>
+              <div className="flex items-center gap-3">
+                 <CheckCircle2 className="w-6 h-6 text-brand-orange" />
+                 <span className="font-bold text-brand-black">Safe & Secure Handling</span>
+              </div>
+           </div>
         </div>
       </section>
-    </div>
+    </main>
   );
 }

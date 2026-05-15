@@ -14,15 +14,15 @@ import {
 } from "lucide-react";
 
 const advantages = [
-  { icon: Zap, text: "Fast & Reliable" },
-  { icon: MapPin, text: "PAN India Network" },
-  { icon: Shield, text: "Safe & Secure" },
-  { icon: Headphones, text: "24/7 Support" },
-  { icon: IndianRupee, text: "Competitive Pricing" },
-  { icon: Settings2, text: "Custom Solutions" },
-  { icon: Clock, text: "Timely Deliveries" },
-  { icon: Network, text: "Strong Partners" },
-  { icon: BadgeCheck, text: "Professional Ops" },
+  { icon: Zap, text: "Fast & Reliable Delivery Services" },
+  { icon: MapPin, text: "PAN India Cargo Connectivity" },
+  { icon: Shield, text: "Safe & Secure Cargo Handling" },
+  { icon: Headphones, text: "Dedicated Customer Support" },
+  { icon: IndianRupee, text: "Economical & Competitive Pricing" },
+  { icon: Settings2, text: "Customized Logistics Solutions" },
+  { icon: Clock, text: "Timely & Committed Deliveries" },
+  { icon: Network, text: "Strong Transportation Network" },
+  { icon: BadgeCheck, text: "Professional Logistics Management" },
 ];
 
 export default function WhyChooseUsSection() {
