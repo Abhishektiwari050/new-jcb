@@ -218,7 +218,7 @@ export default function AboutPageContent() {
                 <div>
                   <h3 className="text-2xl font-bold text-white mb-4">Operational Edge</h3>
                   <p className="text-white/50 leading-relaxed">
-                    Our operational capabilities are driven by a robust internal logistics network and a dedicated fleet, ensuring timely delivery, safety, and operational excellence across all 100+ destinations.
+                    Our operational capabilities are further strengthened through our associated organisation, <span className="text-brand-orange font-bold">Move Zen Express Logistics Pvt. Ltd.</span> Together, we offer customised logistics solutions designed to meet the growing demands of our clients — with complete peace of mind, transparent pricing, and the highest standards of professionalism.
                   </p>
                 </div>
               </div>
