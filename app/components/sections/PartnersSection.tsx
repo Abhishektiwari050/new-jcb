@@ -33,7 +33,7 @@ export default function PartnersSection() {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="font-[var(--font-display)] font-black text-2xl md:text-3xl text-brand-black tracking-tight uppercase"
+            className="font-[var(--font-display)] font-black text-3xl md:text-4xl lg:text-5xl text-brand-black tracking-tight uppercase"
           >
             Our Business Partners
           </motion.h2>
