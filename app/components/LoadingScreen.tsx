@@ -11,14 +11,14 @@ export default function LoadingScreen() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2500);
+    }, 800);
 
     const interval = setInterval(() => {
       setProgress((prev) => {
         if (prev >= 100) return 100;
-        return prev + 1;
+        return prev + 5;
       });
-    }, 20);
+    }, 15);
 
     return () => {
       clearTimeout(timer);

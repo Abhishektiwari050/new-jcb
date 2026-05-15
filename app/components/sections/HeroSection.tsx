@@ -39,8 +39,7 @@ export default function HeroSection() {
             scrollProgress={velocityFactor}
           />
         </div>
-        {/* Overlay gradient to ensure text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#F2EFEA] via-[#F2EFEA]/80 to-transparent pointer-events-none" />
+        {/* Readability overlay removed per user request for clearer 3D visibility */}
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-56 pb-20 w-full min-h-screen flex items-center">
@@ -185,7 +184,6 @@ export default function HeroSection() {
       </div>
 
       {/* Bottom transition to white */}
-      <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-white to-transparent z-20 pointer-events-none" />
     </section>
   );
 }
