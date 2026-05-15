@@ -243,7 +243,7 @@ export default function Footer() {
 
       {/* Large Background Brand Name */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full overflow-hidden pointer-events-none select-none">
-        <h2 className="text-[20vw] font-black text-brand-black/[0.18] leading-none whitespace-nowrap tracking-tighter uppercase text-center">
+        <h2 className="text-[20vw] font-black text-brand-black/[0.03] leading-none whitespace-nowrap tracking-tighter uppercase text-center">
           JBS CARGO MOVERS
         </h2>
       </div>
