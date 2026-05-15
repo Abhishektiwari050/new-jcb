@@ -343,8 +343,8 @@ const CargoBelt3D: FC<CargoBelt3DProps> = ({
     const scene = new THREE.Scene();
 
     const camera = new THREE.PerspectiveCamera(38, W / H, 0.1, 120);
-    camera.position.set(0, 7.5, 13.5);
-    camera.lookAt(0, 3.8, 0);
+    camera.position.set(0, 6, 11);
+    camera.lookAt(0, 1.8, 0);
 
     scene.add(new THREE.HemisphereLight(0xFFF6ED, 0xDAD4C8, 1.2));
 
@@ -360,7 +360,7 @@ const CargoBelt3D: FC<CargoBelt3DProps> = ({
 
     const floor = new THREE.Mesh(
       new THREE.PlaneGeometry(100, 100),
-      new THREE.MeshStandardMaterial({ color: 0xECE8E1, metalness: 0, roughness: 0.97 }),
+      new THREE.MeshStandardMaterial({ color: 0xF2EFEA, metalness: 0, roughness: 1.0 }),
     );
     floor.rotation.x = -Math.PI / 2;
     floor.receiveShadow = true;
