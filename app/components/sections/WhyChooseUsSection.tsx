@@ -30,8 +30,8 @@ export default function WhyChooseUsSection() {
   const tickerItems = [...advantages, ...advantages, ...advantages];
 
   return (
-    <section className="py-24 bg-[#FDFBF7] overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-16">
+    <section className="py-12 bg-[#FDFBF7] overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-10">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div>
             <motion.div

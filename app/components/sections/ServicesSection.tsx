@@ -13,9 +13,9 @@ const Skeleton = ({ className, children }: { className?: string; children?: Reac
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="py-32 bg-white relative">
+    <section id="services" className="py-16 bg-white relative">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-20">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-12">
           <div>
             <motion.div
               initial={{ opacity: 0, x: -20 }}

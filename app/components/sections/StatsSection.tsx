@@ -82,7 +82,7 @@ function AnimatedCounter({
 
 export default function StatsSection() {
   return (
-    <section className="relative bg-brand-black py-24 overflow-hidden">
+    <section className="relative bg-brand-black py-12 overflow-hidden">
       {/* Background glow */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-orange/10 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-brand-orange/5 rounded-full blur-[100px] pointer-events-none" />

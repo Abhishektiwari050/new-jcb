@@ -33,9 +33,9 @@ const footerLinks = {
 
 export default function Footer() {
   return (
-    <footer className="bg-white text-brand-black pt-20 pb-8 border-t border-brand-black/5 relative overflow-hidden">
+    <footer className="bg-white text-brand-black pt-12 pb-8 border-t border-brand-black/5 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-10 relative z-10">
           {/* Column 1 — Logo & Tagline */}
           <div className="space-y-6 lg:col-span-1">
             <div className="flex items-center mb-4 gap-3">

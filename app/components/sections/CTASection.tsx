@@ -6,7 +6,7 @@ import { ArrowRight, Phone } from "lucide-react";
 
 export default function CTASection() {
   return (
-    <section className="relative py-28 overflow-hidden bg-brand-orange">
+    <section className="relative py-16 overflow-hidden bg-brand-orange">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_50%,_white_0%,_transparent_50%)]" />

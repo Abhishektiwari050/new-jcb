@@ -71,14 +71,14 @@ export default function TestimonialsSection() {
   const t = testimonials[current];
 
   return (
-    <section className="py-28 bg-brand-black text-white overflow-hidden relative">
+    <section className="py-16 bg-brand-black text-white overflow-hidden relative">
       {/* Background accents */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-orange/5 rounded-full blur-[150px] pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-brand-orange/5 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="max-w-5xl mx-auto px-6 lg:px-8 relative z-10">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
