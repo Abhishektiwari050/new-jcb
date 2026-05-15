@@ -6,36 +6,28 @@ import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Rajesh Kumar",
-    company: "RK Electronics",
-    role: "Supply Chain Manager",
+    name: "Preet Saini",
+    company: "Commercial Client",
+    role: "Verified Business Owner",
     review:
-      "JBS Cargo Movers has completely transformed our supply chain. Their door-to-door delivery is flawless, and the pan-India coverage ensures our products reach everywhere on time. Highly recommended for commercial shipments.",
-    initials: "RK",
+      "JBS Cargo Movers Made My shipping experience easy and stress-free. From the moment I contacted them for a quote to the final delivery of my shipment, their team was professional, efficient, and well-mannered.",
+    initials: "PS",
   },
   {
-    name: "Sneha Patel",
-    company: "Patel & Sons Textiles",
-    role: "Operations Director",
+    name: "Negi",
+    company: "Business Partner",
+    role: "Verified User",
     review:
-      "We rely heavily on their Surface Cargo services. The pricing is incredibly competitive and the dedicated support team is always available 24/7. They truly understand the value of timely committed deliveries.",
-    initials: "SP",
+      "Very professional work ethic. Service are upto mark and delivery time is as per pre defined schedule. Staff was cooperative and handled our cargo with great care.",
+    initials: "N",
   },
   {
-    name: "Amit Sharma",
-    company: "Sharma Pharmaceuticals",
-    role: "CEO",
+    name: "Elizabeth",
+    company: "Corporate Client",
+    role: "Regular Shipper",
     review:
-      "Handling time-sensitive air cargo is tough, but JBS makes it look easy. Their strong network with airlines like IndiGo and Air India ensures our urgent freight reaches safely without delays. Excellent professional logistics management.",
-    initials: "AS",
-  },
-  {
-    name: "Priya Mehta",
-    company: "Mehta Garments",
-    role: "Logistics Head",
-    review:
-      "Their train logistics service has been a game-changer for our bulk textile shipments. Cost-effective, eco-friendly, and remarkably punctual. The real-time tracking gives us complete peace of mind.",
-    initials: "PM",
+      "I've used several cargo companies before, but JBS CARGO MOVERS is by far the best. Their air cargo service is exceptionally fast and reliable. High-level professionalism and transparency in pricing.",
+    initials: "E",
   },
 ];
 

@@ -58,15 +58,15 @@ export default function AboutPageContent() {
                 About <span className="text-brand-orange">JBS Cargo</span> <br />
                 Movers.
               </h2>
-              <div className="space-y-6 text-brand-black/60 text-lg leading-relaxed">
+              <div className="space-y-8 text-brand-black/70 text-lg leading-relaxed font-medium">
                 <p>
-                  Based in New Delhi, we specialize in Air Cargo, Surface Cargo, Train Cargo, Consolidation Services, and Manpower Solutions. We provide complete Door-to-Door cargo movement services through Air, Surface, and Rail transportation modes, ensuring efficient and timely deliveries across approximately 100 destinations nationwide.
+                  JBS Cargo Movers was founded in 2023 by <span className="text-brand-orange font-bold">Lalit Saini</span>, a seasoned logistics expert with years of hands-on experience in cargo and freight operations across India. Built from the ground up in New Delhi, JBS was created with one vision: to make cargo movement across India reliable, secure, fast, and cost-effective — for every business, large or small.
                 </p>
-                <p>
-                  With a dedicated team of experienced logistics professionals and strong operational coordination, we offer customized logistics solutions designed to meet the growing demands of corporate and commercial clients.
+                <p className="text-brand-black/50 text-base leading-relaxed">
+                  Under Lalit Saini's leadership, JBS has quickly grown into a trusted logistics partner for corporate and commercial clients. We specialise in Air Cargo, Surface Cargo, Train Cargo, Consolidation Services, Door-to-Door Delivery, and Manpower Solutions — serving approximately 100 destinations nationwide through our strong network of airline and logistics partnerships including Blue Dart, Delhivery, Mahindra Logistics, IndiGo Cargo, Air India Cargo, Akasa Air, SpiceJet Cargo, and the Indian Railways Cargo Network.
                 </p>
-                <p>
-                  Our commitment is to provide safe, smooth, and hassle-free cargo transportation services while maintaining the highest standards of professionalism and customer satisfaction.
+                <p className="text-brand-black/50 text-base leading-relaxed italic">
+                  Our operational capabilities are further strengthened through our associated organisation, <span className="text-brand-orange font-bold">Move Zen Express Logistics Pvt. Ltd.</span> Together, we offer customised logistics solutions designed to meet the growing demands of our clients — with complete peace of mind, transparent pricing, and the highest standards of professionalism.
                 </p>
               </div>
               

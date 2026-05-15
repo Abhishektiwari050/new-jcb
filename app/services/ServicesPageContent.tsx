@@ -133,14 +133,15 @@ export default function ServicesPageContent() {
                   </h2>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                      {[
-                       "Fast & Reliable Delivery Services",
+                       "Fast & Reliable Delivery",
                        "PAN India Cargo Connectivity",
                        "Safe & Secure Cargo Handling",
                        "Dedicated Customer Support",
                        "Economical & Competitive Pricing",
-                       "Customized Logistics Solutions",
+                       "Customised Logistics Solutions",
                        "Professional Logistics Management",
-                       "Timely & Committed Deliveries"
+                       "Timely & Committed Deliveries",
+                       "Strong Transportation Network — Blue Dart, Delhivery, Mahindra Logistics and major airline cargo partners"
                      ].map((benefit, i) => (
                        <div key={i} className="flex items-start gap-3">
                           <CheckCircle2 className="w-5 h-5 text-brand-orange mt-0.5" />

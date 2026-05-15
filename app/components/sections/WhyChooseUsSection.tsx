@@ -14,15 +14,15 @@ import {
 } from "lucide-react";
 
 const advantages = [
-  { icon: Zap, text: "Fast & Reliable Delivery Services" },
+  { icon: Zap, text: "Fast & Reliable Delivery" },
   { icon: MapPin, text: "PAN India Cargo Connectivity" },
   { icon: Shield, text: "Safe & Secure Cargo Handling" },
   { icon: Headphones, text: "Dedicated Customer Support" },
   { icon: IndianRupee, text: "Economical & Competitive Pricing" },
-  { icon: Settings2, text: "Customized Logistics Solutions" },
-  { icon: Clock, text: "Timely & Committed Deliveries" },
-  { icon: Network, text: "Strong Transportation Network" },
+  { icon: Settings2, text: "Customised Logistics Solutions" },
   { icon: BadgeCheck, text: "Professional Logistics Management" },
+  { icon: Clock, text: "Timely & Committed Deliveries" },
+  { icon: Network, text: "Strong Transportation Network — Blue Dart, Delhivery, Mahindra Logistics and major airline cargo partners" },
 ];
 
 export default function WhyChooseUsSection() {

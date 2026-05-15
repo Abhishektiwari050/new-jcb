@@ -19,7 +19,10 @@ export default function Home() {
       {/* Hero with 3D Belt */}
       <HeroSection />
 
-      {/* Partners Marquee */}
+      {/* About Us — 3 Paragraphs */}
+      <AboutUsSection />
+
+      {/* Partners Marquee — (Moved up for brand trust) */}
       <PartnersSection />
 
       {/* Service Cards */}
@@ -31,12 +34,10 @@ export default function Home() {
       {/* Sticky Scroll Process */}
       <ProcessSection />
 
-
-
-      {/* Why Choose Us — Ticker */}
+      {/* Why Choose Us — 9 Points */}
       <WhyChooseUsSection />
 
-      {/* Testimonials Carousel */}
+      {/* Testimonials Carousel — Real Reviews */}
       <TestimonialsSection />
 
       {/* Contact / Quote Form */}

@@ -64,7 +64,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="font-[var(--font-display)] font-black text-4xl xs:text-5xl sm:text-6xl lg:text-7xl xl:text-8xl text-brand-black leading-[0.95] tracking-tighter"
+              className="font-[var(--font-display)] font-black text-4xl xs:text-5xl sm:text-6xl lg:text-7xl xl:text-8xl text-white leading-[0.95] tracking-tighter"
             >
               Saman Ho Koi Bhi,
               <br />
@@ -113,12 +113,13 @@ export default function HeroSection() {
               className="flex items-center justify-between sm:justify-start gap-4 sm:gap-12 pt-8 border-t border-brand-black/5"
             >
               {[
-                { val: "100+", label: "Destinations" },
-                { val: "6", label: "Core Services" },
-                { val: "2023", label: "Established" },
+                { val: "100+", label: "Destinations Nationwide" },
+                { val: "6", label: "Services Offered" },
+                { val: "Pan-India", label: "Surface · Air · Rail" },
+                { val: "24/7", label: "Customer Support" },
               ].map((stat) => (
                 <div key={stat.label}>
-                  <p className="font-[var(--font-display)] font-black text-3xl text-brand-black">
+                  <p className="font-[var(--font-display)] font-black text-2xl sm:text-3xl text-brand-black">
                     {stat.val}
                   </p>
                   <p className="text-[10px] text-brand-black/40 uppercase font-bold tracking-widest mt-1">

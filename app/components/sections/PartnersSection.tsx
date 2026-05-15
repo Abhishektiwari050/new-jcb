@@ -4,15 +4,14 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const partners = [
-  { name: "Blue Dart Express Ltd.", logo: "https://upload.wikimedia.org/wikipedia/commons/6/6c/Blue_Dart_Express_logo.svg" },
+  { name: "Blue Dart Express", logo: "https://upload.wikimedia.org/wikipedia/commons/6/6c/Blue_Dart_Express_logo.svg" },
   { name: "Delhivery Ltd.", logo: "https://upload.wikimedia.org/wikipedia/commons/2/23/Delhivery_Logo_%282019%29.png" },
-  { name: "Mahindra Logistics Ltd.", logo: "https://upload.wikimedia.org/wikipedia/commons/7/70/MAHINDRA_LOGISTICS_LOGO.jpg" },
+  { name: "Mahindra Logistics", logo: "https://upload.wikimedia.org/wikipedia/commons/7/70/MAHINDRA_LOGISTICS_LOGO.jpg" },
   { name: "IndiGo Cargo", logo: "https://upload.wikimedia.org/wikipedia/commons/6/69/IndiGo_Airlines_logo.svg" },
   { name: "Air India Cargo", logo: "https://upload.wikimedia.org/wikipedia/commons/b/bf/Air_India_2023.svg" },
   { name: "Akasa Air Cargo", logo: "https://upload.wikimedia.org/wikipedia/commons/6/69/Akasa_Air_logo.svg" },
   { name: "SpiceJet Cargo", logo: "https://upload.wikimedia.org/wikipedia/en/9/9c/SpiceJet_logo.svg" },
-  { name: "DHL Express", logo: "https://upload.wikimedia.org/wikipedia/commons/b/b3/DHL_Express_logo.svg" },
-  { name: "Indian Railways Cargo Network", logo: "https://upload.wikimedia.org/wikipedia/fr/e/ed/Indian_Railway.png" },
+  { name: "Indian Railways", logo: "https://upload.wikimedia.org/wikipedia/fr/e/ed/Indian_Railway.png" },
 ];
 
 export default function PartnersSection() {

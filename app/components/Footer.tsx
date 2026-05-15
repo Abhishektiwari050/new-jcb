@@ -24,6 +24,7 @@ const footerLinks = {
     { label: "Contact Us", href: "/contact" },
   ],
   usefulLinks: [
+    { label: "Coverage", href: "/coverage" },
     { label: "Tracking", href: "/tracking" },
     { label: "Privacy Policy", href: "/privacy" },
     { label: "Terms of Service", href: "/terms" },
@@ -232,7 +233,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-brand-black/5 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 relative z-10">
           <p className="text-brand-black/30 text-xs font-bold uppercase tracking-widest">
-            © {new Date().getFullYear()} JBS Cargo Movers. All Rights Reserved.
+            © 2026 JBS Cargo Movers. All Rights Reserved.
           </p>
           <p className="text-brand-black/20 text-xs font-bold uppercase tracking-widest">
             Designed & Built with precision.

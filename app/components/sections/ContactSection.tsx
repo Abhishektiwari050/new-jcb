@@ -132,12 +132,12 @@ export default function ContactSection() {
                       className="w-full px-4 py-3 rounded-lg border border-border-light focus:border-brand-orange focus:ring-1 focus:ring-brand-orange outline-none transition-all bg-surface-light/50 text-text-primary"
                     >
                       <option value="">Select a service</option>
-                      <option value="air">Air Cargo</option>
-                      <option value="surface">Surface Cargo</option>
-                      <option value="train">Train Cargo</option>
-                      <option value="consolidation">Consolidation</option>
-                      <option value="door">Door-to-Door</option>
-                      <option value="manpower">Manpower</option>
+                      <option value="air">Air Cargo Services</option>
+                      <option value="surface">Surface Cargo Services</option>
+                      <option value="train">Train Cargo Services</option>
+                      <option value="consolidation">Consolidation Services</option>
+                      <option value="door">Door-to-Door Delivery</option>
+                      <option value="manpower">Manpower Services</option>
                     </select>
                   </div>
 
