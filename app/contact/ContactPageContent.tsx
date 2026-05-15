@@ -11,7 +11,7 @@ export default function ContactPageContent() {
       <Navbar theme="dark" />
       
       {/* Hero Section */}
-      <section className="relative py-48 bg-brand-black overflow-hidden">
+      <section className="relative py-32 bg-brand-black overflow-hidden">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
