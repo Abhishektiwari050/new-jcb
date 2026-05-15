@@ -4,9 +4,10 @@ import Footer from "../components/Footer";
 import TrackingPageContent from "./TrackingPageContent";
 
 export const metadata: Metadata = {
-  title: "Track Shipment | JBS Cargo Movers",
+  title: "Track Shipment | Real-time Cargo Tracking Coming Soon",
   description:
-    "Real-time tracking for your JBS Cargo shipments. Enter your consignment number to get live status updates.",
+    "Stay tuned for our high-precision GPS tracking system. In the meantime, contact our operational desk for instant status reports on your JBS Cargo consignments.",
+  keywords: ["track shipment JBS", "cargo tracking India", "consignment status", "GPS logistics tracking"],
 };
 
 export default function TrackingPage() {

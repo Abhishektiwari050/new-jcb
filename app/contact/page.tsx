@@ -4,9 +4,10 @@ import Footer from "../components/Footer";
 import ContactPageContent from "@/app/contact/ContactPageContent";
 
 export const metadata: Metadata = {
-  title: "Contact Us | JBS Cargo Movers",
+  title: "Contact Logistics Experts | JBS Cargo Movers New Delhi",
   description:
-    "Get in touch with JBS Cargo Movers. Our logistics experts are available 24/7 for quotes, tracking, and operational support.",
+    "Get in touch with JBS Cargo Movers for elite logistics solutions. Our New Delhi operational desk is available 24/7 for instant quotes and consignment support.",
+  keywords: ["contact cargo movers", "logistics quote India", "JBS Cargo phone number", "New Delhi logistics support"],
 };
 
 export default function ContactPage() {

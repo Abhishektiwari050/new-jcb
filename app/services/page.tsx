@@ -4,9 +4,10 @@ import Footer from "../components/Footer";
 import ServicesPageContent from "@/app/services/ServicesPageContent";
 
 export const metadata: Metadata = {
-  title: "Logistics Services | JBS Cargo Movers",
+  title: "Cargo Services & Solutions | Air, Surface, Train & Consolidation",
   description:
-    "Explore our full range of logistics solutions including Air, Surface, and Train Cargo, Warehousing, and Door-to-Door delivery.",
+    "Comprehensive logistics solutions: Air Cargo, Surface Cargo, Train Cargo, and specialized Consolidation services. Fast, secure, and cost-effective delivery across India.",
+  keywords: ["air cargo services", "surface transport", "rail freight India", "consolidation services", "logistics solutions"],
 };
 
 export default function ServicesPage() {
