@@ -185,9 +185,15 @@ export default function Footer() {
           <p className="text-brand-black/30 text-xs font-bold uppercase tracking-widest">
             © 2026 JBS Cargo Movers. All Rights Reserved.
           </p>
-          <p className="text-brand-black/20 text-xs font-bold uppercase tracking-widest">
-            Designed & Built with precision.
-          </p>
+          <div className="flex items-center gap-2">
+            <span className="text-brand-black/20 text-xs font-bold uppercase tracking-widest">
+              Designed & Built by
+            </span>
+            <a href="https://vistar.tech" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 hover:opacity-80 transition-opacity group">
+              <img src="/images/vistar-logo.jpg" alt="Vistar Tech" className="h-5 w-auto rounded-sm grayscale group-hover:grayscale-0 transition-all duration-300" />
+              <span className="text-brand-black/40 text-[10px] font-black uppercase tracking-tighter group-hover:text-brand-black transition-colors">Vistar.tech</span>
+            </a>
+          </div>
         </div>
       </div>
 
