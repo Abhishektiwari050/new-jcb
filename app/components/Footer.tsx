@@ -73,7 +73,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://www.justdial.com/Delhi/JBS-Cargo-Movers-Opposite-Vpo-Shahabad-Mohammadpur-Shahabad-Mohammadpur/011PXX11-XX11-230509170519-I3D7_BZDET"
+                href="https://www.justdial.com/Delhi/Jbs-Cargo-Movers-South-West-Delhidelhi-110061-Shahbad-Mohammadpur/011PXX11-XX11-250304143253-J2F3_BZDET"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-brand-black/5 flex items-center justify-center text-brand-black hover:bg-brand-orange hover:text-white transition-all duration-300 group"
