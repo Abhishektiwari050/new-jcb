@@ -114,6 +114,42 @@ export default function ContactPageContent() {
          </div>
       </section>
 
+      {/* Service Areas Section for Local SEO */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="text-brand-orange font-bold uppercase tracking-widest text-xs">Serving Your Neighborhood</span>
+            <h2 className="text-4xl md:text-5xl font-[var(--font-display)] font-black text-brand-black mt-4">
+              Cargo Services <span className="text-brand-orange">Near You.</span>
+            </h2>
+            <p className="text-brand-black/50 mt-6 max-w-2xl mx-auto font-medium">
+              We provide doorstep pickup and delivery across the entire Delhi NCR region.
+              Our local network ensures your cargo moves fast from your location.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {[
+              "Dwarka", "IGI Airport", "Shahabad Mohammadpur", "Gurugram", 
+              "Noida", "South Delhi", "West Delhi", "North Delhi",
+              "East Delhi", "Rohini", "Janakpuri", "Vasant Kunj",
+              "Faridabad", "Ghaziabad", "Manesar", "Aerocity"
+            ].map((area, i) => (
+              <div key={i} className="flex items-center gap-3 p-6 bg-[#FDFBF7] rounded-2xl border border-brand-black/5 hover:border-brand-orange/30 transition-colors group">
+                <div className="w-1.5 h-1.5 rounded-full bg-brand-orange group-hover:scale-150 transition-transform" />
+                <span className="text-brand-black font-bold text-sm tracking-tight">{area}</span>
+              </div>
+            ))}
+          </div>
+          
+          <div className="mt-16 p-8 bg-brand-orange/5 border border-brand-orange/10 rounded-[32px] text-center">
+            <p className="text-brand-black/70 font-medium italic text-sm">
+              Don't see your area? We cover the entire Delhi NCR and provide Pan-India movement from our New Delhi hub.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Quick Stats/Commitment */}
       <section className="py-24 bg-[#FDFBF7] border-t border-brand-black/5">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
