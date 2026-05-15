@@ -41,7 +41,7 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-28 md:pt-32 pb-4 md:pb-6 w-full min-h-screen flex flex-col justify-between items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-28 md:pt-44 pb-4 md:pb-6 w-full min-h-screen flex flex-col justify-between items-center">
         {/* Top Content: Text */}
         <div className="w-full flex flex-col items-center">
           <div className="space-y-6 md:space-y-8 max-w-4xl text-center flex flex-col items-center">
