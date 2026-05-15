@@ -6,6 +6,7 @@ import CustomCursor from "./components/CustomCursor";
 import LoadingScreen from "./components/LoadingScreen";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://new-jcb.vercel.app"),
   title: "JBS Cargo Movers | Air, Surface & Train Cargo — Pan India Logistics",
   description:
     "JBS Cargo Movers offers Air Cargo, Surface Cargo, Train Cargo, Consolidation and Manpower services across 100+ destinations in India. Fast, reliable, door-to-door. Get a quote today.",
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "JBS Cargo Movers | Pan India Logistics",
     description: "Fast, reliable, door-to-door logistics services across 100+ destinations in India.",
-    url: "https://jbscargomovers.com", // Adjust to your actual domain
+    url: "https://new-jcb.vercel.app",
     siteName: "JBS Cargo Movers",
     images: [
       {
