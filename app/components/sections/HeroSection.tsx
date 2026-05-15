@@ -32,14 +32,22 @@ export default function HeroSection() {
   return (
     <section id="hero" ref={sectionRef} className="relative min-h-screen overflow-hidden bg-[#F2EFEA]">
       {/* 3D Background Layer */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+        {/* Background Watermark */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[20vw] font-black text-brand-black/[0.02] uppercase select-none tracking-tighter">
+          JBS CARGO
+        </div>
+        
+        {/* Vertical Decorative Lines */}
+        <div className="absolute left-[10%] top-0 bottom-0 w-px bg-brand-black/[0.03] hidden lg:block" />
+        <div className="absolute right-[10%] top-0 bottom-0 w-px bg-brand-black/[0.03] hidden lg:block" />
+
         <div className="w-full h-full">
           <CargoBelt3D
             isBackground={true}
             scrollProgress={velocityFactor}
           />
         </div>
-        {/* Readability overlay removed per user request for clearer 3D visibility */}
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-32 md:pt-56 pb-20 w-full min-h-screen flex items-center">
@@ -110,19 +118,19 @@ export default function HeroSection() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8 }}
-              className="flex items-center justify-between sm:justify-start gap-4 sm:gap-12 pt-8 border-t border-brand-black/5 mx-auto lg:mx-0 max-w-sm sm:max-w-none"
+              className="flex items-center justify-between gap-4 md:gap-8 pt-8 border-t border-brand-black/5 w-full"
             >
               {[
-                { val: "100+", label: "Destinations Nationwide" },
-                { val: "6", label: "Services Offered" },
-                { val: "Pan-India", label: "Surface · Air · Rail" },
-                { val: "24/7", label: "Customer Support" },
+                { val: "100+", label: "Destinations" },
+                { val: "6", label: "Core Services" },
+                { val: "Pan-India", label: "Network" },
+                { val: "24/7", label: "Live Support" },
               ].map((stat) => (
-                <div key={stat.label}>
-                  <p className="font-[var(--font-display)] font-black text-2xl sm:text-3xl text-brand-black">
+                <div key={stat.label} className="flex-1">
+                  <p className="font-[var(--font-display)] font-black text-2xl sm:text-3xl lg:text-4xl text-brand-black">
                     {stat.val}
                   </p>
-                  <p className="text-[10px] text-brand-black/40 uppercase font-bold tracking-widest mt-1">
+                  <p className="text-[10px] md:text-xs text-brand-black/40 uppercase font-bold tracking-widest mt-1">
                     {stat.label}
                   </p>
                 </div>
