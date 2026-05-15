@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Shield, Target, Users, Zap, Award, Globe, CheckCircle2, Landmark, Building2, Mountain, Cpu, Waves, Castle, MapPin } from "lucide-react";
+import { Shield, Target, Users, Zap, Award, Globe, CheckCircle2, Mountain, Cpu, Waves, Castle } from "lucide-react";
 import Navbar from "@/app/components/Navbar";
 
 const IndiaGateIcon = ({ className }: { className?: string }) => (
@@ -16,6 +16,59 @@ const IndiaGateIcon = ({ className }: { className?: string }) => (
     <circle cx="70" cy="50" r="2.5" fill="currentColor" stroke="none" />
     <path d="M15 65 L25 65" />
     <path d="M75 65 L85 65" />
+  </svg>
+);
+
+const GatewayOfIndiaIcon = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 100 100" className={className} fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M10 90 L90 90" />
+    <path d="M15 90 V50 H85 V90" />
+    <path d="M35 90 V25" />
+    <path d="M65 90 V25" />
+    <path d="M15 90 V50" />
+    <path d="M85 90 V50" />
+    <path d="M35 65 Q50 45 65 65" />
+    <path d="M15 75 Q25 65 35 75" />
+    <path d="M65 75 Q75 65 85 75" />
+    <path d="M35 35 H65" />
+    <path d="M35 45 H65" />
+    <path d="M15 55 H85" />
+    <circle cx="35" cy="20" r="2.5" fill="currentColor" stroke="none" />
+    <circle cx="65" cy="20" r="2.5" fill="currentColor" stroke="none" />
+  </svg>
+);
+
+const BangaloreIcon = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 100 100" className={className} fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M10 90 L90 90" />
+    <path d="M25 90 V60 H75 V90" />
+    <path d="M35 90 V60" />
+    <path d="M45 90 V60" />
+    <path d="M55 90 V60" />
+    <path d="M65 90 V60" />
+    <path d="M15 90 V50" />
+    <path d="M15 50 Q20 40 25 50 V90" />
+    <path d="M75 90 V50" />
+    <path d="M75 50 Q80 40 85 50 V90" />
+    <path d="M35 60 V45 H65 V60" />
+    <path d="M40 45 V35 H60 V45" />
+    <path d="M40 35 Q50 20 60 35" />
+    <path d="M50 20 V15" />
+  </svg>
+);
+
+const ChennaiIcon = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 100 100" className={className} fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M20 90 H80 V60 H20 V90" />
+    <path d="M40 90 V70 H60 V90" />
+    <path d="M25 60 H75 L70 50 H30 L25 60" />
+    <path d="M30 50 H70 L65 40 H35 L30 50" />
+    <path d="M35 40 H65 L60 30 H40 L35 40" />
+    <path d="M40 30 H60 L55 20 H45 L40 30" />
+    <path d="M45 20 H55 V10 H45 V20" />
+    <path d="M42 10 H58" />
+    <path d="M48 60 L48 20" />
+    <path d="M52 60 L52 20" />
   </svg>
 );
 
@@ -157,10 +210,10 @@ export default function AboutPageContent() {
            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
               {[
                 { name: "Delhi NCR", icon: IndiaGateIcon },
-                { name: "Mumbai", icon: Building2 },
+                { name: "Mumbai", icon: GatewayOfIndiaIcon },
                 { name: "Pune", icon: Mountain },
-                { name: "Bangalore", icon: Cpu },
-                { name: "Chennai", icon: Waves },
+                { name: "Bangalore", icon: BangaloreIcon },
+                { name: "Chennai", icon: ChennaiIcon },
                 { name: "Hyderabad", icon: Castle },
               ].map((city, i) => (
                 <div key={i} className="p-6 bg-white border border-brand-black/5 rounded-2xl text-center group hover:border-brand-orange/30 transition-colors">
