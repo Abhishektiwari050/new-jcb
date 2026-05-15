@@ -148,7 +148,7 @@ export default function RootLayout({
         />
       </head>
       <body 
-        className="antialiased bg-brand-black selection:bg-brand-orange selection:text-white"
+        className="antialiased bg-[#F2EFEA] selection:bg-brand-orange selection:text-white"
         suppressHydrationWarning
       >
         <ThemeProvider

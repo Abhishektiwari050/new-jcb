@@ -43,8 +43,8 @@ export default function Navbar({ theme = "light" }: NavbarProps) {
         }`}
       >
         {/* Top Contact Bar */}
-        <div className={`hidden lg:block w-full transition-all duration-300 bg-white ${scrolled ? "h-0 overflow-hidden opacity-0" : `h-10 opacity-100`}`}>
-          <div className={`max-w-7xl mx-auto px-6 lg:px-8 h-full flex items-center justify-end gap-6 text-xs font-bold ${scrolled || isDark ? "text-white/80" : "text-brand-black/60"}`}>
+        <div className={`hidden lg:block w-full transition-all duration-300 bg-white shadow-none border-none ${scrolled ? "h-0 overflow-hidden opacity-0" : `h-10 opacity-100`}`}>
+          <div className={`max-w-7xl mx-auto px-6 lg:px-8 h-full flex items-center justify-end gap-6 text-xs font-bold ${scrolled || isDark ? "text-white/80" : "text-brand-black"}`}>
             <a href="mailto:jbscargomovers@gmail.com" className="flex items-center gap-2 hover:text-brand-orange transition-colors">
               <Mail className="w-3.5 h-3.5" />
               jbscargomovers@gmail.com
