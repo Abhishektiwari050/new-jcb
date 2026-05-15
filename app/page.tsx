@@ -37,8 +37,7 @@ export default function Home() {
       {/* Testimonials Carousel — Real Reviews */}
       <TestimonialsSection />
 
-      {/* Contact / Quote Form */}
-      <ContactSection />
+
 
       {/* CTA Banner */}
       <CTASection />

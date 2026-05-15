@@ -41,16 +41,16 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-32 md:pt-56 pb-20 w-full min-h-screen flex flex-col justify-center">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center w-full">
-          {/* Left Content */}
-          <div className="space-y-10 md:space-y-12 max-w-2xl text-center lg:text-left">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-24 md:pt-32 pb-20 w-full min-h-screen flex flex-col justify-start md:justify-center items-center">
+        <div className="w-full flex flex-col items-center">
+          {/* Centered Content */}
+          <div className="space-y-8 md:space-y-10 max-w-4xl text-center flex flex-col items-center">
             {/* Badge */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 bg-brand-orange/10 border border-brand-orange/20 rounded-full px-4 py-2 mx-auto lg:mx-0"
+              className="inline-flex items-center gap-2 bg-brand-orange/10 border border-brand-orange/20 rounded-full px-4 py-2 mx-auto"
             >
               <span className="w-2 h-2 rounded-full bg-brand-orange animate-pulse" />
               <span className="text-[10px] md:text-xs text-brand-orange font-bold tracking-wide uppercase">
@@ -75,7 +75,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="text-brand-black md:text-brand-black/60 text-sm md:text-lg max-w-md mx-auto lg:mx-0 leading-relaxed font-bold md:font-medium bg-white/10 md:bg-transparent backdrop-blur-[2px] md:backdrop-blur-0 p-2 md:p-0 rounded-xl"
+              className="text-brand-black md:text-brand-black/60 text-sm md:text-lg max-w-xl mx-auto leading-relaxed font-bold md:font-medium bg-white/10 md:bg-transparent backdrop-blur-[2px] md:backdrop-blur-0 p-2 md:p-0 rounded-xl"
             >
               Air, surface, train and consolidation cargo — from New Delhi to 100+ destinations across India. Fast, secure, and door-to-door.
             </motion.p>
@@ -85,7 +85,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="flex flex-col sm:flex-row gap-4"
+              className="flex flex-col sm:flex-row gap-4 justify-center w-full sm:w-auto"
             >
               <Link
                 href="/contact"
@@ -106,29 +106,7 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Stats row — Moved out of grid to span full width */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8 }}
-          className="mt-20 pt-10 border-t border-brand-black/5 w-full grid grid-cols-2 md:grid-cols-4 gap-8"
-        >
-          {[
-            { val: "100+", label: "Destinations" },
-            { val: "6", label: "Core Services" },
-            { val: "Pan-India", label: "Network" },
-            { val: "24/7", label: "Live Support" },
-          ].map((stat) => (
-            <div key={stat.label} className="text-center md:text-left">
-              <p className="font-[var(--font-display)] font-black text-3xl sm:text-4xl lg:text-5xl text-brand-black">
-                {stat.val}
-              </p>
-              <p className="text-[10px] md:text-xs text-brand-black/40 uppercase font-bold tracking-widest mt-2">
-                {stat.label}
-              </p>
-            </div>
-          ))}
-        </motion.div>
+
       </div>
 
       {/* Bottom transition to white */}
