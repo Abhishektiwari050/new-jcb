@@ -19,14 +19,14 @@ export default function Home() {
       <HeroSection />
 
 
+      {/* Statistics Strip — (Moved up for immediate impact) */}
+      <StatsSection />
+
       {/* Partners Marquee — (Moved up for brand trust) */}
       <PartnersSection />
 
       {/* Service Cards */}
       <ServicesSection />
-
-      {/* Statistics Strip */}
-      <StatsSection />
 
       {/* Sticky Scroll Process */}
       <ProcessSection />
