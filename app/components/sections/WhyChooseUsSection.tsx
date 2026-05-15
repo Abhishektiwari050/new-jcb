@@ -69,7 +69,7 @@ export default function WhyChooseUsSection() {
       <div className="relative mb-4">
         <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#FDFBF7] to-transparent z-10" />
         <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#FDFBF7] to-transparent z-10" />
-        <div className="flex animate-[ticker_30s_linear_infinite] whitespace-nowrap gap-4 transform-gpu will-change-transform">
+        <div className="flex animate-[ticker_15s_linear_infinite] lg:animate-[ticker_25s_linear_infinite] whitespace-nowrap gap-4 transform-gpu will-change-transform">
           {tickerItems.map((item, i) => (
             <div
               key={`r1-${i}`}
@@ -90,7 +90,7 @@ export default function WhyChooseUsSection() {
       <div className="relative">
         <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#FDFBF7] to-transparent z-10" />
         <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#FDFBF7] to-transparent z-10" />
-        <div className="flex animate-[tickerReverse_35s_linear_infinite] whitespace-nowrap gap-4 transform-gpu will-change-transform">
+        <div className="flex animate-[tickerReverse_18s_linear_infinite] lg:animate-[tickerReverse_30s_linear_infinite] whitespace-nowrap gap-4 transform-gpu will-change-transform">
           {[...tickerItems].reverse().map((item, i) => (
             <div
               key={`r2-${i}`}

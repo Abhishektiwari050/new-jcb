@@ -43,7 +43,7 @@ export default function PartnersSection() {
       <div className="relative w-full">
         {/* No fade edges as per user request */}
         
-        <div className="flex animate-[ticker_40s_linear_infinite] whitespace-nowrap gap-8 transform-gpu will-change-transform py-4">
+        <div className="flex animate-[ticker_20s_linear_infinite] lg:animate-[ticker_30s_linear_infinite] whitespace-nowrap gap-8 transform-gpu will-change-transform py-4">
           {[...partners, ...partners, ...partners].map((partner, i) => (
             <motion.div
               key={i}
