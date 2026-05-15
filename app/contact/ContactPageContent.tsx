@@ -45,65 +45,7 @@ export default function ContactPageContent() {
         </div>
       </section>
 
-      {/* Contact Cards */}
-      <section className="py-32">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Registered Office */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="p-10 rounded-[40px] border border-brand-black/5 bg-white hover:shadow-2xl transition-all duration-500"
-            >
-              <div className="w-14 h-14 rounded-2xl bg-brand-orange/10 flex items-center justify-center mb-8">
-                <MapPin className="w-7 h-7 text-brand-orange" />
-              </div>
-              <h3 className="text-xl font-black text-brand-black mb-4">Registered Office</h3>
-              <p className="text-brand-black/60 leading-relaxed font-medium">
-                Plot No. 6, Street No. 5, V.P.O. Shahabad Mohammadpur, <br />
-                New Delhi – 110061
-              </p>
-            </motion.div>
 
-            {/* Direct Contact */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              viewport={{ once: true }}
-              className="p-10 rounded-[40px] border border-brand-black/5 bg-white hover:shadow-2xl transition-all duration-500"
-            >
-              <div className="w-14 h-14 rounded-2xl bg-brand-orange/10 flex items-center justify-center mb-8">
-                <Phone className="w-7 h-7 text-brand-orange" />
-              </div>
-              <h3 className="text-xl font-black text-brand-black mb-4">Call Us</h3>
-              <div className="space-y-2">
-                <a href="tel:+919582566995" className="block text-brand-black font-bold text-lg hover:text-brand-orange transition-colors">+91 9582566995</a>
-                <a href="tel:+919582166995" className="block text-brand-black font-bold text-lg hover:text-brand-orange transition-colors">+91 9582166995</a>
-              </div>
-            </motion.div>
-
-            {/* Email & Web */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              viewport={{ once: true }}
-              className="p-10 rounded-[40px] border border-brand-black/5 bg-white hover:shadow-2xl transition-all duration-500"
-            >
-              <div className="w-14 h-14 rounded-2xl bg-brand-orange/10 flex items-center justify-center mb-8">
-                <Mail className="w-7 h-7 text-brand-orange" />
-              </div>
-              <h3 className="text-xl font-black text-brand-black mb-4">Online</h3>
-              <div className="space-y-2">
-                <a href="mailto:jbscargomovers@gmail.com" className="block text-brand-black font-bold hover:text-brand-orange transition-colors">jbscargomovers@gmail.com</a>
-                <a href="https://www.jbscargomovers.com" className="block text-brand-black font-bold hover:text-brand-orange transition-colors text-sm">www.jbscargomovers.com</a>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
 
       {/* Main Contact Form Section */}
       <section className="pb-32">
