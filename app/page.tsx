@@ -1,6 +1,5 @@
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/sections/HeroSection";
-import AboutUsSection from "./components/sections/AboutUsSection";
 import ServicesSection from "./components/sections/ServicesSection";
 import PartnersSection from "./components/sections/PartnersSection";
 import StatsSection from "./components/sections/StatsSection";
@@ -19,8 +18,6 @@ export default function Home() {
       {/* Hero with 3D Belt */}
       <HeroSection />
 
-      {/* About Us — 3 Paragraphs */}
-      <AboutUsSection />
 
       {/* Partners Marquee — (Moved up for brand trust) */}
       <PartnersSection />
