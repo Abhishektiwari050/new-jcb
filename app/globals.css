@@ -4,7 +4,7 @@
    JBS CARGO MOVERS — Design System
    ═══════════════════════════════════════════════════════ */
 
-@theme inline {
+@theme {
   /* ── Brand Colours (from logo — pixel-accurate) ── */
   --color-brand-orange: #E86A2F;
   --color-brand-orange-dark: #D4571E;
