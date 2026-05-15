@@ -56,7 +56,7 @@ export default function ServicesPageContent() {
     <div>
       <Navbar theme="dark" />
       {/* Hero Header */}
-      <section className="relative py-48 bg-brand-black overflow-hidden">
+      <section className="relative py-32 bg-brand-black overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,_rgba(232,106,47,0.15)_0%,_transparent_70%)]" />
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 text-center">
           <motion.div
@@ -90,7 +90,7 @@ export default function ServicesPageContent() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-32 bg-white">
+      <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, i) => (
