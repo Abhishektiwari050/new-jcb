@@ -41,16 +41,16 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-24 md:pt-28 pb-16 w-full min-h-screen flex flex-col justify-between items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-32 md:pt-40 pb-16 w-full min-h-screen flex flex-col justify-between items-center">
         {/* Top Content: Text */}
         <div className="w-full flex flex-col items-center">
-          <div className="space-y-4 md:space-y-5 max-w-4xl text-center flex flex-col items-center">
+          <div className="space-y-6 md:space-y-8 max-w-4xl text-center flex flex-col items-center">
             {/* Headline */}
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="font-[var(--font-display)] font-black text-3xl xs:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-brand-black leading-[1.1] md:leading-[0.95] tracking-tighter"
+              className="font-[var(--font-display)] font-black text-4xl xs:text-5xl sm:text-6xl lg:text-7xl xl:text-8xl text-brand-black leading-[1.1] md:leading-[0.95] tracking-tighter"
             >
               Saman Ho Koi Bhi,
               <br />
@@ -62,7 +62,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="text-brand-black md:text-brand-black/60 text-sm md:text-lg max-w-xl mx-auto leading-relaxed font-bold md:font-medium bg-white/10 md:bg-transparent backdrop-blur-[2px] md:backdrop-blur-0 p-2 md:p-0 rounded-xl"
+              className="text-brand-black/70 text-sm md:text-lg max-w-xl mx-auto leading-relaxed font-bold md:font-medium p-2 md:p-0"
             >
               Air, surface, train and consolidation cargo — from New Delhi to 100+ destinations across India. Fast, secure, and door-to-door.
             </motion.p>
