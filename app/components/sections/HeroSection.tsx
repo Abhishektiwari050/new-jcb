@@ -41,12 +41,10 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-24 md:pt-32 pb-20 w-full min-h-screen flex flex-col justify-start items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-24 md:pt-28 pb-16 w-full min-h-screen flex flex-col justify-between items-center">
+        {/* Top Content: Text */}
         <div className="w-full flex flex-col items-center">
-          {/* Centered Content */}
-          <div className="space-y-6 md:space-y-8 max-w-4xl text-center flex flex-col items-center">
-
-
+          <div className="space-y-4 md:space-y-5 max-w-4xl text-center flex flex-col items-center">
             {/* Headline */}
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
@@ -68,34 +66,32 @@ export default function HeroSection() {
             >
               Air, surface, train and consolidation cargo — from New Delhi to 100+ destinations across India. Fast, secure, and door-to-door.
             </motion.p>
-
-            {/* CTAs */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center w-full sm:w-auto"
-            >
-              <Link
-                href="/contact"
-                className="bg-brand-orange text-white font-[var(--font-display)] font-bold text-sm px-10 py-5 tracking-wider uppercase hover:bg-brand-orange-dark transition-all duration-300 flex items-center justify-center gap-2 shadow-xl shadow-brand-orange/20 hover:scale-105 active:scale-95 w-full sm:w-auto text-center"
-              >
-                Get a Quote
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-              <Link
-                href="https://wa.me/919582566995"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-white text-brand-black border-2 border-brand-black font-bold text-sm px-10 py-5 tracking-wider uppercase hover:bg-brand-black hover:text-white transition-all duration-300 hover:scale-105 active:scale-95 w-full sm:w-auto text-center"
-              >
-                WhatsApp Us
-              </Link>
-            </motion.div>
           </div>
         </div>
 
-
+        {/* Bottom Content: CTAs */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6 }}
+          className="flex flex-col sm:flex-row gap-4 justify-center w-full sm:w-auto"
+        >
+          <Link
+            href="/contact"
+            className="bg-brand-orange text-white font-[var(--font-display)] font-bold text-sm px-10 py-5 tracking-wider uppercase hover:bg-brand-orange-dark transition-all duration-300 flex items-center justify-center gap-2 shadow-xl shadow-brand-orange/20 hover:scale-105 active:scale-95 w-full sm:w-auto text-center"
+          >
+            Get a Quote
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+          <Link
+            href="https://wa.me/919582566995"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white text-brand-black border-2 border-brand-black font-bold text-sm px-10 py-5 tracking-wider uppercase hover:bg-brand-black hover:text-white transition-all duration-300 hover:scale-105 active:scale-95 w-full sm:w-auto text-center"
+          >
+            WhatsApp Us
+          </Link>
+        </motion.div>
       </div>
 
       {/* Bottom transition to white */}
