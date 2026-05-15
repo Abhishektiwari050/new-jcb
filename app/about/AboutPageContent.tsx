@@ -112,7 +112,12 @@ export default function AboutPageContent() {
 
                 <div className="w-full h-px bg-white/10" />
 
-
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-4">Operational Edge</h3>
+                  <p className="text-white/50 leading-relaxed">
+                    Our operational capabilities are driven by a robust internal logistics network and a dedicated fleet, ensuring timely delivery, safety, and operational excellence across all 100+ destinations.
+                  </p>
+                </div>
               </div>
 
               <div className="p-10 bg-brand-orange/5 border border-brand-orange/10 rounded-[40px]">
