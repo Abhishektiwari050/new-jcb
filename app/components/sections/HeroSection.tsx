@@ -32,16 +32,7 @@ export default function HeroSection() {
   return (
     <section id="hero" ref={sectionRef} className="relative min-h-screen overflow-hidden bg-[#F2EFEA]">
       {/* 3D Background Layer */}
-      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-        {/* Background Watermark */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[20vw] font-black text-brand-black/[0.02] uppercase select-none tracking-tighter">
-          JBS CARGO
-        </div>
-        
-        {/* Vertical Decorative Lines */}
-        <div className="absolute left-[10%] top-0 bottom-0 w-px bg-brand-black/[0.03] hidden lg:block" />
-        <div className="absolute right-[10%] top-0 bottom-0 w-px bg-brand-black/[0.03] hidden lg:block" />
-
+      <div className="absolute inset-0 z-0 pointer-events-none">
         <div className="w-full h-full">
           <CargoBelt3D
             isBackground={true}
@@ -113,83 +104,31 @@ export default function HeroSection() {
               </Link>
             </motion.div>
 
-            {/* Stats row */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.8 }}
-              className="flex items-center justify-between gap-4 md:gap-8 pt-8 border-t border-brand-black/5 w-full"
-            >
-              {[
-                { val: "100+", label: "Destinations" },
-                { val: "6", label: "Core Services" },
-                { val: "Pan-India", label: "Network" },
-                { val: "24/7", label: "Live Support" },
-              ].map((stat) => (
-                <div key={stat.label} className="flex-1">
-                  <p className="font-[var(--font-display)] font-black text-2xl sm:text-3xl lg:text-4xl text-brand-black">
-                    {stat.val}
-                  </p>
-                  <p className="text-[10px] md:text-xs text-brand-black/40 uppercase font-bold tracking-widest mt-1">
-                    {stat.label}
-                  </p>
-                </div>
-              ))}
-            </motion.div>
-          </div>
-
-          {/* Right Visual - Floating Trust Card */}
-          <div className="hidden lg:flex flex-col items-end justify-center relative">
-            <motion.div
-              initial={{ x: 50, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ delay: 1.0 }}
-              className="bg-white/80 backdrop-blur-xl p-8 rounded-3xl border border-white shadow-2xl shadow-brand-black/5 w-80 relative overflow-hidden"
-            >
-              <div className="absolute top-0 right-0 w-32 h-32 bg-brand-orange/10 rounded-full blur-3xl -mr-16 -mt-16" />
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 bg-brand-orange rounded-2xl flex items-center justify-center shadow-lg shadow-brand-orange/30">
-                  <Shield className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <p className="text-brand-black font-black text-xl leading-tight">Secured</p>
-                  <p className="text-brand-black/40 text-xs font-bold uppercase tracking-wider">100% Insured</p>
-                </div>
-              </div>
-              <div className="space-y-4">
-                <div className="h-2 bg-brand-black/5 rounded-full overflow-hidden">
-                  <motion.div
-                    initial={{ width: 0 }}
-                    animate={{ width: "99.8%" }}
-                    transition={{ duration: 2, delay: 1.5 }}
-                    className="h-full bg-brand-orange"
-                  />
-                </div>
-                <div className="flex justify-between items-end">
-                  <div>
-                    <p className="text-brand-black font-black text-3xl">99.8%</p>
-                    <p className="text-brand-black/30 text-[10px] font-bold uppercase">SLA Met</p>
-                  </div>
-                  <div className="text-right">
-                    <p className="text-brand-orange font-black text-xl italic tracking-tighter">PREMIUM</p>
-                    <p className="text-brand-black/30 text-[10px] font-bold uppercase whitespace-nowrap">Service Level</p>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Live Indicator */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 1.2 }}
-              className="mt-6 mr-8 bg-live-green/10 border border-live-green/20 px-4 py-2 rounded-full flex items-center gap-2"
-            >
-              <span className="w-2 h-2 rounded-full bg-live-green animate-pulse" />
-              <span className="text-[10px] text-live-green font-bold uppercase tracking-widest">System Online</span>
-            </motion.div>
-          </div>
         </div>
+
+        {/* Stats row — Moved out of grid to span full width */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8 }}
+          className="mt-20 pt-10 border-t border-brand-black/5 w-full grid grid-cols-2 md:grid-cols-4 gap-8"
+        >
+          {[
+            { val: "100+", label: "Destinations" },
+            { val: "6", label: "Core Services" },
+            { val: "Pan-India", label: "Network" },
+            { val: "24/7", label: "Live Support" },
+          ].map((stat) => (
+            <div key={stat.label} className="text-center md:text-left">
+              <p className="font-[var(--font-display)] font-black text-3xl sm:text-4xl lg:text-5xl text-brand-black">
+                {stat.val}
+              </p>
+              <p className="text-[10px] md:text-xs text-brand-black/40 uppercase font-bold tracking-widest mt-2">
+                {stat.label}
+              </p>
+            </div>
+          ))}
+        </motion.div>
       </div>
 
       {/* Bottom transition to white */}
