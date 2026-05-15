@@ -42,19 +42,19 @@ export default function HeroSection() {
         {/* Readability overlay removed per user request for clearer 3D visibility */}
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-56 pb-20 w-full min-h-screen flex items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-40 md:pt-56 pb-20 w-full min-h-screen flex items-center">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center w-full">
           {/* Left Content */}
-          <div className="space-y-12 max-w-2xl">
+          <div className="space-y-10 md:space-y-12 max-w-2xl text-center lg:text-left">
             {/* Badge */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 bg-brand-orange/10 border border-brand-orange/20 rounded-full px-4 py-2"
+              className="inline-flex items-center gap-2 bg-brand-orange/10 border border-brand-orange/20 rounded-full px-4 py-2 mx-auto lg:mx-0"
             >
               <span className="w-2 h-2 rounded-full bg-brand-orange animate-pulse" />
-              <span className="text-xs text-brand-orange font-bold tracking-wide uppercase">
+              <span className="text-[10px] md:text-xs text-brand-orange font-bold tracking-wide uppercase">
                 Shipping Nationwide — 24/7
               </span>
             </motion.div>
@@ -64,7 +64,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="font-[var(--font-display)] font-black text-4xl xs:text-5xl sm:text-6xl lg:text-7xl xl:text-8xl text-brand-black leading-[0.95] tracking-tighter"
+              className="font-[var(--font-display)] font-black text-4xl xs:text-5xl sm:text-6xl lg:text-7xl xl:text-8xl text-brand-black leading-[1.1] md:leading-[0.95] tracking-tighter"
             >
               Saman Ho Koi Bhi,
               <br />
@@ -76,7 +76,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="text-brand-black/60 text-base md:text-lg max-w-md leading-relaxed font-medium"
+              className="text-brand-black/60 text-sm md:text-lg max-w-md mx-auto lg:mx-0 leading-relaxed font-medium"
             >
               Air, surface, train and consolidation cargo — from New Delhi to 100+ destinations across India. Fast, secure, and door-to-door.
             </motion.p>
@@ -110,7 +110,7 @@ export default function HeroSection() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8 }}
-              className="flex items-center justify-between sm:justify-start gap-4 sm:gap-12 pt-8 border-t border-brand-black/5"
+              className="flex items-center justify-between sm:justify-start gap-4 sm:gap-12 pt-8 border-t border-brand-black/5 mx-auto lg:mx-0 max-w-sm sm:max-w-none"
             >
               {[
                 { val: "100+", label: "Destinations Nationwide" },

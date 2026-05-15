@@ -64,7 +64,7 @@ export default function Navbar({ theme = "light" }: NavbarProps) {
           <div className={`flex items-center justify-between transition-all duration-500 ${scrolled ? "h-20" : "h-32"}`}>
             {/* Logo */}
             <Link href="/" className="flex items-center group">
-              <div className={`relative transition-all duration-500 flex items-center justify-start overflow-visible ${scrolled ? "h-12 w-28 mt-0" : "h-16 w-36 mt-2"}`}>
+              <div className={`relative transition-all duration-500 flex items-center justify-start overflow-visible ${scrolled ? "h-10 w-24 md:h-12 md:w-28 mt-0" : "h-12 w-28 md:h-16 md:w-36 mt-2"}`}>
                 <img 
                    src="/images/logo.png" 
                    alt="JBS Cargo Movers" 

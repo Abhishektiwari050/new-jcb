@@ -44,12 +44,12 @@ export default function PartnersSection() {
 
       {/* Logo Marquee — Full Width */}
       <div className="relative w-full">
-        <div className="flex animate-[ticker_10s_linear_infinite] lg:animate-[ticker_20s_linear_infinite] whitespace-nowrap gap-8 transform-gpu will-change-transform py-4">
+        <div className="flex animate-[ticker_10s_linear_infinite] lg:animate-[ticker_20s_linear_infinite] whitespace-nowrap gap-4 md:gap-8 transform-gpu will-change-transform py-4">
           {[...partners, ...partners, ...partners].map((partner, i) => (
             <motion.div
               key={i}
               whileHover={{ y: -5, scale: 1.02 }}
-              className="flex items-center justify-center min-w-[220px] h-28 px-10 bg-white rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-brand-black/5 hover:border-brand-orange/30 transition-all group"
+              className="flex items-center justify-center min-w-[140px] md:min-w-[220px] h-20 md:h-28 px-6 md:px-10 bg-white rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-brand-black/5 hover:border-brand-orange/30 transition-all group"
             >
               <div className="relative w-full h-14">
                 <Image

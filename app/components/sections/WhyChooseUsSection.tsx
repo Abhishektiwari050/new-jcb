@@ -65,45 +65,71 @@ export default function WhyChooseUsSection() {
         </div>
       </div>
 
-      {/* Scrolling Ticker — Row 1 (left to right) */}
-      <div className="relative mb-4">
-        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#FDFBF7] to-transparent z-10" />
-        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#FDFBF7] to-transparent z-10" />
-        <div className="flex animate-[ticker_15s_linear_infinite] lg:animate-[ticker_25s_linear_infinite] whitespace-nowrap gap-4 transform-gpu will-change-transform">
-          {tickerItems.map((item, i) => (
-            <div
-              key={`r1-${i}`}
-              className="flex items-center gap-3 px-6 py-4 bg-white border border-brand-black/5 rounded-2xl min-w-fit hover:border-brand-orange/30 hover:shadow-lg transition-all duration-300 group"
+      {/* Mobile Grid / Desktop Ticker */}
+      <div className="lg:hidden px-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {advantages.map((item, i) => (
+            <motion.div
+              key={`mob-${i}`}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.05 }}
+              className="flex items-center gap-4 p-5 bg-white border border-brand-black/5 rounded-2xl"
             >
-              <div className="w-10 h-10 rounded-xl bg-brand-orange/10 flex items-center justify-center group-hover:bg-brand-orange transition-colors duration-300">
-                <item.icon className="w-5 h-5 text-brand-orange group-hover:text-white transition-colors duration-300" />
+              <div className="w-10 h-10 shrink-0 rounded-xl bg-brand-orange/10 flex items-center justify-center">
+                <item.icon className="w-5 h-5 text-brand-orange" />
               </div>
-              <span className="font-bold text-brand-black text-sm tracking-wide">
+              <span className="font-bold text-brand-black text-sm tracking-tight leading-snug">
                 {item.text}
               </span>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
 
-      {/* Scrolling Ticker — Row 2 (right to left) */}
-      <div className="relative">
-        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#FDFBF7] to-transparent z-10" />
-        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#FDFBF7] to-transparent z-10" />
-        <div className="flex animate-[tickerReverse_18s_linear_infinite] lg:animate-[tickerReverse_30s_linear_infinite] whitespace-nowrap gap-4 transform-gpu will-change-transform">
-          {[...tickerItems].reverse().map((item, i) => (
-            <div
-              key={`r2-${i}`}
-              className="flex items-center gap-3 px-6 py-4 bg-white border border-brand-black/5 rounded-2xl min-w-fit hover:border-brand-orange/30 hover:shadow-lg transition-all duration-300 group"
-            >
-              <div className="w-10 h-10 rounded-xl bg-brand-orange/10 flex items-center justify-center group-hover:bg-brand-orange transition-colors duration-300">
-                <item.icon className="w-5 h-5 text-brand-orange group-hover:text-white transition-colors duration-300" />
+      {/* Scrolling Ticker — Desktop Only */}
+      <div className="hidden lg:block space-y-4">
+        {/* Row 1 (left to right) */}
+        <div className="relative">
+          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#FDFBF7] to-transparent z-10" />
+          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#FDFBF7] to-transparent z-10" />
+          <div className="flex animate-[ticker_25s_linear_infinite] whitespace-nowrap gap-4 transform-gpu will-change-transform">
+            {tickerItems.map((item, i) => (
+              <div
+                key={`r1-${i}`}
+                className="flex items-center gap-3 px-6 py-4 bg-white border border-brand-black/5 rounded-2xl min-w-fit hover:border-brand-orange/30 hover:shadow-lg transition-all duration-300 group"
+              >
+                <div className="w-10 h-10 rounded-xl bg-brand-orange/10 flex items-center justify-center group-hover:bg-brand-orange transition-colors duration-300">
+                  <item.icon className="w-5 h-5 text-brand-orange group-hover:text-white transition-colors duration-300" />
+                </div>
+                <span className="font-bold text-brand-black text-sm tracking-wide">
+                  {item.text}
+                </span>
               </div>
-              <span className="font-bold text-brand-black text-sm tracking-wide">
-                {item.text}
-              </span>
-            </div>
-          ))}
+            ))}
+          </div>
+        </div>
+
+        {/* Row 2 (right to left) */}
+        <div className="relative">
+          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#FDFBF7] to-transparent z-10" />
+          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#FDFBF7] to-transparent z-10" />
+          <div className="flex animate-[tickerReverse_30s_linear_infinite] whitespace-nowrap gap-4 transform-gpu will-change-transform">
+            {[...tickerItems].reverse().map((item, i) => (
+              <div
+                key={`r2-${i}`}
+                className="flex items-center gap-3 px-6 py-4 bg-white border border-brand-black/5 rounded-2xl min-w-fit hover:border-brand-orange/30 hover:shadow-lg transition-all duration-300 group"
+              >
+                <div className="w-10 h-10 rounded-xl bg-brand-orange/10 flex items-center justify-center group-hover:bg-brand-orange transition-colors duration-300">
+                  <item.icon className="w-5 h-5 text-brand-orange group-hover:text-white transition-colors duration-300" />
+                </div>
+                <span className="font-bold text-brand-black text-sm tracking-wide">
+                  {item.text}
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

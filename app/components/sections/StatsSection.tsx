@@ -72,7 +72,7 @@ function AnimatedCounter({
   return (
     <div
       ref={ref}
-      className="font-[var(--font-display)] font-black text-5xl sm:text-6xl lg:text-7xl text-white leading-none"
+      className="font-[var(--font-display)] font-black text-4xl sm:text-6xl lg:text-7xl text-white leading-none"
     >
       {count}
       {suffix}
