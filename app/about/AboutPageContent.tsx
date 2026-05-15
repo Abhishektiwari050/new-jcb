@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Shield, Target, Users, Zap, Award, Globe, CheckCircle2, MapPin } from "lucide-react";
+import { Shield, Target, Users, Zap, Award, Globe, CheckCircle2, Landmark, Building2, Mountain, Cpu, Waves, Castle, MapPin } from "lucide-react";
 import Navbar from "@/app/components/Navbar";
 
 export default function AboutPageContent() {
@@ -140,10 +140,17 @@ export default function AboutPageContent() {
            </div>
            
            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-              {["Delhi NCR", "Mumbai", "Pune", "Bangalore", "Chennai", "Hyderabad"].map((city, i) => (
+              {[
+                { name: "Delhi NCR", icon: Landmark },
+                { name: "Mumbai", icon: Building2 },
+                { name: "Pune", icon: Mountain },
+                { name: "Bangalore", icon: Cpu },
+                { name: "Chennai", icon: Waves },
+                { name: "Hyderabad", icon: Castle },
+              ].map((city, i) => (
                 <div key={i} className="p-6 bg-white border border-brand-black/5 rounded-2xl text-center group hover:border-brand-orange/30 transition-colors">
-                  <MapPin className="w-6 h-6 text-brand-orange mx-auto mb-3 group-hover:scale-110 transition-transform" />
-                  <span className="font-bold text-brand-black text-sm">{city}</span>
+                  <city.icon className="w-6 h-6 text-brand-orange mx-auto mb-3 group-hover:scale-110 transition-transform" />
+                  <span className="font-bold text-brand-black text-sm">{city.name}</span>
                 </div>
               ))}
            </div>
