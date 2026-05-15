@@ -344,7 +344,7 @@ const CargoBelt3D: FC<CargoBelt3DProps> = ({
 
     const camera = new THREE.PerspectiveCamera(38, W / H, 0.1, 120);
     camera.position.set(0, 6, 11);
-    camera.lookAt(0, 1.8, 0);
+    camera.lookAt(0, 3.2, 0);
 
     scene.add(new THREE.HemisphereLight(0xFFF6ED, 0xDAD4C8, 1.2));
 
