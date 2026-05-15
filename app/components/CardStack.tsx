@@ -21,7 +21,7 @@ export const CardStack = ({
     <motion.div
       ref={containerRef}
       className="relative"
-      style={{ height: `${items.length * 100}vh` }}
+      style={{ height: `${items.length * 70}vh` }}
     >
       {/* This sticky wrapper acts as a fixed viewport */}
       <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
@@ -64,31 +64,21 @@ const StackCard = ({
   const cardMid = (cardStart + cardEnd) / 2;
 
   // Card slides up from below → lands in center → gets pushed up by next card
-  // For the first card, it starts visible (no slide-in needed)
   const y = useTransform(progress, (v) => {
     if (i === 0) {
-      // First card: starts at center, then gets pushed slightly as next cards arrive
       if (v < cardEnd) return 0;
-      return -(v - cardEnd) * total * 40; // slight upward push
+      return -(v - cardEnd) * total * 40;
     }
 
-    // Other cards: slide up from below into position
-    if (v < cardStart) {
-      return 600; // below viewport
-    }
+    if (v < cardStart) return 600;
     if (v < cardMid) {
-      // Sliding in: cardStart → cardMid maps to 600 → 0
       const t = (v - cardStart) / (cardMid - cardStart);
       return 600 * (1 - t);
     }
-    if (v < cardEnd) {
-      return 0; // settled in place
-    }
-    // After this card's section, push it up slightly
+    if (v < cardEnd) return 0;
     return -(v - cardEnd) * total * 40;
   });
 
-  // Scale: card is full size when active, shrinks slightly when next card arrives
   const scale = useTransform(progress, (v) => {
     if (v < cardStart) return 0.9;
     if (v < cardMid) {
@@ -96,20 +86,24 @@ const StackCard = ({
       return 0.9 + 0.1 * t;
     }
     if (v < cardEnd) return 1;
-    // Shrink as next card comes in
     const overrun = (v - cardEnd) * total;
     return Math.max(0.88, 1 - overrun * 0.06);
   });
 
-  // Opacity: fade in, stay visible, then reduce when pushed back
   const opacity = useTransform(progress, (v) => {
+    // First card appears immediately or very quickly
+    if (i === 0) {
+      if (v < cardEnd) return 1;
+      const overrun = (v - cardEnd) * total;
+      return Math.max(0.4, 1 - overrun * 0.3);
+    }
+
     if (v < cardStart) return 0;
     if (v < cardMid) {
       const t = (v - cardStart) / (cardMid - cardStart);
       return t;
     }
     if (v < cardEnd) return 1;
-    // Reduce opacity slightly when pushed back
     const overrun = (v - cardEnd) * total;
     return Math.max(0.4, 1 - overrun * 0.3);
   });
