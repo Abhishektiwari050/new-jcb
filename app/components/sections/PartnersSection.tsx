@@ -11,6 +11,7 @@ const partners = [
   { name: "Air India Cargo", logo: "https://upload.wikimedia.org/wikipedia/commons/b/bf/Air_India_2023.svg" },
   { name: "Akasa Air Cargo", logo: "https://upload.wikimedia.org/wikipedia/commons/6/69/Akasa_Air_logo.svg" },
   { name: "SpiceJet Cargo", logo: "https://upload.wikimedia.org/wikipedia/en/9/9c/SpiceJet_logo.svg" },
+  { name: "DHL Express", logo: "https://upload.wikimedia.org/wikipedia/commons/b/b3/DHL_Express_logo.svg" },
   { name: "Indian Railways Cargo Network", logo: "https://upload.wikimedia.org/wikipedia/fr/e/ed/Indian_Railway.png" },
 ];
 
