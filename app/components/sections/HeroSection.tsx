@@ -50,7 +50,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="font-[var(--font-display)] font-black text-4xl xs:text-5xl sm:text-6xl lg:text-7xl xl:text-8xl text-brand-black leading-[1.1] md:leading-[0.95] tracking-tighter"
+              className="font-[var(--font-display)] font-black text-3xl xs:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-brand-black leading-[1.1] md:leading-[0.95] tracking-tighter"
             >
               Saman Ho Koi Bhi,
               <br />
