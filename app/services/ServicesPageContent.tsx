@@ -60,7 +60,7 @@ export default function ServicesPageContent() {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="/images/hero_bg.png" 
+            src="/images/air-cargo-v2.png" 
             alt="Services Background" 
             className="w-full h-full object-cover opacity-40 grayscale-[0.5]"
           />

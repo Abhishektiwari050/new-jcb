@@ -15,7 +15,7 @@ export default function ContactPageContent() {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="/images/hero_bg.png" 
+            src="/images/delivery.png" 
             alt="Contact Background" 
             className="w-full h-full object-cover opacity-40 grayscale-[0.5]"
           />
@@ -58,7 +58,7 @@ export default function ContactPageContent() {
 
 
       {/* Main Contact Form Section */}
-      <section className="pb-32">
+      <section className="pb-12">
          <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="bg-brand-black rounded-[60px] overflow-hidden">
                <ContactSection />
@@ -67,7 +67,7 @@ export default function ContactPageContent() {
       </section>
 
       {/* Service Areas Section for Local SEO */}
-      <section className="py-24 bg-white">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="text-brand-orange font-bold uppercase tracking-widest text-xs">Serving Your Neighborhood</span>

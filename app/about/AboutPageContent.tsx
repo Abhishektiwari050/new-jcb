@@ -116,8 +116,8 @@ export default function AboutPageContent() {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="/images/hero_bg.png" 
-            alt="Logistics Background" 
+            src="/images/warehouse-v2.png" 
+            alt="About Background" 
             className="w-full h-full object-cover opacity-40 grayscale-[0.5]"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-brand-black via-brand-black/80 to-brand-black" />
