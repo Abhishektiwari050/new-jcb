@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import AboutPageContent from "./AboutPageContent";
+import AboutPageContent from "@/app/about/AboutPageContent";
 
 export const metadata: Metadata = {
   title: "About Us | JBS Cargo Movers",

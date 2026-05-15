@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Shield, Target, Users, Zap, Award, Globe, CheckCircle2 } from "lucide-react";
+import { Shield, Target, Users, Zap, Award, Globe, CheckCircle2, MapPin } from "lucide-react";
 import Navbar from "@/app/components/Navbar";
 
 export default function AboutPageContent() {
