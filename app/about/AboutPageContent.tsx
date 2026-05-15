@@ -65,9 +65,7 @@ export default function AboutPageContent() {
                 <p className="text-brand-black/50 text-base leading-relaxed">
                   Under Lalit Saini's leadership, JBS has quickly grown into a trusted logistics partner for corporate and commercial clients. We specialise in Air Cargo, Surface Cargo, Train Cargo, Consolidation Services, Door-to-Door Delivery, and Manpower Solutions — serving approximately 100 destinations nationwide through our strong network of airline and logistics partnerships including Blue Dart, Delhivery, Mahindra Logistics, IndiGo Cargo, Air India Cargo, Akasa Air, SpiceJet Cargo, and the Indian Railways Cargo Network.
                 </p>
-                <p className="text-brand-black/50 text-base leading-relaxed italic">
-                  Our operational capabilities are further strengthened through our associated organisation, <span className="text-brand-orange font-bold">Move Zen Express Logistics Pvt. Ltd.</span> Together, we offer customised logistics solutions designed to meet the growing demands of our clients — with complete peace of mind, transparent pricing, and the highest standards of professionalism.
-                </p>
+
               </div>
               
               <div className="pt-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -114,12 +112,7 @@ export default function AboutPageContent() {
 
                 <div className="w-full h-px bg-white/10" />
 
-                <div className="pt-4">
-                   <p className="text-brand-orange text-xs font-bold uppercase tracking-widest mb-2">Operational Edge</p>
-                   <p className="text-white/70 text-sm leading-relaxed">
-                     Our operational capabilities are further strengthened through our associated organization, <span className="text-white font-bold underline decoration-brand-orange underline-offset-4">Move Zen Express Logistics Pvt. Ltd.</span>, which provides additional expertise in transport and logistics management.
-                   </p>
-                </div>
+
               </div>
 
               <div className="p-10 bg-brand-orange/5 border border-brand-orange/10 rounded-[40px]">

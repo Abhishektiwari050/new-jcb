@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     "cheap cargo movers",
     "reliable freight forwarders",
     "Indian logistics network",
-    "Move Zen Express Logistics",
+
     "cargo movers New Delhi",
     "interstate cargo shipping",
     "cargo services near me",

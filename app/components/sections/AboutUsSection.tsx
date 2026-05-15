@@ -36,9 +36,7 @@ export default function AboutUsSection() {
               <p className="text-white/40 text-base leading-relaxed">
                 Under Lalit Saini's leadership, JBS has quickly grown into a trusted logistics partner for corporate and commercial clients. We specialise in Air Cargo, Surface Cargo, Train Cargo, Consolidation Services, Door-to-Door Delivery, and Manpower Solutions — serving approximately 100 destinations nationwide through our strong network of airline and logistics partnerships including Blue Dart, Delhivery, Mahindra Logistics, IndiGo Cargo, Air India Cargo, Akasa Air, SpiceJet Cargo, and the Indian Railways Cargo Network.
               </p>
-              <p className="text-white/40 text-base leading-relaxed italic">
-                Our operational capabilities are further strengthened through our associated organisation, <span className="text-brand-orange font-bold">Move Zen Express Logistics Pvt. Ltd.</span> Together, we offer customised logistics solutions designed to meet the growing demands of our clients — with complete peace of mind, transparent pricing, and the highest standards of professionalism.
-              </p>
+
             </div>
           </motion.div>
 
