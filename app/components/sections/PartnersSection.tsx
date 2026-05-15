@@ -37,7 +37,7 @@ export default function PartnersSection() {
           >
             Our Business Partners
           </motion.h2>
-          <p className="text-brand-black/40 text-[10px] font-bold uppercase tracking-widest mt-3 max-w-lg mx-auto leading-relaxed">
+          <p className="text-brand-black/40 text-xs md:text-sm font-bold uppercase tracking-widest mt-4 max-w-2xl mx-auto leading-relaxed">
             Strengthening our logistics network with India's premier cargo carriers and infrastructure
           </p>
         </div>
