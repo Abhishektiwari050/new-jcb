@@ -39,7 +39,7 @@ export default function Navbar({ theme = "light" }: NavbarProps) {
         className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${
           scrolled || isOpen
             ? "bg-brand-black/95 backdrop-blur-md shadow-lg shadow-black/20"
-            : "bg-transparent"
+            : "bg-[#F2EFEA] shadow-none border-none"
         }`}
       >
         {/* Top Contact Bar */}
