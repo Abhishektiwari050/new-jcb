@@ -359,8 +359,8 @@ const CargoBelt3D: FC<CargoBelt3DProps> = ({
     scene.add(key);
 
     const floor = new THREE.Mesh(
-      new THREE.PlaneGeometry(100, 100),
-      new THREE.MeshStandardMaterial({ color: 0xF2EFEA, metalness: 0, roughness: 1.0 }),
+      new THREE.PlaneGeometry(200, 200),
+      new THREE.ShadowMaterial({ opacity: 0.12 })
     );
     floor.rotation.x = -Math.PI / 2;
     floor.receiveShadow = true;

@@ -72,7 +72,7 @@ export default function CustomCursor() {
           scale: isClicking ? 0.8 : isHovering ? 1.4 : 1,
           opacity: isHovering ? 0.6 : 0.2,
         }}
-        className="absolute w-12 h-12 bg-brand-orange rounded-full blur-xl"
+        className="absolute w-6 h-6 bg-brand-orange rounded-full blur-lg"
       />
 
       {/* The Logo Cursor */}
@@ -82,7 +82,7 @@ export default function CustomCursor() {
           rotate: isClicking ? -5 : 0,
         }}
         transition={{ type: 'spring', damping: 15, stiffness: 300 }}
-        className="relative w-16 h-9 md:w-20 md:h-11"
+        className="relative w-8 h-4.5 md:w-10 md:h-5.5"
       >
         <img
           src="/images/cursor.png"
