@@ -4,6 +4,21 @@ import { motion } from "framer-motion";
 import { Shield, Target, Users, Zap, Award, Globe, CheckCircle2, Landmark, Building2, Mountain, Cpu, Waves, Castle, MapPin } from "lucide-react";
 import Navbar from "@/app/components/Navbar";
 
+const IndiaGateIcon = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 100 100" className={className} fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M10 90 L90 90" />
+    <path d="M20 90 L20 35 L80 35 L80 90" />
+    <path d="M35 90 L35 60 C35 45 65 45 65 60 L65 90" />
+    <path d="M15 35 L85 35" />
+    <path d="M20 25 L80 25" />
+    <path d="M30 15 L70 15" />
+    <circle cx="30" cy="50" r="2.5" fill="currentColor" stroke="none" />
+    <circle cx="70" cy="50" r="2.5" fill="currentColor" stroke="none" />
+    <path d="M15 65 L25 65" />
+    <path d="M75 65 L85 65" />
+  </svg>
+);
+
 export default function AboutPageContent() {
   return (
     <div>
@@ -141,7 +156,7 @@ export default function AboutPageContent() {
            
            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
               {[
-                { name: "Delhi NCR", icon: Landmark },
+                { name: "Delhi NCR", icon: IndiaGateIcon },
                 { name: "Mumbai", icon: Building2 },
                 { name: "Pune", icon: Mountain },
                 { name: "Bangalore", icon: Cpu },
