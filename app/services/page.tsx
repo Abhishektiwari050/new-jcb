@@ -3,6 +3,8 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ServicesPageContent from "@/app/services/ServicesPageContent";
 
+import CTASection from "../components/sections/CTASection";
+
 export const metadata: Metadata = {
   title: "Cargo Services & Solutions | Air, Surface, Train & Consolidation",
   description:
@@ -15,6 +17,7 @@ export default function ServicesPage() {
     <main className="min-h-screen bg-white">
       <Navbar theme="dark" />
       <ServicesPageContent />
+      <CTASection />
       <Footer />
     </main>
   );

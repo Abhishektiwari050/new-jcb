@@ -39,8 +39,7 @@ export default function Home() {
 
 
 
-      {/* CTA Banner */}
-      <CTASection />
+
 
       <Footer />
     </main>

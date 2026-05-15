@@ -43,7 +43,7 @@ export default function Navbar({ theme = "light" }: NavbarProps) {
         }`}
       >
         {/* Top Contact Bar */}
-        <div className={`hidden lg:block w-full border-b transition-all duration-300 ${scrolled ? "h-0 overflow-hidden opacity-0" : `h-10 opacity-100 ${isDark ? "border-white/10" : "border-brand-black/10"}`}`}>
+        <div className={`hidden lg:block w-full transition-all duration-300 ${scrolled ? "h-0 overflow-hidden opacity-0" : `h-10 opacity-100`}`}>
           <div className={`max-w-7xl mx-auto px-6 lg:px-8 h-full flex items-center justify-end gap-6 text-xs font-bold ${scrolled || isDark ? "text-white/80" : "text-brand-black/60"}`}>
             <a href="mailto:jbscargomovers@gmail.com" className="flex items-center gap-2 hover:text-brand-orange transition-colors">
               <Mail className="w-3.5 h-3.5" />
@@ -60,7 +60,7 @@ export default function Navbar({ theme = "light" }: NavbarProps) {
         </div>
 
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className={`flex items-center justify-between transition-all duration-500 ${scrolled ? "h-20" : "h-32"}`}>
+          <div className={`flex items-center justify-between transition-all duration-500 ${scrolled ? "h-20" : "h-24"}`}>
             {/* Logo */}
             <Link href="/" className="flex items-center group">
               <div className={`relative transition-all duration-500 flex items-center justify-start overflow-visible ${scrolled ? "h-10 w-24 md:h-12 md:w-28 mt-0" : "h-12 w-28 md:h-16 md:w-36 mt-2"}`}>
