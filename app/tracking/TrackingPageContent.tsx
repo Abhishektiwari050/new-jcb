@@ -121,6 +121,57 @@ export default function TrackingPageContent() {
           </motion.div>
         </div>
       </section>
+
+      {/* Integrated Coverage Section */}
+      <section className="py-32 bg-white border-t border-brand-black/5">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div>
+              <span className="text-brand-orange font-bold uppercase tracking-[0.3em] text-xs mb-4 block">
+                Network Coverage
+              </span>
+              <h2 className="font-[var(--font-display)] font-black text-4xl md:text-6xl text-brand-black tracking-tighter mb-8 leading-[1.1]">
+                Across The <br />
+                <span className="text-brand-orange">Subcontinent.</span>
+              </h2>
+              <p className="text-brand-black/50 text-lg leading-relaxed mb-10">
+                From our strategic hub in New Delhi, we reach the furthest corners of India. 
+                Whether it's the mountains of Leh or the ports of Chennai, our network covers over 100+ destinations nationwide.
+              </p>
+
+              <div className="grid grid-cols-2 gap-8">
+                {[
+                  { label: "100+", sub: "Destinations" },
+                  { label: "Pan-India", sub: "Surface · Air · Rail" },
+                ].map((stat, i) => (
+                  <div key={i}>
+                    <p className="text-3xl font-black text-brand-black">{stat.label}</p>
+                    <p className="text-[10px] font-bold text-brand-black/40 uppercase tracking-widest mt-1">{stat.sub}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="bg-brand-black p-12 rounded-[48px] relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-brand-orange/10 rounded-full blur-[80px] -mr-32 -mt-32" />
+              <p className="text-brand-orange font-bold uppercase tracking-widest text-[10px] mb-8 relative z-10">Strategic Presence</p>
+              <div className="space-y-6 relative z-10">
+                <div className="flex flex-wrap gap-3">
+                  {["Delhi NCR", "Mumbai", "Pune", "Bangalore", "Chennai", "Hyderabad", "Kolkata", "Ahmedabad"].map((city, i) => (
+                    <div key={i} className="flex items-center gap-2 px-4 py-2 bg-white/5 rounded-full border border-white/10 group hover:border-brand-orange/30 transition-colors">
+                      <div className="w-1.5 h-1.5 rounded-full bg-brand-orange" />
+                      <span className="text-white/80 text-xs font-bold uppercase tracking-wider">{city}</span>
+                    </div>
+                  ))}
+                </div>
+                <p className="text-white/30 text-sm italic font-medium pt-4">
+                  + Connecting to major Tier 2 & Tier 3 cities via our multi-modal transport network.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
