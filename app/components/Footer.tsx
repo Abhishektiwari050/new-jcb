@@ -6,6 +6,10 @@ import {
   Mail,
   MapPin,
   ArrowRight,
+  Facebook,
+  Instagram,
+  Linkedin,
+  MessageCircle,
 } from "lucide-react";
 
 const footerLinks = {
@@ -55,6 +59,46 @@ export default function Footer() {
               <span className="text-[10px] text-live-green font-bold uppercase tracking-widest">
                 Operations Active
               </span>
+            </div>
+
+            {/* Social Icons */}
+            <div className="flex items-center gap-4 pt-4">
+              <a
+                href="https://wa.me/919582566995"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-brand-black/5 flex items-center justify-center text-brand-black hover:bg-brand-orange hover:text-white transition-all duration-300 group"
+                title="WhatsApp"
+              >
+                <MessageCircle className="w-5 h-5 group-hover:scale-110 transition-transform" />
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-brand-black/5 flex items-center justify-center text-brand-black hover:bg-brand-orange hover:text-white transition-all duration-300 group"
+                title="Facebook"
+              >
+                <Facebook className="w-5 h-5 group-hover:scale-110 transition-transform" />
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-brand-black/5 flex items-center justify-center text-brand-black hover:bg-brand-orange hover:text-white transition-all duration-300 group"
+                title="Instagram"
+              >
+                <Instagram className="w-5 h-5 group-hover:scale-110 transition-transform" />
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-brand-black/5 flex items-center justify-center text-brand-black hover:bg-brand-orange hover:text-white transition-all duration-300 group"
+                title="LinkedIn"
+              >
+                <Linkedin className="w-5 h-5 group-hover:scale-110 transition-transform" />
+              </a>
             </div>
           </div>
           

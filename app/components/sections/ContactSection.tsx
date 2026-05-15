@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail, Globe } from "lucide-react";
+import { MapPin, Phone, Mail, Globe, MessageCircle } from "lucide-react";
 
 export default function ContactSection() {
   const [submitted, setSubmitted] = useState(false);
@@ -42,6 +42,15 @@ export default function ContactSection() {
                 <div>
                   <p className="text-sm text-text-hint font-medium uppercase tracking-wider mb-1">Phone</p>
                   <p className="text-text-primary font-medium text-lg">+91 9582566995 / +91 9582166995</p>
+                  <a 
+                    href="https://wa.me/919582566995" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 mt-2 text-sm font-bold text-[#25D366] hover:underline"
+                  >
+                    <span>Chat on WhatsApp</span>
+                    <MessageCircle className="w-4 h-4" />
+                  </a>
                 </div>
               </div>
 
