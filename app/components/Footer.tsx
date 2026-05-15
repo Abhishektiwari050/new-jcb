@@ -16,6 +16,7 @@ const footerLinks = {
     { label: "Warehousing", href: "/services" },
     { label: "Consolidation", href: "/services" },
     { label: "Door-to-Door", href: "/services" },
+    { label: "Manpower", href: "/services" },
   ],
   information: [
     { label: "About Us", href: "/about" },

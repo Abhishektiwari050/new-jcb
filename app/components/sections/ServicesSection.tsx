@@ -66,38 +66,38 @@ export default function ServicesSection() {
 const items = [
   {
     title: "Air Cargo",
-    description: "Expedited next-day delivery across 100+ cities using India's leading airline networks. Perfect for time-sensitive, high-value shipments.",
+    description: "Fast and secure air freight solutions for urgent and time-sensitive shipments across India using leading airline networks.",
     icon: Plane,
     bgImage: "/images/air-cargo-v2.png",
   },
   {
     title: "Surface Freight",
-    description: "Reliable and cost-effective road transport with a dedicated fleet ensuring safe delivery of bulk and industrial cargo.",
+    description: "Reliable and economical transportation solutions through express and dedicated surface cargo movement across India.",
     icon: Truck,
     bgImage: "/images/surface-cargo-v2.png",
   },
   {
     title: "Train Logistics",
-    description: "Leverage the power of Indian Railways for heavy-volume long-haul transport. Eco-friendly and highly efficient.",
+    description: "Efficient railway cargo solutions for commercial and bulk consignments with cost-effective and timely operations.",
     icon: Train,
     bgImage: "/images/train-cargo-v2.png",
   },
   {
-    title: "Warehousing",
-    description: "Strategic storage solutions with advanced inventory management. Safe, secure, and ready for rapid distribution.",
-    icon: Warehouse,
-    bgImage: "/images/warehouse-v2.png",
-  },
-  {
     title: "Consolidation",
-    description: "Smart groupage services that bundle smaller shipments into full loads, significantly reducing your overall logistics costs.",
+    description: "Smart consolidation solutions to optimize transportation costs and improve delivery efficiency for smaller shipments.",
     icon: Package,
     bgImage: "/images/consolidation.png",
   },
   {
     title: "Door-to-Door",
-    description: "End-to-end logistics where we handle everything from pickup at your origin to final delivery at your customer's doorstep.",
+    description: "Complete pickup and delivery support from origin to destination with safe handling and committed timely delivery.",
     icon: DoorOpen,
     bgImage: "/images/delivery.png",
+  },
+  {
+    title: "Manpower Services",
+    description: "Professional manpower support for warehouse handling, logistics operations, loading-unloading, and distribution activities.",
+    icon: Users,
+    bgImage: "/images/warehouse-v2.png",
   },
 ];

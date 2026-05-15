@@ -60,7 +60,7 @@ export default function WhyChooseUsSection() {
             viewport={{ once: true }}
             className="text-brand-black/50 max-w-sm text-lg leading-relaxed"
           >
-            Trusted by businesses across India for speed, safety, and scale.
+            Trusted by businesses across India, with core hubs in Delhi NCR, Mumbai, Pune, Bangalore, Chennai, and Hyderabad.
           </motion.p>
         </div>
       </div>

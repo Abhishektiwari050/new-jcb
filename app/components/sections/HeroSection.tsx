@@ -116,7 +116,7 @@ export default function HeroSection() {
               {[
                 { val: "100+", label: "Destinations" },
                 { val: "6", label: "Core Services" },
-                { val: "15+", label: "Years Exp" },
+                { val: "2023", label: "Established" },
               ].map((stat) => (
                 <div key={stat.label}>
                   <p className="font-[var(--font-display)] font-black text-3xl text-brand-black">
