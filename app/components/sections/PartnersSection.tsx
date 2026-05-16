@@ -20,26 +20,36 @@ export default function PartnersSection() {
     <section className="bg-white py-8 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-6">
         {/* Header */}
-        <div className="text-center mb-8">
+        <div className="flex flex-col items-center text-center gap-6 mb-12">
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-orange/5 border border-brand-orange/10 mb-4"
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-orange/10 border border-brand-orange/20 mb-2"
           >
+            <span className="w-2 h-2 rounded-full bg-brand-orange animate-pulse" />
             <span className="text-[10px] text-brand-orange font-bold uppercase tracking-widest">Industry Leaders</span>
           </motion.div>
-          <motion.h2
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="font-[var(--font-display)] font-black text-3xl md:text-4xl lg:text-5xl text-brand-black tracking-tight uppercase"
-          >
-            Our Business Partners
-          </motion.h2>
-          <p className="text-brand-black/40 text-xs md:text-sm font-bold uppercase tracking-widest mt-4 max-w-2xl mx-auto leading-relaxed">
-            Strengthening our logistics network with India's premier cargo carriers and infrastructure
-          </p>
+          
+          <div className="max-w-4xl">
+            <motion.h2
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-4xl md:text-5xl lg:text-6xl font-[var(--font-display)] font-extrabold text-brand-black leading-tight"
+            >
+              Our Business Partners.
+            </motion.h2>
+            
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-brand-black/60 mt-6 text-lg leading-relaxed max-w-2xl mx-auto"
+            >
+              Strengthening our logistics network with India's premier cargo carriers and infrastructure.
+            </motion.p>
+          </div>
         </div>
       </div>
 
